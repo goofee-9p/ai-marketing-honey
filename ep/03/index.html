@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.03 매일 아침 소재 교체 에이전트 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="매일 아침 광고 소재를 갈아 끼우는 AI 에이전트. 그냥 시키면 망하고, 핵심은 브랜드 가이드예요. 브랜드 가이드 양식과 에이전트 지시문을 그대로 복사해 쓰세요.">
+<meta property="og:title" content="EP.03 AI한테 소재 맡기기 전에, 브랜드 가이드부터">
+<meta property="og:description" content="브랜드 가이드 양식 8칸 + 매일 아침 7시 소재 교체 에이전트 지시문.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a href="../../">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/">@ai.marketing.honey</a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.03 · 매일 아침 소재 교체 에이전트</span>
+    <h1>AI한테 소재 맡기기 전에,<br><span class="hl">브랜드 가이드</span>부터</h1>
+    <p class="lead">출근하면 새 소재가 와 있는 에이전트, 만들 수 있어요. 근데 그냥 시키면 '역대급 특가!!' 같은 소재가 매일 네 개씩 올라와요. 영상에서 말한 브랜드 가이드 양식과 에이전트 지시문을 여기 그대로 모아 뒀어요.</p>
+    <div class="meta"><span class="chip ghost">브랜드 가이드 양식 8칸</span><span class="chip ghost">매일 07:00 자동</span><span class="chip ghost">등록은 꺼진 상태로</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>가이드 없이 vs 가이드 넣고</h2>
+    <p>같은 사진, 같은 AI예요. 다른 건 '우리 브랜드가 어떻게 말하는지'를 알려 줬느냐 하나예요.</p>
+    <div class="stats" style="margin-top:14px">
+      <div class="stat"><img src="../../assets/img/ep03/bad_1.jpg" alt="가이드 없이 만든 소재" style="width:100%;border-radius:12px;display:block" loading="lazy"><span>가이드 없이 · 역대급 · 무조건 · !!!</span></div>
+      <div class="stat on"><img src="../../assets/img/ep03/good_1.jpg" alt="브랜드 가이드를 넣고 만든 소재" style="width:100%;border-radius:12px;display:block" loading="lazy"><span>가이드 넣고 · 우리 말투 한 줄</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>브랜드 가이드 양식</h2>
+    <p>아래 8칸을 채워서 클로드에 <b>스킬</b>로 저장해 두세요. 한 번만 정리해 두면 매일 아침 이 문서를 먼저 읽고 소재를 만들어요.</p>
+
+    <div class="prompt" id="brand-guide" style="margin-top:16px">
+      <div class="label">브랜드 가이드 양식 (복사해서 채우세요)</div>
+      <pre>[브랜드 가이드] ___ 브랜드
+
+1. 한 줄 소개: 우리는 ___한 사람에게 ___을 해 주는 브랜드
+2. 타겟: 누가, 어떤 상황에서, 뭘 제일 답답해하는지
+3. 말투: 예) 해요체 · 이모지 1개까지 · 느낌표 남발 금지
+4. 꼭 쓰는 말 / 절대 안 쓰는 말: 예) '역대급' '무조건' '1위' 금지
+5. 비주얼: 메인 컬러, 피하는 색, 사진 톤(밝게 / 자연광 등), 로고 위치
+6. 잘된 소재 3개: 이미지 + 문구 + 왜 잘됐는지 한 줄
+7. 망한 소재 2개: 왜 안 됐는지 한 줄
+8. 심사 주의: 효과 보장 · 전후 비교 등 매체에서 반려되는 표현</pre>
+      <p class="tip">💡 제일 중요한 건 6·7번이에요. 말로 설명하는 것보다 잘된 소재·망한 소재 예시 몇 개가 AI한테 훨씬 잘 먹혀요.</p>
+    </div>
+
+    <div class="prompt" id="save-skill">
+      <div class="label">채운 가이드를 스킬로 저장하기</div>
+      <pre>아래 브랜드 가이드를 '[브랜드명] 브랜드 가이드' 스킬로 저장해 줘. 앞으로 광고 소재 문구나 이미지를 만들 때는 항상 이 스킬을 먼저 읽고 따라 줘. 가이드에 안 맞는 표현이 나오면 스스로 고친 다음 보여 줘.
+
+(여기에 채운 브랜드 가이드를 붙여 넣기)</pre>
+      <p class="tip">💡 잘된 소재·망한 소재 이미지도 같이 첨부하세요. 글보다 이미지 예시가 비주얼 톤을 더 정확하게 잡아요.</p>
+    </div>
+
+    <p class="muted" style="margin-top:14px">영상 속 예시 · 허니 뷰티 브랜드 가이드</p>
+    <img src="../../assets/img/ep03/guide_example.jpg" alt="허니 뷰티 브랜드 가이드 예시 — 말투, 절대 안 쓰는 표현, 비주얼, 잘됐던 소재" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:8px" loading="lazy">
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>매일 아침 소재 교체 에이전트</h2>
+    <ol class="steps">
+      <li><b>매일 아침 7시 예약 실행</b>클로드의 예약 작업(scheduled task)으로 걸어 둬요.</li>
+      <li><b>어제 성과 읽기 → 지친 소재 찾기</b>클릭률은 떨어지는데 같은 사람한테 계속 노출되는 소재를 골라요.</li>
+      <li><b>잘된 소재로 새 소재 4개</b>브랜드 가이드 스킬을 따라 문구와 이미지 구도만 바꿔요.</li>
+      <li><b>꺼진 상태로 등록</b>돈은 안 나가요. 나는 아침에 보고 승인만 눌러요.</li>
+    </ol>
+
+    <div class="prompt" id="daily-agent" style="margin-top:16px">
+      <div class="label">에이전트 지시문 (복사해서 쓰세요)</div>
+      <pre>매일 아침 7시에 아래 순서로 해 줘.
+
+1. 메타 광고 계정 [계정명]에서 최근 7일 소재별 노출, CTR, 빈도, CPA를 가져와.
+2. 최근 3일 CTR이 7일 평균보다 20% 이상 낮고 빈도가 3 이상인 소재를 '지친 소재'로 골라.
+3. 7일 CPA가 가장 낮은 소재를 기준으로, 소구점은 그대로 두고 첫 문장과 이미지 구도를 바꾼 새 소재 4개를 만들어. [브랜드 가이드] 스킬을 꼭 따라.
+4. 새 소재는 같은 광고 세트에 '꺼짐' 상태로 등록해. 아무것도 켜거나 끄지 마.
+5. 끌 소재, 새 소재, 고른 이유를 한 장으로 요약해서 보내 줘.</pre>
+      <p class="tip">💡 '지친 소재' 기준은 숫자로 박아 두세요. 안 정하면 AI가 날마다 다른 기준으로 골라요. 숫자는 우리 계정에 맞게 바꾸면 돼요.</p>
+    </div>
+    <p class="muted" style="margin-top:10px">광고 관리자는 메타 공식 커넥터로 연결하거나, 연결이 없는 매체는 <a href="../02/">EP.02</a>의 ego lite로 로그인된 화면을 그대로 써요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>꼭 지킬 것</h2>
+    <div class="warn">
+      <ul>
+        <li><b>켜고 끄는 건 사람이.</b> 예산이 나가는 변경(켜기 · 끄기 · 예산 · 입찰)은 승인 전엔 하지 않게 지시문에 박아 두세요.</li>
+        <li><b>생성 이미지는 한 번 보세요.</b> 상표 · 인물 · 과장 표현(효과 보장 등)은 매체 심사에서 반려될 수 있어요. 뷰티·건강 카테고리는 특히 조심하세요.</li>
+        <li><b>매일 갈아 끼우면 학습이 흔들릴 수 있어요.</b> 처음엔 주 2~3회로 시작해도 돼요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>영상 속 장면</h2>
+    <div class="gallery">
+      <img src="../../assets/img/ep03/s_2.6.jpg" alt="출근하면 새 소재 4개가 와 있어요" loading="lazy">
+      <img src="../../assets/img/ep03/s_7.0.jpg" alt="성과를 읽고 지친 소재 2개를 찾아요" loading="lazy">
+      <img src="../../assets/img/ep03/s_9.6.jpg" alt="CPA 1위 소재로 새 소재 4개" loading="lazy">
+      <img src="../../assets/img/ep03/s_16.3.jpg" alt="근데 이거, 그냥 시키면 망해요" loading="lazy">
+      <img src="../../assets/img/ep03/s_21.0.jpg" alt="가이드 없이 만든 소재 4개" loading="lazy">
+      <img src="../../assets/img/ep03/s_27.5.jpg" alt="핵심은 브랜드 가이드" loading="lazy">
+      <img src="../../assets/img/ep03/s_33.0.jpg" alt="가이드를 넣으면 우리 브랜드 직원처럼" loading="lazy">
+      <img src="../../assets/img/ep03/s_36.4.jpg" alt="나는 승인만 눌러요" loading="lazy">
+    </div>
+    <p class="muted" style="margin-top:8px">영상 속 '허니 뷰티'는 설명을 위한 가상 브랜드이고, 제품 사진은 AI로 만든 예시예요. 광고 관리 화면과 숫자도 예시예요.</p>
+  </section>
+
+  <nav class="next">
+    <a href="../02/"><small>← 이전 편</small>EP.02 ego lite 쓰는 법</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

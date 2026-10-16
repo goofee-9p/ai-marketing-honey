@@ -6,6 +6,7 @@
 - 사이트: https://goofee-9p.github.io/ai-marketing-honey/
 - EP.01 ego lite가 뭐예요? → `ep/01/`
 - EP.02 ego lite 쓰는 법 → `ep/02/`
+- EP.03 매일 아침 소재 교체 에이전트 · 브랜드 가이드 양식 → `ep/03/`
 
 ## 구조
 
