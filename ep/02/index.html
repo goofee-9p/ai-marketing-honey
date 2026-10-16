@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.02 ego lite 쓰는 법 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="API 키 발급도, MCP 설정도 없이 AI한테 광고 세팅을 맡기는 법. ego lite 설치부터 바로 복사해 쓰는 프롬프트까지.">
+<meta property="og:title" content="EP.02 API·MCP 연동 없이 AI한테 광고 세팅 맡기는 법">
+<meta property="og:description" content="ego lite 설치 → 한마디 → 끝. 영상 속 프롬프트 원문과 주의할 점까지.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a href="../../">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/">@ai.marketing.honey</a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.02 · ego lite 쓰는 법</span>
+    <h1>API·MCP 연동 없이<br><span class="hl">AI한테 광고 세팅</span><br>맡기는 법</h1>
+    <p class="lead">설치하고, 클로드한테 "ego lite로 해 줘" 한마디. 영상에서 다 못 한 설명과 바로 복사해 쓰는 프롬프트를 모아 뒀어요.</p>
+    <div class="meta"><span class="chip ghost">무료</span><span class="chip ghost">설치하면 바로</span><span class="chip ghost">API 키 · MCP 설정 없음</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>준비는 세 단계예요</h2>
+    <ol class="steps">
+      <li><b>ego lite 내려받기</b><a href="https://lite.ego.app/">lite.ego.app</a>에서 받아 설치해요. 무료예요.<br><span class="muted">지금은 맥에서만 쓸 수 있어요. 윈도우는 사이트에서 출시 알림을 신청할 수 있어요.</span></li>
+      <li><b>처음 켤 때 안내대로 진행</b>크롬에서 쓰던 데이터를 가져올지 고를 수 있어요. 이 과정에서 클로드 코드 같은 AI 에이전트에 <code>ego-browser</code> 스킬이 자동으로 깔려요.<br><span class="muted">클로드 코드 말고도 Codex · Cursor · Gemini CLI 같은 에이전트에서도 쓸 수 있어요.</span></li>
+      <li><b>ego lite에서 광고 관리자에 로그인</b>네이버 검색광고, 메타 광고 관리자처럼 AI한테 맡길 화면에 평소처럼 로그인해 두면 끝이에요. AI는 이 로그인된 창을 그대로 써요.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>이렇게 시켜요</h2>
+    <p>할 일 앞에 <code>/ego-browser</code>를 붙이거나, 그냥 "ego lite로 해 줘"라고 말하면 돼요. 아래는 영상 속 두 장면의 프롬프트예요. 실무에서 쓰기 좋게 마지막 한 줄씩 더 붙였어요.</p>
+
+    <div class="prompt" id="naver-bid" style="margin-top:16px">
+      <div class="label">영상 속 ① 네이버 검색광고 입찰가</div>
+      <pre>/ego-browser 네이버 검색광고에서 최근 7일 기준 ROAS 300% 넘는 키워드는 입찰가를 20% 올려 줘. 바꾸기 전에 대상 키워드와 바꿀 입찰가를 표로 먼저 보여 줘.</pre>
+      <p class="tip">💡 "얼마나"를 숫자로 박아 두세요. 안 정하면 AI가 임의로 정해요. 그리고 바꾸기 전에 표로 먼저 받아 보면 실수가 확 줄어요.</p>
+    </div>
+
+    <div class="prompt" id="meta-creative">
+      <div class="label">영상 속 ② 메타 타겟별 소재 세팅</div>
+      <pre>/ego-browser 바탕화면 ffnab_10월_소재 폴더의 이미지랑 미디어믹스_10월.xlsx를 보고, 메타 광고 관리자에서 타겟별 광고 세트에 소재를 넣어 줘. 게시는 하지 말고 초안으로만 저장해 줘.</pre>
+      <p class="tip">💡 "게시하지 말고 초안으로"를 꼭 붙이세요. 마지막 게시 버튼은 내가 누르는 게 안전해요.</p>
+    </div>
+
+    <div class="prompt" id="account-check">
+      <div class="label">덤 · 아무것도 안 바꾸는 계정 점검</div>
+      <pre>/ego-browser 메타 광고 관리자에서 꺼진 광고, 반려된 광고, 예산을 다 쓴 광고 세트를 찾아서 표로 정리해 줘. 아무것도 바꾸지 마.</pre>
+      <p class="tip">💡 처음엔 이렇게 '읽기만' 시켜 보면서 손에 익히는 걸 추천해요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>API 연동 없이 어떻게 돼요?</h2>
+    <p>광고 관리 화면은 버튼을 누를 때마다 뒤에서 서버와 요청을 주고받아요. ego lite는 내가 로그인해 둔 그 화면에서 <span class="hl">이 요청을 직접 찾아내고</span>, 버튼을 하나하나 누르는 대신 그 요청으로 한 번에 처리해요. 그래서 API 키를 발급받거나 MCP를 따로 연결할 필요가 없어요.</p>
+    <div class="api" style="margin-top:14px">
+      <div class="h">ego lite · 찾은 요청 (영상 속 예시)</div>
+      <div class="r"><span class="m get">GET</span>/ncc/stats?range=7d</div>
+      <div class="r"><span class="m get">GET</span>/ncc/keywords</div>
+      <div class="r hit"><span class="m put">PUT</span>/ncc/keywords · bidAmt ×4</div>
+      <div style="margin-top:8px;font-weight:800;color:#ffd27a">→ 요청 1번으로 4개를 한 번에 적용</div>
+    </div>
+    <p class="muted" style="margin-top:10px">버튼을 누르고 → 화면을 찍어 확인하고 → 다시 누르는 방식보다 훨씬 빨라요. 왜 빠른지는 <a href="../01/">EP.01</a>에 더 자세히 있어요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>꼭 지킬 것</h2>
+    <div class="warn">
+      <ul>
+        <li><b>내 계정에서 실제로 움직여요.</b> 입찰가 변경 · 게시 · 예산처럼 돈이 걸린 일은 '표로 먼저 보여 줘', '초안으로만'을 붙이고 마지막 확인은 사람이 하세요.</li>
+        <li><b>관리 화면이 뒤에서 쓰는 요청은 공식 API가 아니에요.</b> 대량 작업 전에는 매체 운영 정책을 한 번 확인해 두세요.</li>
+        <li>처음 몇 번은 결과를 화면에서 직접 확인하면서 쓰세요. 익숙해지면 그때 맡기는 범위를 넓히면 돼요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>영상 속 장면</h2>
+    <div class="gallery">
+      <img src="../../assets/img/ep02/s_4.6.jpg" alt="API 연동, MCP 설정 필요 없어요" loading="lazy">
+      <img src="../../assets/img/ep02/s_12.9.jpg" alt="ego lite 설치하고 한마디면 끝" loading="lazy">
+      <img src="../../assets/img/ep02/s_19.3.jpg" alt="찾은 API로 입찰가 4개를 한 번에 변경" loading="lazy">
+      <img src="../../assets/img/ep02/s_25.4.jpg" alt="메타 타겟별 세트에 소재 6개를 초안으로" loading="lazy">
+      <img src="../../assets/img/ep02/s_29.6.jpg" alt="시켜 두고 나는 다른 일, 끝나면 확인만" loading="lazy">
+      <img src="../../assets/img/ep02/s_36.7.jpg" alt="로그인된 브라우저에서 요청을 찾아 처리" loading="lazy">
+    </div>
+    <p class="muted" style="margin-top:8px">영상 속 광고 관리 화면은 이해를 돕기 위해 다시 만든 예시 화면이에요. 숫자도 예시 데이터예요.</p>
+  </section>
+
+  <nav class="next">
+    <a href="../01/"><small>← 이전 편</small>EP.01 ego lite가 뭐예요?</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    ego lite는 citrolabs가 만든 브라우저로, 이 페이지와는 관계없는 개인 정리 노트예요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
