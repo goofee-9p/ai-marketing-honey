@@ -20,6 +20,8 @@ a { color: inherit; }
 /* 머리 */
 .top { display: flex; align-items: center; gap: 10px; padding: 18px 0; }
 .top a { text-decoration: none; font-weight: 800; font-size: 15px; }
+.top .brand { display: inline-flex; align-items: center; gap: 8px; }
+.top .brand img { width: 26px; height: 26px; display: block; }
 .top .handle { margin-left: auto; font-size: 13px; font-weight: 700; color: #fff; background: var(--honey); padding: 4px 12px; border-radius: 999px; text-decoration: none; }
 
 .chip { display: inline-block; font-size: 13px; font-weight: 800; padding: 4px 12px; border-radius: 999px; background: var(--honey); color: #fff; }
