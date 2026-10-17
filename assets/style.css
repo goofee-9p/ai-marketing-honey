@@ -32,6 +32,7 @@ a { color: inherit; }
 
 .hero { padding: 28px 0 8px; }
 .hero h1 { font-size: clamp(30px, 8vw, 44px); line-height: 1.25; font-weight: 900; margin: 14px 0 12px; letter-spacing: -1px; }
+.hero h1.one { white-space: nowrap; font-size: clamp(26px, 7.4vw, 44px); }
 .hero p.lead { font-size: 17px; color: #3a4252; }
 .hero .meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 
