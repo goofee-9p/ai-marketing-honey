@@ -22,7 +22,9 @@ a { color: inherit; }
 .top a { text-decoration: none; font-weight: 800; font-size: 15px; }
 .top .brand { display: inline-flex; align-items: center; gap: 8px; }
 .top .brand img { width: 26px; height: 26px; display: block; }
-.top .handle { margin-left: auto; font-size: 13px; font-weight: 700; color: #fff; background: var(--honey); padding: 4px 12px; border-radius: 999px; text-decoration: none; }
+.top .handle { margin-left: auto; flex: none; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #fff; background: var(--honey); border-radius: 50%; text-decoration: none; }
+.top .handle svg { display: block; }
+.top .brand { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .chip { display: inline-block; font-size: 13px; font-weight: 800; padding: 4px 12px; border-radius: 999px; background: var(--honey); color: #fff; }
 .chip.ghost { background: #fff; color: var(--ink); border: 1.5px solid var(--line); }
