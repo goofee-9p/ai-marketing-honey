@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>브랜드 한 장</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#FAFAF7; --grid:#EAEAE4; --ink:#181E2A; --sub:#707682; --line:#D6D6CE;
+  --honey:#F5A623; --hl:#FFE9B2; --red:#DE4852; --green:#24A86C; --card:#FFFFFF; --dark:#282C36;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 2px,transparent 2px),linear-gradient(90deg,var(--grid) 2px,transparent 2px);
+  background-size:54px 54px;}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.logo{width:40px;height:40px}
+h1{font-size:28px;font-weight:900;margin:0;letter-spacing:-.5px}
+h1 mark{background:linear-gradient(transparent 55%,var(--hl) 55%);color:inherit;padding:0 2px}
+.tagline{color:var(--sub);font-size:15px;font-weight:500}
+.tabs{display:flex;gap:8px;margin-left:auto}
+.tab{border:2px solid var(--ink);background:var(--card);color:var(--ink);font:700 15px Pretendard,sans-serif;padding:9px 18px;border-radius:999px;cursor:pointer}
+.tab.on{background:var(--ink);color:#fff}
+.brandbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.brandbar select,.brandbar button{font:600 14px Pretendard,sans-serif;border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:8px 12px;color:var(--ink);cursor:pointer}
+.brandbar .lbl{font-weight:700;font-size:14px;color:var(--sub)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}.tabs{margin-left:0}}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 6px 24px rgba(24,30,42,.06)}
+.card+.card{margin-top:16px}
+.sec{font-size:13px;font-weight:800;letter-spacing:.3px;color:var(--sub);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.sec .n{background:var(--honey);color:var(--ink);border-radius:999px;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+label.f{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}
+input[type=text],textarea,select.f{width:100%;font:500 15px Pretendard,sans-serif;color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
+textarea{resize:vertical;min-height:70px;line-height:1.5}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--honey);box-shadow:0 0 0 3px var(--hl)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.colors{display:grid;gap:8px}
+.crow{display:grid;grid-template-columns:44px 1fr 1fr 92px;gap:8px;align-items:center}
+.crow input[type=color]{width:44px;height:42px;border:1.5px solid var(--line);border-radius:10px;padding:3px;background:#fff;cursor:pointer}
+.crow .hex{font:600 13px ui-monospace,Menlo,monospace;color:var(--sub);text-align:center}
+.hint{font-size:12.5px;color:var(--sub);margin-top:6px;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:600 14px Pretendard,sans-serif;color:var(--ink);cursor:pointer;user-select:none}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip.ai.on{background:var(--honey);color:var(--ink);border-color:var(--honey)}
+.chip.ai::before{content:"AI 티 ";font-size:11px;font-weight:800;opacity:.75}
+.out{position:sticky;top:16px}
+.outbox{background:#F4F4EF;border:1.5px solid var(--line);border-radius:12px;padding:14px;font:500 14px/1.65 Pretendard,sans-serif;white-space:pre-wrap;word-break:break-word;max-height:360px;overflow:auto;color:var(--ink)}
+.ko{font-family:Pretendard,sans-serif;font-size:14px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{border:none;border-radius:12px;padding:11px 16px;font:800 15px Pretendard,sans-serif;cursor:pointer}
+.btn.pri{background:var(--honey);color:var(--ink)}
+.btn.dark{background:var(--dark);color:#fff}
+.btn.ghost{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn:active{transform:translateY(1px)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-weight:700;opacity:0;transition:.25s;pointer-events:none;z-index:9}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.ex{font-size:12px;color:var(--sub);font-weight:600}
+.pill{display:inline-block;background:var(--hl);border-radius:6px;padding:1px 6px;font-weight:700;font-size:12px}
+/* 검수 */
+.drop{border:2px dashed var(--line);border-radius:14px;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--sub);font-weight:600;cursor:pointer;background:#fff;overflow:hidden}
+.drop img{max-width:100%;max-height:520px;display:block}
+.chk{display:grid;gap:8px}
+.ci{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff}
+.ci .t{font-weight:700;font-size:15px}
+.ci .d{font-size:12.5px;color:var(--sub);margin-top:2px}
+.ci .sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:4px;border:1px solid rgba(0,0,0,.15)}
+.ok,.ng{border:1.5px solid var(--line);background:#fff;border-radius:10px;width:46px;height:38px;font:800 15px Pretendard,sans-serif;cursor:pointer}
+.ci.pass{border-color:var(--green)} .ci.pass .ok{background:var(--green);color:#fff;border-color:var(--green)}
+.ci.fail{border-color:var(--red);background:#FFF6F6} .ci.fail .ng{background:var(--red);color:#fff;border-color:var(--red)}
+.score{font-size:15px;font-weight:800;margin:12px 0 4px}
+.hidden{display:none}
+footer{margin-top:22px;color:var(--sub);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg class="logo" viewBox="0 0 1080 1080" aria-hidden="true">
+      <polygon points="540,220 817.1,380 540,540 262.9,380" fill="#FBE8B6"/>
+      <polygon points="262.9,380 540,540 540,860 262.9,700" fill="#F2C55C"/>
+      <polygon points="540,540 817.1,380 817.1,700 540,860" fill="#CF963F"/>
+    </svg>
+    <div>
+      <h1><mark>브랜드 한 장</mark></h1>
+      <div class="tagline">AI 이미지에 붙이는 우리 브랜드 규칙 · AI 티 금지</div>
+    </div>
+    <nav class="tabs">
+      <button class="tab on" data-tab="make">① 만들기</button>
+      <button class="tab" data-tab="check">② 검수</button>
+    </nav>
+  </header>
+
+  <div class="brandbar">
+    <span class="lbl">브랜드</span>
+    <select id="brandList"></select>
+    <button id="saveBrand">💾 이 브랜드 저장</button>
+    <button id="newBrand">＋ 새 브랜드</button>
+    <button id="delBrand">삭제</button>
+    <span class="ex">클라이언트마다 한 장씩 저장해 두고 골라 쓰세요 (이 브라우저에만 저장돼요)</span>
+  </div>
+
+  <!-- ① 만들기 -->
+  <section id="tab-make" class="grid2">
+    <div>
+      <div class="card">
+        <div class="sec"><span class="n">1</span>브랜드</div>
+        <div class="row2">
+          <div><label class="f">브랜드 이름</label><input type="text" id="name"></div>
+          <div><label class="f">대표 제품</label><input type="text" id="product"></div>
+        </div>
+        <label class="f">제품 실제 크기</label>
+        <input type="text" id="size" placeholder="예: 30ml 유리병, 손바닥에 쏙 들어가는 크기">
+        <div class="hint">AI는 제품을 괜히 크게 그려요. 실제 크기를 적어 두면 막을 수 있어요.</div>
+      </div>
+
+      <div class="card">
+        <div class="sec"><span class="n">2</span>브랜드 색 · 사물에 묶기</div>
+        <div class="colors" id="colors"></div>
+        <div class="hint">색 코드만 쓰면 AI가 잘 안 지켜요. <span class="pill">뚜껑은 꿀색</span>처럼 <b>어디에 쓰는지</b>를 같이 적어요.</div>
+      </div>
+
+      <div class="card">
+        <div class="sec"><span class="n">3</span>무드 · 조명 · 배경</div>
+        <label class="f">무드 (여러 개)</label>
+        <div class="chips" id="moods"></div>
+        <label class="f">조명</label>
+        <div class="chips" id="lights"></div>
+        <div class="row2">
+          <div><label class="f">배경</label><input type="text" id="bg"></div>
+          <div><label class="f">소품</label>
+            <select class="f" id="props">
+              <option value="0">소품 없음</option>
+              <option value="1">1개까지</option>
+              <option value="2">2개까지</option>
+            </select></div>
+        </div>
+        <label class="f">서체 (글자를 넣을 때만)</label>
+        <input type="text" id="font" placeholder="예: Pretendard Bold, 산세리프">
+      </div>
+
+      <div class="card">
+        <div class="sec"><span class="n">4</span>하지 말 것</div>
+        <div class="chips" id="donts"></div>
+        <div class="hint">꿀색 3개가 'AI 티' 기본 금지예요: 번들번들한 광택 · 과한 질감 · 제품 과장.</div>
+      </div>
+    </div>
+
+    <div class="out">
+      <div class="card">
+        <div class="sec"><span class="n">5</span>이번에 만들 이미지 (선택)</div>
+        <textarea id="ask" placeholder="예: 앰플 제품 사진, 인스타 피드용"></textarea>
+        <div class="hint">평소 쓰던 요청을 그대로 적으면, 브랜드 한 장이 앞에 붙어서 같이 복사돼요.</div>
+      </div>
+      <div class="card">
+        <div class="sec">이미지 AI에 붙일 지시문 <span class="ex">(ChatGPT·Gemini 어디에든 붙여 넣기)</span></div>
+        <div class="outbox" id="promptOut"></div>
+        <div class="btns">
+          <button class="btn pri" id="copyPrompt">지시문 복사</button>
+          <button class="btn dark" id="dlMd">DESIGN.md 내려받기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 검수 -->
+  <section id="tab-check" class="grid2 hidden">
+    <div class="card">
+      <div class="sec">만든 이미지 올리기 <span class="ex">(내 컴퓨터에서만 열려요, 어디에도 안 올라가요)</span></div>
+      <label class="drop" id="drop">
+        <input type="file" id="file" accept="image/*" hidden>
+        <span id="dropTxt">여기를 눌러 이미지를 고르거나<br>끌어다 놓으세요</span>
+      </label>
+    </div>
+    <div class="out">
+      <div class="card">
+        <div class="sec">브랜드 한 장 기준으로 체크</div>
+        <div class="chk" id="chk"></div>
+        <div class="score" id="score"></div>
+        <div class="outbox hidden" id="fixOut"></div>
+        <div class="btns"><button class="btn pri hidden" id="copyFix">고쳐 달라는 말 복사</button>
+          <button class="btn ghost" id="resetChk">체크 초기화</button></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>@ai.marketing.honey · 브랜드 한 장 v1 · 화면 속 '허니 뷰티'는 예시 브랜드예요</footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const MOODS = [
+  ["clean","깨끗한","clean"],["warm","따뜻한","warm"],["minimal","미니멀","minimal"],
+  ["premium","고급스러운","premium"],["natural","자연스러운","natural, everyday"],["bold","선명한","bold, high-contrast"],
+  ["soft","포근한","soft, gentle"],["playful","발랄한","playful"]
+];
+const LIGHTS = [
+  ["window","창가 자연광","한쪽 창가에서 들어오는 부드러운 자연광, 가장자리가 부드러운 옅은 그림자"],
+  ["studio","부드러운 스튜디오","큰 소프트박스로 고르게 퍼진 스튜디오 조명, 대비 낮게"],
+  ["morning","아침 햇살 + 그림자","낮게 들어오는 따뜻한 아침 햇살, 길고 또렷한 자연스러운 그림자"],
+];
+const DONTS = [
+  ["gloss","번들번들한 광택","플라스틱처럼 번들거리는 광택이나 젖은 듯한 하이라이트",1,"광택이 과하지 않나","보정한 듯 번들거리는 하이라이트가 없나","번들거리는 광택을 줄여서, 표면을 실제 사진처럼 무광에 가깝게 자연스럽게 해 줘."],
+  ["texture","과한 질감","모공·결·물방울 하나하나까지 과하게 선명한 질감",1,"질감이 과하지 않나","모든 게 지나치게 선명하고 디테일하지 않나","과하게 선명한 질감을 줄여서, 카메라로 찍은 것처럼 자연스러운 디테일로 해 줘."],
+  ["scale","제품 과장","실제보다 크게 과장된 제품",1,"제품 크기가 자연스럽나","손·소품에 비해 제품이 너무 크지 않나","제품을 손과 소품에 비해 실제 크기로 줄여 줘."],
+  ["text","가짜 글자","제품이나 배경에 생기는 가짜 글자·깨진 글자",0,"글자가 깨지지 않았나","라벨·배경에 이상한 글자가 없나","깨진 글자, 가짜 글자는 전부 지우고 라벨은 비워 둬. 진짜 로고와 글자는 나중에 따로 넣을 거야."],
+  ["logo","다른 로고","없는 로고·브랜드 마크·워터마크",0,"로고가 이상하지 않나","없는 로고·워터마크가 생기지 않았나","추가로 생긴 로고, 브랜드 마크, 워터마크를 지워 줘."],
+  ["sat","쨍한 과포화 색","형광처럼 쨍한 과포화 색",0,"색이 너무 쨍하지 않나","채도가 과하게 올라가지 않았나","채도를 낮춰서 실제 같은 색, 브랜드 색에 맞게 해 줘."],
+  ["render","3D 렌더 느낌","3D 렌더·CG 같은 느낌",0,"사진처럼 보이나","3D 렌더·CG처럼 보이지 않나","3D 렌더나 CG 말고, 카메라로 찍은 진짜 사진처럼 보이게 해 줘."],
+  ["clutter","복잡한 소품","산만한 소품이나 복잡한 배경",0,"배경이 정돈됐나","소품이 너무 많거나 산만하지 않나","배경을 단순하게 하고 필요 없는 소품은 빼 줘."],
+];
+const SAMPLE = {
+  name:"허니 뷰티", product:"꿀 앰플 (스포이트 유리병)", size:"30ml 유리병, 손바닥에 쏙 들어가는 크기 (높이 약 10cm)",
+  colors:[
+    {hex:"#F5A623",name:"꿀색",where:"스포이트 뚜껑"},
+    {hex:"#FBF3E4",name:"크림",where:"배경 리넨 천"},
+    {hex:"#181E2A",name:"딥 네이비",where:"병 라벨 띠"}
+  ],
+  moods:["clean","warm","natural"], light:"window", bg:"크림색 리넨 천 위", props:"1", font:"",
+  donts:["gloss","texture","scale","text","logo"], ask:"꿀 앰플 제품 사진 만들어 줘. 인스타 피드용."
+};
+const EMPTY = {name:"새 브랜드",product:"",size:"",colors:[{hex:"#333333",name:"",where:""},{hex:"#FFFFFF",name:"",where:""},{hex:"#999999",name:"",where:""}],
+  moods:[],light:"window",bg:"",props:"1",font:"",donts:["gloss","texture","scale"],ask:""};
+
+let st = JSON.parse(JSON.stringify(SAMPLE));
+const store = {
+  get(){ try{ return JSON.parse(localStorage.getItem("brandSheets")||"{}") }catch(e){ return {} } },
+  set(v){ try{ localStorage.setItem("brandSheets",JSON.stringify(v)); return true }catch(e){ return false } }
+};
+
+function toast(m){ const t=$("#toast"); t.textContent=m; t.classList.add("show"); clearTimeout(t._); t._=setTimeout(()=>t.classList.remove("show"),1600); }
+function copy(text,msg){
+  const done=()=>toast(msg||"복사했어요");
+  if(navigator.clipboard&&window.isSecureContext){ navigator.clipboard.writeText(text).then(done,()=>fallback()); } else fallback();
+  function fallback(){ const ta=document.createElement("textarea"); ta.value=text; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy")}catch(e){} ta.remove(); done(); }
+}
+const esc = s => String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- 화면 그리기 ---------- */
+function renderForm(){
+  $("#name").value=st.name; $("#product").value=st.product; $("#size").value=st.size;
+  $("#bg").value=st.bg; $("#props").value=st.props; $("#font").value=st.font; $("#ask").value=st.ask;
+  $("#colors").innerHTML = st.colors.map((c,i)=>`
+    <div class="crow">
+      <input type="color" data-i="${i}" data-k="hex" value="${esc(c.hex)}">
+      <input type="text" data-i="${i}" data-k="name" placeholder="색 이름 (예: 꿀색)" value="${esc(c.name)}">
+      <input type="text" data-i="${i}" data-k="where" placeholder="어디에? (예: 뚜껑)" value="${esc(c.where)}">
+      <span class="hex">${esc(c.hex.toUpperCase())}</span>
+    </div>`).join("");
+  $("#moods").innerHTML = MOODS.map(([k,ko])=>`<span class="chip ${st.moods.includes(k)?"on":""}" data-mood="${k}">${ko}</span>`).join("");
+  $("#lights").innerHTML = LIGHTS.map(([k,ko])=>`<span class="chip ${st.light===k?"on":""}" data-light="${k}">${ko}</span>`).join("");
+  $("#donts").innerHTML = DONTS.map(([k,ko,,ai])=>`<span class="chip ${ai?"ai":""} ${st.donts.includes(k)?"on":""}" data-dont="${k}">${ko}</span>`).join("");
+  renderOut(); renderChecks();
+}
+
+function colorLines(){
+  return st.colors.filter(c=>c.where||c.name).map(c=>{
+    const nm = c.name||"이 색";
+    return c.where ? `- ${c.where}: ${nm} (${c.hex.toUpperCase()})` : `- ${nm} (${c.hex.toUpperCase()})`;
+  });
+}
+function buildPrompt(){
+  const moods = MOODS.filter(m=>st.moods.includes(m[0])).map(m=>m[1]).join(", ");
+  const light = (LIGHTS.find(l=>l[0]===st.light)||LIGHTS[0])[2];
+  const donts = DONTS.filter(d=>st.donts.includes(d[0])).map(d=>"- "+d[2]);
+  const props = st.props==="0" ? "소품 없이" : `소품은 ${st.props}개까지만`;
+  const L = [];
+  L.push(`[브랜드 한 장: ${st.name||"브랜드"}]`);
+  L.push(`아래 브랜드 규칙을 지켜서 이미지를 만들어 줘.`);
+  if(st.product) L.push(`제품: ${st.product}`);
+  if(moods) L.push(`무드: ${moods}`);
+  const cl = colorLines(); if(cl.length){ L.push(`색 (사물마다 이 색 그대로):`); L.push(...cl); }
+  L.push(`조명: ${light}`);
+  L.push(`배경: ${st.bg||"단순하고 깔끔한 바닥"}, ${props}`);
+  if(st.size) L.push(`크기: 제품은 실제 크기로 — ${st.size}. 크게 키우지 말 것`);
+  if(st.font) L.push(`글자를 넣을 때 서체: ${st.font}`);
+  L.push(`느낌: 사진가가 실제로 찍은 사진처럼. 실제 같은 색, 자연스러운 흠도 조금`);
+  if(donts.length){ L.push(`하지 말 것:`); L.push(...donts); }
+  if(st.ask.trim()){ L.push(""); L.push(`[이번 요청]`); L.push(st.ask.trim()); }
+  return L.join("\n");
+}
+function buildMd(){
+  const moods = MOODS.filter(m=>st.moods.includes(m[0])).map(m=>m[1]).join(" · ");
+  const light = (LIGHTS.find(l=>l[0]===st.light)||LIGHTS[0]);
+  const donts = DONTS.filter(d=>st.donts.includes(d[0]));
+  return `# DESIGN.md — ${st.name}
+
+> 브랜드 한 장 v1로 만든 파일이에요. AI(이미지·디자인·코딩)에게 작업 전에 먼저 읽혀 주세요.
+
+## 1. Overview
+- 브랜드: ${st.name}
+- 대표 제품: ${st.product}
+- 무드: ${moods||"-"}
+
+## 2. Colors
+| 이름 | 코드 | 어디에 |
+|---|---|---|
+${st.colors.map(c=>`| ${c.name||"-"} | ${c.hex.toUpperCase()} | ${c.where||"-"} |`).join("\n")}
+
+## 3. Typography
+- ${st.font||"(지정 안 함)"}
+
+## 4. Imagery (이미지 규칙)
+- 조명: ${light[1]} — ${light[2]}
+- 배경: ${st.bg||"단순한 바닥"} · 소품 ${st.props==="0"?"없음":st.props+"개까지"}
+- 제품 크기: ${st.size||"-"} (키우지 않기)
+- 느낌: 사진가가 찍은 진짜 사진, 실제 같은 색
+
+## 5. Don'ts
+${donts.map(d=>`- ${d[1]} — ${d[2]}`).join("\n")}
+
+## 6. 이미지 AI에 붙일 지시문
+\`\`\`
+${buildPrompt()}
+\`\`\`
+`;
+}
+function renderOut(){ $("#promptOut").textContent = buildPrompt(); }
+
+/* ---------- 검수 ---------- */
+let checks = {};
+function checkItems(){
+  const items = [];
+  st.colors.filter(c=>c.where||c.name).forEach((c,i)=>items.push({
+    id:"c"+i, t:`${c.where||"색"} — ${c.name||c.hex}`, d:`<span class="sw" style="background:${esc(c.hex)}"></span>${esc(c.hex.toUpperCase())} 그대로인가`,
+    fix:`${c.where||"메인 색"} 색을 ${c.name?c.name+" ":""}(${c.hex.toUpperCase()}) 그대로 맞춰 줘.`
+  }));
+  DONTS.filter(d=>st.donts.includes(d[0])).forEach(d=>items.push({id:d[0],t:d[4],d:esc(d[5]),fix:d[6]}));
+  return items;
+}
+function renderChecks(){
+  const items = checkItems();
+  $("#chk").innerHTML = items.map(it=>`
+    <div class="ci ${checks[it.id]||""}" data-id="${it.id}">
+      <div><div class="t">${esc(it.t)}</div><div class="d">${it.d}</div></div>
+      <div style="display:flex;gap:6px"><button class="ok" data-v="pass">✓</button><button class="ng" data-v="fail">✗</button></div>
+    </div>`).join("");
+  const done = items.filter(i=>checks[i.id]).length, fails = items.filter(i=>checks[i.id]==="fail");
+  $("#score").textContent = done ? `${done}/${items.length} 확인 · ${fails.length ? "고칠 것 "+fails.length+"개" : "모두 통과 🎉"}` : "";
+  if(fails.length){
+    const txt = `나머지는 그대로 두고, 아래만 고쳐 줘.\n` + fails.map((f,i)=>`${i+1}. ${f.fix}`).join("\n");
+    $("#fixOut").textContent = txt; $("#fixOut").classList.remove("hidden"); $("#copyFix").classList.remove("hidden");
+  } else { $("#fixOut").classList.add("hidden"); $("#copyFix").classList.add("hidden"); }
+}
+
+/* ---------- 브랜드 저장 ---------- */
+function renderBrandList(sel){
+  const all = store.get(); const names = Object.keys(all);
+  if(!names.includes(SAMPLE.name)) names.unshift(SAMPLE.name);
+  if(!names.includes(st.name)) names.push(st.name);
+  $("#brandList").innerHTML = names.map(n=>`<option ${n===(sel||st.name)?"selected":""}>${esc(n)}</option>`).join("");
+}
+
+/* ---------- 이벤트 ---------- */
+document.addEventListener("input", e=>{
+  const el=e.target;
+  if(el.dataset.k){ st.colors[+el.dataset.i][el.dataset.k]=el.value; if(el.dataset.k==="hex") el.parentNode.querySelector(".hex").textContent=el.value.toUpperCase(); renderOut(); renderChecks(); return; }
+  if(["name","product","size","bg","font","ask"].includes(el.id)){ st[el.id]=el.value; renderOut(); if(el.id!=="ask") renderChecks(); }
+});
+$("#props").addEventListener("change",e=>{ st.props=e.target.value; renderOut(); });
+document.addEventListener("click", e=>{
+  const c=e.target.closest(".chip");
+  if(c){
+    if(c.dataset.mood){ const k=c.dataset.mood; st.moods = st.moods.includes(k)? st.moods.filter(x=>x!==k) : [...st.moods,k]; }
+    if(c.dataset.light){ st.light=c.dataset.light; }
+    if(c.dataset.dont){ const k=c.dataset.dont; st.donts = st.donts.includes(k)? st.donts.filter(x=>x!==k) : [...st.donts,k]; }
+    renderForm(); return;
+  }
+  const t=e.target.closest(".tab");
+  if(t){ document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
+    $("#tab-make").classList.toggle("hidden",t.dataset.tab!=="make"); $("#tab-check").classList.toggle("hidden",t.dataset.tab!=="check"); return; }
+  const b=e.target.closest(".ok,.ng");
+  if(b){ const id=b.closest(".ci").dataset.id; checks[id] = checks[id]===b.dataset.v ? undefined : b.dataset.v; renderChecks(); }
+});
+$("#copyPrompt").onclick=()=>copy(buildPrompt(),"지시문을 복사했어요 · 이미지 AI에 붙여 넣으세요");
+$("#dlMd").onclick=()=>{
+  const blob=new Blob([buildMd()],{type:"text/markdown"}); const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download=`DESIGN-${st.name.replace(/\s+/g,"-")}.md`; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  toast("DESIGN.md를 내려받았어요");
+};
+$("#copyFix").onclick=()=>copy($("#fixOut").textContent,"고쳐 달라는 말을 복사했어요");
+$("#resetChk").onclick=()=>{ checks={}; renderChecks(); };
+$("#saveBrand").onclick=()=>{ const all=store.get(); all[st.name]=st; if(!store.set(all)){ toast("이 브라우저에선 저장이 막혀 있어요 · DESIGN.md로 내려받아 두세요"); return; } renderBrandList(st.name); toast(`'${st.name}' 저장했어요`); };
+$("#newBrand").onclick=()=>{ st=JSON.parse(JSON.stringify(EMPTY)); let n=1; const all=store.get(); while(all[st.name]||st.name===SAMPLE.name){ st.name=`새 브랜드 ${++n}`; } checks={}; renderForm(); renderBrandList(st.name); };
+$("#delBrand").onclick=()=>{ const all=store.get(); if(!all[st.name]){ toast("저장된 브랜드가 아니에요"); return; } if(!confirm(`'${st.name}'을(를) 지울까요?`)) return; delete all[st.name]; store.set(all); st=JSON.parse(JSON.stringify(SAMPLE)); checks={}; renderForm(); renderBrandList(); };
+$("#brandList").onchange=e=>{ const n=e.target.value, all=store.get(); st = JSON.parse(JSON.stringify(all[n] || (n===SAMPLE.name?SAMPLE:EMPTY))); checks={}; renderForm(); };
+
+const file=$("#file"), drop=$("#drop");
+function showImg(f){ if(!f||!f.type.startsWith("image/")) return; const r=new FileReader(); r.onload=()=>{ drop.innerHTML=`<img alt="검수할 이미지" src="${r.result}">`; drop.appendChild(file); }; r.readAsDataURL(f); }
+file.onchange=()=>showImg(file.files[0]);
+drop.addEventListener("dragover",e=>{e.preventDefault();});
+drop.addEventListener("drop",e=>{e.preventDefault(); showImg(e.dataTransfer.files[0]);});
+
+renderForm(); renderBrandList();
+</script>
+</body>
+</html>
