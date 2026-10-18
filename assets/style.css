@@ -87,6 +87,10 @@ p + p { margin-top: 10px; }
 .ep .no { font-size: 13px; font-weight: 800; color: var(--honey-d); }
 .ep .t { font-size: 18px; font-weight: 800; line-height: 1.4; margin: 2px 0 4px; }
 .ep .d { font-size: 14px; color: var(--sub); line-height: 1.5; }
+/* 아직 공개 전인 회차: 흐리게 + Soon! (클릭 안 됨) */
+.ep.soon { position: relative; cursor: default; }
+.ep.soon > img, .ep.soon > div { opacity: 0.4; filter: grayscale(0.6); }
+.ep.soon .badge { position: absolute; top: 12px; right: 12px; background: var(--honey); color: var(--ink); font-size: 13px; font-weight: 900; padding: 4px 12px; border-radius: 999px; }
 
 .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .stat { background: #fff; border: 1.5px solid var(--line); border-radius: 16px; padding: 14px; text-align: center; }
