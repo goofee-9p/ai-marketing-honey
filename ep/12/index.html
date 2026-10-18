@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.12 현지인처럼 자연스러운 글로벌 광고 카피 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="일본어를 몰라도 일본 광고 카피를 자연스럽게. 그냥 GPT로 돌리면 생기는 오류, 큐텐 재팬 리뷰로 소비자 말투를 뽑아 카피 쓰고 검수하는 법, 리뷰 모으는 법과 프롬프트 3개.">
+<meta property="og:title" content="EP.12 현지인처럼 자연스러운 글로벌 광고 카피">
+<meta property="og:description" content="정답은 리뷰. 리뷰 모으는 법 + 표현 세기 · 카피 · 검수 프롬프트.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.12 · 글로벌 마케팅</span>
+    <h1>현지인처럼 자연스러운<br><span class="hl">글로벌 광고 카피</span></h1>
+    <p class="lead">일본어를 한 글자도 몰라도, 일본 소비자가 실제로 쓰는 말은 찾을 수 있어요. 큐텐 재팬 리뷰를 모아 AI로 표현을 세고, 그 말로 카피를 쓰고, 올리기 전에 검수까지 해 봤어요.</p>
+    <div class="meta"><span class="chip ghost">리뷰 모으는 법</span><span class="chip ghost">프롬프트 3개</span><span class="chip ghost">검수 표</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>그냥 GPT로 돌리면 생기는 오류</h2>
+    <p class="muted">ChatGPT에 <b>"이 한국어 광고 카피를 큐텐 재팬에 올릴 자연스러운 일본어 광고 카피로 써 줘"</b>라고 시켰어요. 문법은 자연스러워요. 그런데 단어를 실제 리뷰 108개와 하나씩 대조해 보면 이래요.</p>
+    <img src="../../assets/img/ep12/gpt.jpg" alt="ChatGPT가 쓴 일본어 카피: はちみつのように濃密なのに、すーっとなじむ高保湿アンプル" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div class="stats" style="margin-top:12px">
+      <div class="stat"><b>0</b><span>濃密 (농밀)</span></div>
+      <div class="stat"><b>0</b><span>高保湿 (고보습)</span></div>
+      <div class="stat"><b>0</b><span>一日中 (하루 종일)</span></div>
+      <div class="stat on"><b>18</b><span>なじむ (스며들다)</span></div>
+    </div>
+    <p class="muted" style="margin-top:8px">숫자는 리뷰 108개 중 그 말이 나온 리뷰 수예요.</p>
+    <div class="card" style="margin-top:12px"><b>오류 ① 일본인 듣기에 어색한 말</b><p class="muted" style="margin:4px 0 0">濃密 · 高保湿 · 一日中은 광고에서 자주 보는 말이지만, 실제 소비자는 한 번도 쓰지 않았어요. 한국어로 치면 "농밀한 텍스처가 신속히 흡수" 같은 번역투예요.</p></div>
+    <div class="card"><b>오류 ② 정작 자주 쓰는 표현이 빠짐</b><p class="muted" style="margin:4px 0 0">일본 리뷰에서 「とろみ(쫀쫀한 제형)」 뒤에 거의 항상 붙는 「ベタつかない(안 끈적여요)」가 GPT 카피엔 없었어요.</p></div>
+    <div class="card"><b>공정하게 말하면</b><p class="muted" style="margin:4px 0 0">GPT도 なじむ · うるおい · しっとり처럼 리뷰에 많이 나오는 말은 잘 골랐어요. 문제는 GPT가 아니라 <b>근거 없이 쓴다</b>는 거예요. 같은 AI라도 리뷰를 근거로 같이 주면 결과가 달라져요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>리뷰 싹 모아 오는 법</h2>
+    <ol class="steps">
+      <li><b>비슷한 제품 3~5개 고르기</b>내 제품과 제형 · 가격대가 비슷하고 리뷰가 많은 현지 인기 제품이요. 이번 편은 큐텐 재팬에서 '아ンプル'로 검색해 한국 보습 앰플·세럼 4개(토리든 · 아누아 · 메디큐브 · 믹순)를 골랐어요.</li>
+      <li><b>리뷰 탭에서 정렬 두 번</b>'인기순'으로 1~2쪽(칭찬하는 말), '평점 낮은 순'으로 1쪽(불만 · 걱정하는 말). 제품당 30개 안팎이면 충분해요.</li>
+      <li><b>본문만 시트에 붙이기</b><a href="../../assets/files/review-sheet-template.csv" download>리뷰 시트 양식(CSV)</a>에 리뷰 본문만 붙여요. <b>아이디 · 닉네임은 넣지 않아요.</b> 무상 샘플 리뷰는 표시해 두면 나중에 걸러 볼 수 있어요.</li>
+      <li><b>빠르게 하려면</b>AI 브라우저나 브라우저 확장에 "이 페이지 리뷰를 본문 · 별점 · 날짜만 표로 정리해 줘"라고 시키면 복사가 빨라져요. 다만 <b>사람이 보는 속도로, 필요한 만큼만</b> 모으세요(아래 주의 참고).</li>
+    </ol>
+    <p class="muted" style="margin-top:8px">이번 편은 119개를 모아 일본어가 아닌 리뷰를 빼고 108개를 썼어요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>바로 쓰는 프롬프트</h2>
+    <p class="muted">리뷰 시트(CSV)를 첨부하고 순서대로 붙여 넣어요. 이번 편은 Claude로 했고, ChatGPT · Gemini에서도 같은 흐름으로 쓸 수 있어요.</p>
+    <div class="prompt" id="review-expressions">
+      <div class="label">① 소비자 표현 세기</div>
+      <pre>첨부한 CSV는 [나라] [쇼핑몰]에서 [내 제품과 비슷한 제품] [개수]개의 리뷰 [N]개를 모은 거예요.
+
+1. 소비자가 제형·사용감·효과를 말할 때 자주 쓰는 표현을 뽑아서 표로 정리해 줘. (표현 · 한국어 뜻 · 나온 리뷰 수 · 예시 리뷰 No.)
+2. 아래 카피에 나온 표현이 리뷰에 몇 번 나오는지 세어 줘.
+3. 리뷰 수는 직접 세고, 표기 변형은 묶어서 세 줘. 칭찬이 아니라 불만으로 쓰인 경우는 따로 알려 줘.
+
+지금 카피: [GPT나 번역기로 만든 카피]</pre>
+    </div>
+    <div class="prompt" id="review-copy">
+      <div class="label">② 리뷰 말로 카피 쓰기</div>
+      <pre>이제 위 표에 있는 표현만 써서, [쇼핑몰]용 한 줄 카피를 3개 써 줘.
+
+제품: [제품 이름] ([특징 2~3개])
+조건: 표에 없는 말은 쓰지 말고, 카피마다 어떤 표현을 썼는지 리뷰 수와 함께 적어 줘.
+표현만으로 전달이 안 되는 특징이 있으면 억지로 넣지 말고 따로 알려 줘.</pre>
+    </div>
+    <div class="prompt" id="review-check">
+      <div class="label">③ 올리기 전 검수</div>
+      <pre>[번호]번으로 갈게요. 올리기 전에 검수해 줘.
+
+1. 카피의 표현마다 리뷰에 실제로 나왔는지 (리뷰 No.와 원문 일부)
+2. 한국어로 다시 옮기면 무슨 뜻인지
+3. [나라]의 화장품 광고 규제(일본이면 약기법)상 쓰면 안 되는 표현이 있는지
+4. 그리고 리뷰엔 자주 나오지만 광고에는 쓰면 안 되는 표현도 따로 알려 줘.</pre>
+      <p class="tip">💡 ①에서 AI가 센 숫자는 가끔 틀려요. 이번에도 「とろみ」를 Claude는 24건, 직접 센 결과는 27건이었어요. 영상·보고서에 쓸 숫자는 시트에서 한 번 더 세어 보세요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>이번 편 결과</h2>
+    <img src="../../assets/img/ep12/claude_zero.jpg" alt="Claude 표: GPT 카피 표현 高保湿 · 濃密 · 素早く · 一日中 모두 리뷰 등장 0" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+      <img src="../../assets/img/ep12/claude_source.jpg" alt="Claude 검수 표: 카피 표현마다 실제 리뷰 번호와 원문" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div class="card" style="margin-top:12px"><b>리뷰가 알려 준 것</b><p class="muted" style="margin:4px 0 0">「とろみ(쫀쫀한 제형)」를 쓴 리뷰 27개 중 15개가 바로 뒤에 「ベタつかない(안 끈적여요)」나 「なじむ(스며들어요)」를 붙였어요. 일본 소비자는 쫀쫀하다고 들으면 '끈적이겠네'를 먼저 걱정한다는 뜻이에요. 화장 전에 쓰거나 파운데이션에 섞어 쓴다는 말도 20개나 나왔어요.</p></div>
+    <div class="card"><b>그래서 나온 카피 첫 줄</b><p class="muted" style="margin:4px 0 0"><b>とろみがあるのに、ベタつかない。</b> (쫀쫀한데, 안 끈적여요.) 쓴 표현은 모두 리뷰에 실제로 나온 말이에요.</p></div>
+    <img src="../../assets/img/ep12/ad_copy.jpg" alt="큐텐 광고 소재 예시: 허니 뷰티 앰플 사진 위에 とろみがあるのに、ベタつかない。" loading="lazy" style="width:72%;border-radius:16px;border:1.5px solid var(--line);display:block;margin:12px auto 0">
+    <p class="muted" style="margin-top:8px">사진의 '허니 뷰티'는 가상 브랜드 예시예요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>검수 표 · 광고에 못 쓰는 말</h2>
+    <p class="muted">리뷰에 많이 나와도 광고에 그대로 옮기면 안 되는 말이 있어요. 일본 화장품 광고는 정해진 효능 범위(56개 항목) 밖의 효과를 말할 수 없어요.</p>
+    <img src="../../assets/img/ep12/claude_banned.jpg" alt="Claude 검수: 리뷰엔 자주 나오지만 광고에 쓰면 안 되는 표현 표" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div class="card" style="margin-top:12px"><b>✗ 쓰면 안 되는 예</b><p class="muted" style="margin:4px 0 0">ニキビが減る(여드름이 줄었다) · ニキビ跡が薄くなる(여드름 자국이 옅어졌다) · 肌荒れ改善(피부 트러블 개선) · 再生・修復(재생 · 회복) · 毛穴詰まり改善(모공 막힘 개선) · No.1 · 一番(근거 없는 최고 표현)</p></div>
+    <div class="card"><b>✓ 범위 안으로 바꿔 쓰는 예</b><p class="muted" style="margin:4px 0 0">潤う → 肌にうるおいを与える · 乾燥 → 肌の乾燥を防ぐ · ツヤ → 肌にツヤを与える · ハリ → 肌にはりを与える. 사용감(とろみ · ベタつかない · なじむ)은 사실이라면 쓸 수 있어요.</p></div>
+    <div class="card"><b>浸透(스며듦)을 쓸 때</b><p class="muted" style="margin:4px 0 0">「角質層まで」(각질층까지)를 같이 적어야 해요. 「肌の奥深く」(피부 깊숙이)는 쓸 수 없어요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>아마존도 마찬가지예요</h2>
+    <p class="muted">아마존 재팬이면 그대로, 미국 아마존이면 영어 리뷰로 같은 흐름을 써요. 프롬프트의 [나라] · [쇼핑몰]만 바꾸면 돼요.</p>
+    <div class="card" style="margin-top:12px"><b>영어권에서 바꿀 점</b><p class="muted" style="margin:4px 0 0">검수 ③의 규제 칸을 그 나라 기준으로 바꿔요. 미국은 화장품이 '질병 치료 · 피부 구조 변화'를 주장하면 의약품으로 봐요. 예를 들어 "cures acne"는 쓸 수 없어요. 리뷰에서 자주 나오는 "not sticky" · "absorbs fast" 같은 사용감 표현부터 찾아보세요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">07</span>써 보기 전에 꼭</h2>
+    <div class="warn">
+      <ul>
+        <li><b>사이트 약관</b>을 먼저 확인하세요. 아마존은 이용 약관에서 로봇 · 데이터 마이닝 같은 자동 수집을 허용하지 않아요. 프로그램으로 대량 수집하지 말고, 사람이 보는 속도로 필요한 만큼만 모으세요.</li>
+        <li><b>개인정보</b>는 모으지 마세요. 아이디 · 닉네임 · 리뷰어 사진은 시트에 넣지 않아요.</li>
+        <li><b>리뷰 문장을 광고에 그대로 인용</b>하지 마세요. 표현(단어)을 참고하는 데만 쓰세요.</li>
+        <li><b>무상 샘플 리뷰</b>가 많으면 칭찬 쪽으로 치우쳐요. 이번 편도 108개 중 32개가 샘플 리뷰였어요.</li>
+        <li>약기법 같은 <b>광고 규제 판단</b>은 AI 검수만 믿지 말고, 게재 전에 현지 담당자나 대행사의 확인을 받으세요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">08</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>큐텐 재팬 공개 리뷰 (2026-10-18 확인): <a href="https://www.qoo10.jp/gmkt.inc/catalog/goods/goods.aspx?catalogno=10030">トリデン ダイブインセラム</a> · <a href="https://www.qoo10.jp/gmkt.inc/catalog/goods/goods.aspx?catalogno=22189">アヌア PDRNヒアルロン酸カプセル100セラム</a> · <a href="https://www.qoo10.jp/gmkt.inc/catalog/goods/goods.aspx?catalogno=20966">メディキューブ PDRNピンクペプチドアンプル</a> · <a href="https://www.qoo10.jp/gmkt.inc/catalog/goods/goods.aspx?catalogno=22105">ミクスン 大豆エッセンス</a></li>
+      <li><a href="https://www.pref.osaka.lg.jp/o100100/yakumu/shinsa/hyou1-4.html">오사카부 — 화장품의 효능 범위(56항목)</a> · 근거: 후생노동성 통지 薬食発0721第1号(2011)</li>
+      <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088">Amazon Conditions of Use</a></li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../11/"><small>← 이전 편</small>EP.11 AI 잘한다는 마케터, 81%는 과장</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. 큐텐(Qoo10) · 아마존 · OpenAI · Anthropic, 그리고 출처의 각 브랜드와는 관계가 없어요. 화면 속 '허니 뷰티'는 가상 브랜드 예시예요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
