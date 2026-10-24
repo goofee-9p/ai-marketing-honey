@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.14 Claude vs GPT, 배너 20장 대결 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="배너 사이즈 작업, Claude로 잡고 늘리는 배너 에디터를 만들고 GPT 이미지 생성과 비교해 봤어요. 사이즈만 바꿔 넣는 GPT 프롬프트 템플릿, 안전 영역 표, 에디터 만든 요청문, 실제 결과.">
+<meta property="og:title" content="EP.14 Claude vs GPT, 배너 20장 대결">
+<meta property="og:description" content="사이즈만 바꿔 넣는 GPT 배너 리사이즈 템플릿 + Claude 배너 에디터 만든 요청문.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.14 · 배너 리사이즈</span>
+    <h1>Claude vs GPT,<br><span class="hl">배너 20장 대결</span></h1>
+    <p class="lead">배너 사이즈마다 PSD를 다시 열고 있다면, 원본 한 장으로 사이즈를 뽑아 보세요. "생성형 이미지 AI는 이거 못 해요"라고 콘텐츠를 짜다가 GPT도 돌려 봤는데, 생각보다 잘 뽑았어요. 그래서 둘 다 정리했어요.</p>
+    <div class="meta"><span class="chip ghost">GPT 프롬프트 템플릿</span><span class="chip ghost">안전 영역 표</span><span class="chip ghost">배너 에디터 요청문</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>사이즈만 바꿔 넣는 GPT 템플릿</h2>
+    <p class="muted">ChatGPT에 <b>원본 배너 이미지를 첨부</b>하고 아래 템플릿을 붙여 넣어요. 맨 위 <b>'만들 사이즈'</b> 칸만 원하는 사이즈로 바꾸면 돼요. 나머지 규칙은 그대로 둬요.</p>
+    <div class="prompt" id="banner-template">
+      <div class="label">배너 리사이즈 템플릿</div>
+      <pre>[배너 리사이즈 템플릿]
+만들 사이즈: [ 728x90, 970x90, 120x600 ]   ← 원하는 사이즈만 바꿔 넣기
+
+이 배너를 위 사이즈로 다 바꿔 줘. 이미지 생성으로 사이즈별 배너 이미지를 만들어 줘.
+1. 원본과 같은 제품, 같은 색, 같은 글자를 그대로 유지해. 문구는 한 글자도 바꾸지 마.
+2. 요소는 5개야: 로고 / 헤드라인 / 서브카피 / 제품 / 구매 버튼.
+3. 3:1보다 긴 가로 띠는 3:1로, 1:3보다 긴 세로 띠는 1:3으로 그려. 나중에 가운데를 정확한 사이즈로 잘라 쓸 거야.
+   그래서 5개 요소를 전부 아래 &#x27;안전 영역&#x27; 안에만 넣고, 그 밖에는 배경(천·빛)만 이어 그려.
+   [안전 영역 표 — 사이즈가 여기 있으면 이 숫자를 그대로 써]
+   가로 띠(세로 가운데 띠): 728x90 31% · 970x90 24% · 980x120 31% · 930x180 49% · 970x250 66% · 320x50 40% · 300x50 43% · 320x100 80%
+   세로 띠(가로 가운데 띠): 120x600 50% · 160x600 68% · 300x1050 73%
+   표에 없는 띠 사이즈는 가로 띠 = 255 ÷ 가로세로 비율(%), 세로 띠 = 255 × 가로세로 비율(%)로 계산해.
+4. 가로 띠는 [로고+헤드라인 왼쪽] [제품 가운데, 띠 높이 안에 들어오게 작게] [버튼 오른쪽]을 한 줄로. 안전 영역이 35%보다 좁으면 서브카피는 빼.
+   세로 띠는 위에서부터 [로고] [제품] [헤드라인 두 줄] [버튼]을 쌓고, 서브카피는 빼. 헤드라인·버튼 폭은 안전 영역 폭의 80% 이하로.
+5. 모든 요소는 안전 영역 가장자리에서 8% 안쪽에. 넘치면 글자를 줄여. 글자·버튼이 안전 영역 밖으로 1px도 나가면 안 돼.
+6. 다 만든 뒤 표로 알려 줘: 요청 사이즈 / 그린 비율 / 잘라 쓸 영역.</pre>
+      <p class="tip">💡 ChatGPT는 한 번에 최대 10장까지 만들어요. 20개가 필요하면 '만들 사이즈'를 10개씩 나눠 두 번 돌려요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>왜 '안전 영역'이 필요할까</h2>
+    <p class="muted">GPT 이미지 생성은 728×90 같은 <b>아주 길쭉한 비율을 그대로 못 그리고</b>, 3:1 정도로 그려 줘요. 그대로 잘라 쓰면 로고·글자·버튼이 잘려요. 실제로 처음 돌린 10장 중 4장의 비율이 요청과 달랐어요.</p>
+    <img src="../../assets/img/ep14/strip_cut.jpg" alt="728x90 요청에 3:1로 그려진 GPT 결과와, 728x90으로 잘랐을 때 로고와 글자가 잘린 모습" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <p class="muted" style="margin-top:10px">그래서 템플릿은 "3:1로 그리되, 나중에 잘라 쓸 가운데 띠(안전 영역) 안에만 요소를 넣으라"고 시켜요. 사이즈마다 숫자를 표로 미리 넣어 둔 게 핵심이에요. 처음엔 GPT가 계산하게 했더니 970×90에서 로고가 잘렸어요.</p>
+    <div class="card" style="margin-top:12px"><b>표에 없는 사이즈는</b><p class="muted" style="margin:4px 0 0">가로 띠는 255 ÷ (가로÷세로) %, 세로 띠는 255 × (가로÷세로) %로 계산해 표에 한 줄 추가하세요. 예: 468×60 → 255 ÷ 7.8 ≈ 33%.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>실제로 돌려 본 결과</h2>
+    <p class="muted">템플릿으로 728×90 · 970×90 · 120×600을 뽑아 정확한 사이즈로 잘랐어요. 로고 · 헤드라인 · 버튼이 모두 남았어요(2026-10-24, ChatGPT 웹).</p>
+    <img src="../../assets/img/ep14/template_result.jpg" alt="템플릿으로 뽑아 자른 728x90, 970x90, 120x600 배너" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div class="card" style="margin-top:12px"><b>오히려 GPT가 나은 점</b><p class="muted" style="margin:4px 0 0">사이즈마다 배경(천·빛)을 끝까지 이어 그려서 빈 데가 없어요. 아래 Claude 에디터는 사진과 판을 나눠 배치해서 단정하지만, 세로로 긴 사이즈에선 여백이 남았어요.</p></div>
+    <img src="../../assets/img/ep14/gpt_chat.jpg" alt="ChatGPT 대화창에서 생성된 배너 이미지들" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>잡고 늘리는 배너 에디터 (Claude)</h2>
+    <p class="muted">영상 처음에 나온 에디터예요. claude.ai 채팅에 원본 배너를 첨부하고 아래처럼 요청하면 <b>아티팩트</b>로 만들어 줘요. 모서리를 잡고 늘리면 정사각 · 세로 · 가로 띠에 맞춰 배치가 바뀌어요. 글자와 로고는 실제 글자로 다시 넣어서 어떤 크기에서도 안 깨져요.</p>
+    <img src="../../assets/img/ep14/editor.jpg" alt="Claude 배너 에디터에서 1:1, 9:16, 1.91:1, 728x90으로 늘린 모습" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div class="prompt" id="editor-request">
+      <div class="label">① 에디터 만들기</div>
+      <pre>이 배너를 창 크기에 맞춰 알아서 다시 배치되는 배너로 만들어 줘.
+모서리를 잡고 늘리거나 줄이면 정사각, 가로 띠, 세로 띠 어떤 비율이든 글자, 로고, 제품 이미지가 안 깨지고 안 잘리게.
+한 페이지에서 바로 잡고 늘려 볼 수 있게 아티팩트로 만들어 줘.</pre>
+    </div>
+    <div class="prompt" id="editor-fix">
+      <div class="label">② 쓰기 편하게 다듬기</div>
+      <pre>두 가지만 고쳐 줘.
+1. 모서리를 잡고 끌 때, 잡은 모서리의 반대쪽 모서리는 그 자리에 고정되게 해 줘.
+2. 끌다가 자주 쓰는 사이즈(1:1, 4:5, 9:16, 1.91:1, 728×90, 160×600, 300×250) 비율 근처에 오면 그 비율로 착 달라붙고, 붙은 동안 배너 위에 &#x27;1080×1080&#x27;처럼 사이즈 이름 배지를 잠깐 보여 줘.
+나머지 디자인과 배치 규칙은 그대로 둬.</pre>
+      <p class="tip">💡 에디터는 사이즈를 바꿔 '보는' 도구예요. 매체에 올릴 PNG는 Claude에 "사이즈별로 PNG로 저장할 수 있게 해 줘"라고 한 번 더 요청하세요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>써 보기 전에 꼭</h2>
+    <div class="warn">
+      <ul>
+        <li><b>20개 전체로는 아직 안 돌려 봤어요.</b> 템플릿은 실패했던 띠 배너 3개(728×90 · 970×90 · 120×600)로 다시 확인했어요. 다른 사이즈는 결과를 꼭 눈으로 확인하세요.</li>
+        <li>ChatGPT 이미지 생성은 <b>한 번에 10장</b>까지예요.</li>
+        <li>GPT는 제품을 <b>원본 픽셀 그대로가 아니라 새로 그려요.</b> 라벨 글자나 색이 미묘하게 달라질 수 있어서, 실제 제품 광고라면 제품 컷은 원본으로 바꿔 끼우는 게 안전해요.</li>
+        <li>문구도 가끔 바뀌어요. "한 글자도 바꾸지 마"를 넣었지만 올리기 전에 꼭 대조하세요.</li>
+        <li>매체별 규격은 바뀔 수 있어요. 구글은 공식 도움말, 메타는 광고 가이드, 네이버 GFA는 관리자 화면에서 최신 사이즈를 확인하세요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li><a href="https://support.google.com/google-ads/answer/1722096">Google Ads 도움말 — 이미지 광고 사이즈</a></li>
+      <li><a href="https://www.facebook.com/business/ads-guide/update/image">Meta 광고 가이드 — 이미지</a></li>
+      <li>네이버 GFA 소재 사이즈 — 대행사 정리 글(<a href="https://inside.ampm.co.kr/insight/13354">AMPM</a>) 기준, 관리자 화면에서 최신값 확인 필요</li>
+      <li>예시 배너는 가상 브랜드 '허니 뷰티'예요.</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../13/"><small>← 이전 편</small>EP.13 터진 공식 따라 했는데 왜 내 건 안 터질까</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic · OpenAI · Google · Meta · NAVER와는 관계가 없어요. 결과는 2026-10-19~24에 직접 돌려 본 값이에요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
