@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.20 AI 답 길어서, 스크롤만 내린다면 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="AI 설정에 한 줄만 넣으면 긴 답이 결론이 맨 위인 한 장짜리 PDF 보고서로 와요. 그대로 붙여 넣는 설정 문장, ChatGPT·Claude 넣는 곳, 직접 돌려 본 결과, 바꿔 쓰는 문장.">
+<meta property="og:title" content="EP.20 AI 답 길어서, 스크롤만 내린다면">
+<meta property="og:description" content="설정에 한 줄 — 긴 답은 결론이 맨 위인 한 장짜리 보고서로. 설정 문장 + 넣는 곳 + 실제 결과 + 변형 문장.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.20 · AI 답변 설정</span>
+    <h1>AI 답 길어서,<br><span class="hl">스크롤만 내린다면</span></h1>
+    <p class="lead">같은 질문을 두 번 해 봤어요. 설정 전엔 <b>2,504자짜리 긴 채팅</b>이 왔고, 설정에 한 줄을 넣은 뒤엔 <b>결론이 맨 위에 있는 PDF 한 장</b>이 왔어요. 긴 답은 다 읽지 말고, 맨 위 결론만 보고 고르면 돼요.</p>
+    <div class="meta"><span class="chip ghost">설정 문장</span><span class="chip ghost">넣는 곳</span><span class="chip ghost">실제 결과</span><span class="chip ghost">바꿔 쓰는 문장</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>설정에 그대로 붙여 넣는 한 줄</h2>
+    <p class="muted">한 번 넣어 두면 그다음 새 채팅부터 모든 대화에 적용돼요. 이미 다른 지침이 있으면 맨 끝 줄에 붙이면 돼요.</p>
+    <div class="prompt" id="report-line">
+      <div class="label">영상에서 넣은 문장</div>
+      <pre>답이 400자를 넘으면, 채팅 말고 한 장짜리 PDF 보고서로 줘. 결론은 맨 위에.</pre>
+      <p class="tip">💡 짧은 질문("앰플이랑 세럼 차이, 한 줄로")은 그대로 짧은 채팅으로 왔어요. 길어질 질문만 보고서로 바뀌어요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>넣는 곳</h2>
+    <div class="card"><b>ChatGPT</b><p class="muted" style="margin:4px 0 0">설정 › <b>개인 맞춤 설정</b> › <b>사용자 지정 지침</b> › ChatGPT → 칸 맨 끝에 붙여 넣고 '저장'. 일반 채팅과 '개인화됨' 임시 채팅에 적용돼요. 임시 채팅을 '개인화되지 않음'으로 쓰면 이 지침도 빠져요.</p></div>
+    <img src="../../assets/img/ep20/setting.jpg" alt="ChatGPT 설정 › 개인 맞춤 설정 › 사용자 지정 지침 › ChatGPT 칸에 설정 문장 한 줄을 넣은 화면" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div class="card" style="margin-top:12px"><b>Claude</b><p class="muted" style="margin:4px 0 0">설정 › <b>계정</b> › <b>Claude 지침</b> 칸에 넣고 '변경사항 저장'. 같은 문장을 넣어 보니 Claude는 문서(Claude Docs)로 만들려고 했어요. 다만 <b>시크릿 채팅에서는 문서를 못 만들어서</b> 채팅 안에 보고서 모양으로만 답했어요. 문서로 받으려면 일반 채팅에서 물어보세요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>실제로 돌려 본 결과</h2>
+    <img src="../../assets/img/ep20/compare.jpg" alt="같은 질문에 설정 전 2,504자 채팅과 설정 후 결론이 맨 위인 PDF 한 장을 나란히 놓은 비교" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div style="overflow-x:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6">
+      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>넣은 문장</th><th>긴 질문</th><th>짧은 질문</th></tr></thead>
+      <tbody>
+        <tr><td>(없음)</td><td>2,504자 채팅 · 세 화면 스크롤</td><td>—</td></tr>
+        <tr><td>"…한 장짜리 보고서로 줘."</td><td>PDF 1번 / 4번<br><small>나머지 3번은 채팅 안에 보고서 모양(제목 · 표 · 추천)</small></td><td>2번 모두 짧은 채팅</td></tr>
+        <tr><td><b>"…한 장짜리 PDF 보고서로 줘. 결론은 맨 위에."</b></td><td><b>PDF 1번 / 2번</b><br><small>나머지 1번은 결론 먼저 + 표 하나(568자 채팅)</small></td><td>—</td></tr>
+      </tbody></table></div>
+    <p class="muted" style="margin-top:8px">질문은 허니 뷰티(예시) 기준 세 가지예요: 경쟁 브랜드 3곳 프로모션 비교, 신제품 런칭 예산 500만 원 배분, 메타 광고 ROAS 하락 원인. 경쟁 브랜드 정보는 가상으로 만들어 붙여 넣었어요. "PDF"와 "결론은 맨 위에"를 넣었을 때 결론이 두 번 모두 맨 위에 왔어요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>내 상황에 맞게 바꿔 쓰는 문장</h2>
+    <p class="muted">위 결과는 01번 문장으로만 시험했어요. 아래는 보고서 모양만 바꾸는 예시예요.</p>
+    <div class="prompt" id="report-line-3lines">
+      <div class="label">결론 3줄 + 표</div>
+      <pre>답이 400자를 넘으면, 채팅 말고 한 장짜리 PDF 보고서로 줘. 맨 위에 결론 3줄, 그다음 비교는 표로.</pre>
+    </div>
+    <div class="prompt" id="report-line-todo">
+      <div class="label">맨 아래에 할 일까지</div>
+      <pre>답이 400자를 넘으면, 채팅 말고 한 장짜리 PDF 보고서로 줘. 결론은 맨 위에, 맨 아래엔 이번 주에 할 일 3개.</pre>
+    </div>
+    <div class="prompt" id="report-line-chat">
+      <div class="label">파일 없이 채팅에서 짧게</div>
+      <pre>답이 400자를 넘으면, 결론 한 줄을 맨 위에 쓰고 나머지는 표 하나로만 정리해 줘.</pre>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>써 보기 전에 알아 둘 점</h2>
+    <div class="warn">
+      <ul>
+        <li><b>매번 PDF로 오는 건 아니에요.</b> 이번 시험에선 2번 중 1번이었고, 나머지 1번은 결론부터 짧게 정리한 채팅으로 왔어요.</li>
+        <li><b>400자는 대략이에요.</b> AI가 글자 수를 정확히 세지는 않아요. 짧은 질문이 채팅으로 오고, 긴 질문이 정리되어 오는 정도로 보세요.</li>
+        <li><b>보고서 숫자 · 출처는 꼭 확인하세요.</b> 실제로 받은 PDF 맨 아래에 확인되지 않은 외부 자료 이름이 들어 있어서, 영상에선 그 칸을 잘라 냈어요.</li>
+        <li>모든 채팅에 적용돼요. 다른 작업에 방해되면 그 줄만 지우고 저장하면 원래대로 돌아가요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>아이디어: 커리어해커 알렉스 쇼츠 <a href="https://www.youtube.com/shorts/PgClEomhIRU">"AI 답변이 400자를 넘으면 보고서로 받는 법"</a>(2026-10-21). 원래는 개발자용 AI 에이전트 규칙이고, 여기서는 채팅 AI 설정으로 옮겼어요.</li>
+      <li>2026-10-26 ChatGPT(Plus) · claude.ai(Claude)로 직접 시험한 결과예요.</li>
+      <li>영상 속 화면은 예시예요. 소재는 가상 브랜드 '허니 뷰티'예요.</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../18/"><small>← 같이 보면 좋은 편</small>EP.18 카피 뽑는 마케터들, '전문가처럼'은 F예요</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic · OpenAI와는 관계가 없어요. 결과는 2026-10-26 시험 기준이라 도구가 바뀌면 달라질 수 있어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
