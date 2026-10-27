@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.19 '그 뜨는 창' 하면, AI한테 두 번 말해요 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="AI로 만든 페이지를 고칠 때 '그 뜨는 창'이라고 하면 AI가 하나를 골라 고쳐요. 모달·토스트·드롭다운처럼 화면 이름으로 시키면 딱 그것만 바뀌어요. 화면 이름 카드 14장 + 이렇게 시키세요 예문 + 시험 결과.">
+<meta property="og:title" content="EP.19 '그 뜨는 창' 하면, AI한테 두 번 말해요">
+<meta property="og:description" content="화면 이름 카드 14장 + 이렇게 시키세요 예문 + 9번 돌린 시험 결과.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+<style>
+  .names { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+  @media (max-width: 520px) { .names { grid-template-columns: 1fr; } }
+  .name { background: #fff; border: 1.5px solid var(--line); border-radius: 18px; padding: 14px; display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: start; }
+  .name svg { width: 64px; height: 100px; display: block; background: var(--honey-l); border-radius: 14px; padding: 4px; }
+  .name b { font-size: 18px; font-weight: 900; }
+  .name .en { font-size: 12.5px; color: var(--sub); font-weight: 700; margin-left: 4px; }
+  .name p { font-size: 14px; color: #3a4252; line-height: 1.55; margin-top: 2px; }
+  .name .say { margin-top: 8px; font-size: 13.5px; font-weight: 700; background: #fffaf0; border: 1.5px dashed var(--honey); border-radius: 12px; padding: 8px 10px; line-height: 1.5; }
+  .name .say::before { content: "이렇게 시키세요"; display: block; font-size: 11.5px; color: var(--honey-d); font-weight: 800; margin-bottom: 2px; }
+  .name.hot { border-color: var(--honey); box-shadow: 0 8px 20px rgba(245, 166, 35, 0.16); }
+  table.res { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.55; margin-top: 12px; }
+  table.res th, table.res td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.res thead tr { border-bottom: 2px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.19 · 화면 이름</span>
+    <h1>'그 뜨는 창' 하면,<br><span class="hl">AI한테 두 번 말해요</span></h1>
+    <p class="lead">AI로 만든 이벤트 페이지에 쿠폰 창 · 장바구니 알림 · 설명 말풍선 · 용량 목록이 다 떠요. 여기서 "그 뜨는 창 좀 작게 해 줘"라고 세 번 시켰더니 <b>세 번 다 쿠폰 창을 줄였어요</b>. 내가 말한 게 장바구니 알림이었다면 엉뚱한 데가 바뀐 거예요. <b>"장바구니 토스트만 작게"처럼 이름으로 시키면 딱 그것만 바뀌었어요.</b> AI한테는, 아는 만큼 시킬 수 있어요.</p>
+    <div class="meta"><span class="chip ghost">화면 이름 카드 14장</span><span class="chip ghost">이렇게 시키세요</span><span class="chip ghost">시험 결과</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>뜨는 게 이렇게 많아요</h2>
+    <p class="muted">Claude에게 화면 이름은 빼고 생김새로만 설명해서 만든 허니 뷰티(예시) 이벤트 페이지예요. 왼쪽은 들어오자마자 뜨는 쿠폰 창, 오른쪽은 용량 목록을 펼치고 장바구니에 담은 화면이에요.</p>
+    <img src="../../assets/img/ep19/tags.jpg" alt="허니 뷰티 이벤트 페이지 두 화면 — 쿠폰 창에 '모달', 펼친 용량 목록에 '드롭다운', 장바구니 알림에 '토스트' 이름표" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>화면 이름 카드 14장</h2>
+    <p class="muted">이벤트 페이지 · 랜딩페이지 · 배너 툴을 AI로 만들고 고칠 때 자주 나오는 이름이에요. 꿀색 테두리 두 장이 이번 영상에서 쓴 이름이에요. 예문의 문구·숫자만 내 것으로 바꾸세요.</p>
+    <div class="names">
+      <div class="name hot">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="6" y="6" width="48" height="84" rx="7" fill="#c8c4bc"/><rect x="11" y="32" width="38" height="32" rx="5" fill="#fff" stroke="#181e2a" stroke-width="2.5"/><rect x="16" y="38" width="22" height="4" rx="2" fill="#dcdcd4"/><rect x="16" y="52" width="28" height="6" rx="3" fill="#f5a623"/></svg>
+        <div><b>모달</b><span class="en">Modal · 팝업</span><p>화면 가운데 크게 뜨고 뒤가 어두워지는 창. 닫기 전엔 뒤를 못 눌러요.</p><div class="say">들어오자마자 뜨는 쿠폰 모달, 폭을 260px로 줄이고 닫기 버튼을 더 크게 해 줘.</div></div>
+      </div>
+      <div class="name hot">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="11" y="16" width="38" height="5" rx="2.5" fill="#dcdcd4"/><rect x="11" y="27" width="28" height="5" rx="2.5" fill="#dcdcd4"/><rect x="11" y="38" width="38" height="5" rx="2.5" fill="#dcdcd4"/><rect x="11" y="70" width="38" height="11" rx="5.5" fill="#181e2a"/><rect x="17" y="74" width="22" height="3" rx="1.5" fill="#fff"/></svg>
+        <div><b>토스트</b><span class="en">Toast</span><p>잠깐 떴다가 저절로 사라지는 작은 알림. "장바구니에 담았어요" 같은 거예요.</p><div class="say">장바구니 토스트만 작게 하고, 2초 뒤에 사라지게 해 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="10" y="20" width="40" height="11" rx="3" fill="#fff" stroke="#181e2a" stroke-width="2.5"/><path d="M40 24h6l-3 4z" fill="#181e2a"/><rect x="10" y="34" width="40" height="30" rx="3" fill="#fff" stroke="#181e2a" stroke-width="2.5"/><rect x="14" y="39" width="22" height="4" rx="2" fill="#f5a623"/><rect x="14" y="47" width="22" height="4" rx="2" fill="#dcdcd4"/><rect x="14" y="55" width="22" height="4" rx="2" fill="#dcdcd4"/></svg>
+        <div><b>드롭다운</b><span class="en">Dropdown · 셀렉트</span><p>누르면 아래로 펼쳐지는 선택 목록. 용량·색상·수량 고를 때 써요.</p><div class="say">용량 드롭다운에 '3개 세트'를 추가하고 기본값을 50ml로 해 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="10" y="16" width="40" height="10" rx="3" fill="#fff" stroke="#181e2a" stroke-width="2"/><rect x="10" y="30" width="40" height="26" rx="3" fill="#ffe9b2" stroke="#f5a623" stroke-width="2"/><rect x="14" y="36" width="28" height="3.5" rx="1.7" fill="#965c00"/><rect x="14" y="44" width="22" height="3.5" rx="1.7" fill="#dcdcd4"/><rect x="10" y="60" width="40" height="10" rx="3" fill="#fff" stroke="#181e2a" stroke-width="2"/><rect x="10" y="74" width="40" height="10" rx="3" fill="#fff" stroke="#181e2a" stroke-width="2"/></svg>
+        <div><b>아코디언</b><span class="en">Accordion</span><p>제목을 누르면 내용이 펼쳐지고 다시 누르면 접히는 칸. 자주 묻는 질문에 많이 써요.</p><div class="say">FAQ 아코디언은 한 번에 하나만 열리게 하고, 첫 질문은 펼쳐 둬.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="9" y="18" width="13" height="6" rx="2" fill="#181e2a"/><rect x="24" y="18" width="13" height="6" rx="2" fill="#dcdcd4"/><rect x="39" y="18" width="12" height="6" rx="2" fill="#dcdcd4"/><rect x="9" y="27" width="13" height="2.5" fill="#f5a623"/><rect x="9" y="38" width="42" height="4" rx="2" fill="#dcdcd4"/><rect x="9" y="47" width="34" height="4" rx="2" fill="#dcdcd4"/><rect x="9" y="56" width="40" height="4" rx="2" fill="#dcdcd4"/></svg>
+        <div><b>탭</b><span class="en">Tab</span><p>같은 자리에서 내용을 바꿔 보는 버튼 줄. 상세 정보 · 리뷰 · 배송 안내 같은 거예요.</p><div class="say">상세 정보·리뷰·배송 안내 탭에서, 들어오면 리뷰 탭이 먼저 열려 있게 해 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="12" y="20" width="36" height="36" rx="5" fill="#ffe9b2" stroke="#f5a623" stroke-width="2"/><path d="M9 38l-4-4m4 4l-4 4M51 38l4-4m-4 4l4 4" stroke="#181e2a" stroke-width="2.2" stroke-linecap="round"/><circle cx="24" cy="64" r="2.5" fill="#f5a623"/><circle cx="30" cy="64" r="2.5" fill="#dcdcd4"/><circle cx="36" cy="64" r="2.5" fill="#dcdcd4"/></svg>
+        <div><b>캐러셀</b><span class="en">Carousel · 슬라이더</span><p>옆으로 넘겨 보는 사진 묶음. 아래 점이 몇 번째인지 알려 줘요.</p><div class="say">제품 사진 캐러셀이 3초마다 저절로 넘어가게 하고, 점을 누르면 그 사진으로 가게 해 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="10" y="30" width="34" height="12" rx="4" fill="#181e2a"/><path d="M24 42h6l-3 4z" fill="#181e2a"/><rect x="14" y="35" width="20" height="2.5" rx="1.2" fill="#fff"/><rect x="10" y="52" width="16" height="4" rx="2" fill="#dcdcd4"/><circle cx="31" cy="54" r="4" fill="none" stroke="#181e2a" stroke-width="1.8"/><rect x="10" y="66" width="40" height="4" rx="2" fill="#dcdcd4"/></svg>
+        <div><b>툴팁</b><span class="en">Tooltip</span><p>ⓘ에 마우스를 올리거나 누르면 뜨는 작은 설명 말풍선.</p><div class="say">'무료 배송' 툴팁 문구를 '3만 원 이상 무료 · 제주 3,000원 추가'로 바꿔 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="10" y="20" width="40" height="26" rx="4" fill="#ffe9b2"/><rect x="10" y="52" width="24" height="5" rx="2.5" fill="#181e2a"/><rect x="37" y="51" width="14" height="7" rx="3.5" fill="#f5a623"/><rect x="10" y="62" width="32" height="4" rx="2" fill="#dcdcd4"/></svg>
+        <div><b>배지</b><span class="en">Badge · 라벨</span><p>이름 옆에 붙는 작은 표시. BEST · NEW · 30% 같은 거예요.</p><div class="say">제품 이름 옆 BEST 배지를 빨간색 'NEW' 배지로 바꿔 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="10" y="24" width="22" height="4" rx="2" fill="#dcdcd4"/><rect x="34" y="21" width="16" height="9" rx="4.5" fill="#f5a623"/><circle cx="45.5" cy="25.5" r="3.2" fill="#fff"/><rect x="10" y="42" width="22" height="4" rx="2" fill="#dcdcd4"/><rect x="34" y="39" width="16" height="9" rx="4.5" fill="#dcdcd4"/><circle cx="38.5" cy="43.5" r="3.2" fill="#fff"/></svg>
+        <div><b>토글</b><span class="en">Toggle · 스위치</span><p>눌러서 켜고 끄는 스위치. 수신 동의 · 알림 받기에 써요.</p><div class="say">회원가입 아래에 '광고성 정보 수신 동의' 토글을 넣고, 기본은 꺼 둬.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="10" y="16" width="40" height="4" rx="2" fill="#dcdcd4"/><rect x="10" y="26" width="32" height="4" rx="2" fill="#dcdcd4"/><rect x="10" y="36" width="40" height="4" rx="2" fill="#dcdcd4"/><rect x="10" y="46" width="28" height="4" rx="2" fill="#dcdcd4"/><circle cx="43" cy="76" r="8" fill="#181e2a"/><circle cx="43" cy="76" r="3" fill="#f5a623"/></svg>
+        <div><b>플로팅 버튼</b><span class="en">Floating button</span><p>스크롤해도 화면 구석에 늘 떠 있는 버튼. 문의 · 맨 위로 같은 거예요.</p><div class="say">오른쪽 아래 '문의' 플로팅 버튼을 '카톡 상담'으로 바꾸고, 장바구니 버튼을 가리지 않게 조금 위로 올려 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="6" y="6" width="48" height="13" rx="6" fill="#181e2a"/><rect x="11" y="10.5" width="14" height="4" rx="2" fill="#f5a623"/><rect x="10" y="28" width="40" height="4" rx="2" fill="#dcdcd4"/><rect x="10" y="38" width="34" height="4" rx="2" fill="#dcdcd4"/><path d="M30 52v22m0 0l-5-5m5 5l5-5" stroke="#965c00" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+        <div><b>스티키 헤더</b><span class="en">Sticky header</span><p>스크롤해도 맨 위에 붙어서 따라오는 바(상단 고정 바).</p><div class="say">스티키 헤더 오른쪽에 '쿠폰 받기' 버튼을 넣고, 누르면 쿠폰 모달이 뜨게 해 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="8" y="12" width="44" height="34" rx="5" fill="#f5a623"/><rect x="13" y="20" width="26" height="5" rx="2.5" fill="#fff"/><rect x="13" y="30" width="16" height="8" rx="2" fill="#fff"/><rect x="10" y="54" width="40" height="4" rx="2" fill="#dcdcd4"/><rect x="10" y="63" width="32" height="4" rx="2" fill="#dcdcd4"/></svg>
+        <div><b>히어로</b><span class="en">Hero · 메인 배너</span><p>페이지 맨 위, 가장 크게 보이는 첫 화면.</p><div class="say">히어로 문구를 '가을 한정 최대 30%'로 바꾸고, 기간 글자를 더 크게 해 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="6" y="6" width="48" height="84" rx="7" fill="#c8c4bc"/><path d="M6 56h48v27a7 7 0 0 1-7 7H13a7 7 0 0 1-7-7z" fill="#fff" stroke="#181e2a" stroke-width="2.5"/><rect x="24" y="60" width="12" height="2.5" rx="1.2" fill="#dcdcd4"/><rect x="12" y="68" width="36" height="4" rx="2" fill="#f5a623"/><rect x="12" y="77" width="28" height="4" rx="2" fill="#dcdcd4"/></svg>
+        <div><b>바텀 시트</b><span class="en">Bottom sheet</span><p>화면 아래에서 올라오는 판. 옵션 고르기 · 공유하기에 많이 써요.</p><div class="say">'구매하기'를 누르면 용량을 고르는 바텀 시트가 아래에서 올라오게 해 줘.</div></div>
+      </div>
+      <div class="name">
+        <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="3" y="3" width="54" height="90" rx="10" fill="#fff" stroke="#181e2a" stroke-width="3"/><rect x="10" y="16" width="40" height="4" rx="2" fill="#dcdcd4"/><rect x="10" y="26" width="32" height="4" rx="2" fill="#dcdcd4"/><rect x="10" y="36" width="40" height="4" rx="2" fill="#dcdcd4"/><path d="M6 70h48v13a7 7 0 0 1-7 7H13a7 7 0 0 1-7-7z" fill="#ebebe5"/><rect x="11" y="75" width="20" height="3" rx="1.5" fill="#6f7582"/><rect x="11" y="81" width="30" height="3" rx="1.5" fill="#dcdcd4"/></svg>
+        <div><b>푸터</b><span class="en">Footer</span><p>페이지 맨 아래 회사 정보 · 약관 · 고객센터 칸.</p><div class="say">푸터에 인스타 링크와 고객센터 운영 시간 줄을 추가해 줘.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>이렇게 시키세요</h2>
+    <div class="prompt" id="name-request">
+      <div class="label">이름으로 시키는 틀</div>
+      <pre>[어느 화면]의 [화면 이름]만 [어떻게] 바꿔 줘. 다른 건 그대로 둬.</pre>
+      <p class="tip">💡 예: "이벤트 페이지의 장바구니 토스트만 작게 해 줘. 다른 건 그대로 둬." 같은 이름이 여러 군데 쓰이면 앞에 어디 것인지 붙여요(쿠폰 모달 · 장바구니 토스트). 이번 시험에서 토스트는 장바구니 · 쿠폰 받기 · 문의가 같이 쓰는 칸이었는데, "장바구니 토스트만"이라고 하니 장바구니 알림만 작아졌어요.</p>
+    </div>
+    <div class="prompt" id="ask-names">
+      <div class="label">이름을 모를 때 먼저 물어보기</div>
+      <pre>이 페이지에 있는 화면 요소 이름을 목록으로 알려 줘(모달, 토스트처럼). 각각 화면 어디에 있는지도 한 줄씩.</pre>
+    </div>
+    <div class="card" style="margin-top:12px"><b>바꿀 줄만 알려 줄 때</b><p class="muted" style="margin:4px 0 0">HTML 파일을 붙여서 고쳐 달라고 하면, 이번 시험 9번 모두 고칠 CSS·JS 줄만 알려 줬어요(파일을 새로 만들어 주진 않았어요). 직접 붙이기 어려우면 "고친 파일 전체로 줘"라고 한 번 더 말하세요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>실제로 돌려 본 결과</h2>
+    <img src="../../assets/img/ep19/result.jpg" alt="'그 뜨는 창 좀 작게 해 줘'에 쿠폰 창이 줄고 장바구니 알림은 그대로인 화면, '장바구니 토스트만 작게 해 줘'에 장바구니 알림만 작아진 전후 비교" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <div style="overflow-x:auto"><table class="res">
+      <thead><tr><th>부탁</th><th>1회</th><th>2회</th><th>3회</th></tr></thead>
+      <tbody>
+        <tr><td><b>"그 뜨는 창 좀 작게 해 줘"</b></td><td>쿠폰 창만 줄임 + "장바구니 알림이나 배송 ⓘ 말풍선을 말씀하신 거면 알려 주세요"</td><td>쿠폰 창만 줄임</td><td>쿠폰 창만 줄임 + "혹시 다른 창(용량 선택 목록, 배송 툴팁)을 말한 거라면 알려 주세요"</td></tr>
+        <tr><td><b>"쿠폰 모달만 작게 해 줘"</b></td><td>쿠폰 창만</td><td>쿠폰 창만</td><td>쿠폰 창만 · "나머지 화면은 그대로"</td></tr>
+        <tr><td><b>"장바구니 토스트만 작게 해 줘"</b></td><td>장바구니 알림만 · "쿠폰과 문의 토스트는 지금 크기 그대로"</td><td>장바구니 알림만</td><td>장바구니 알림만</td></tr>
+      </tbody>
+    </table></div>
+    <div class="card" style="margin-top:12px"><b>한 줄 요약</b><p class="muted" style="margin:4px 0 0">AI는 '그 뜨는 창'을 세 번 다 쿠폰 창으로 알아듣고, 묻기 전에 먼저 고쳤어요. 줄이고 싶은 게 쿠폰 창이었다면 맞힌 거지만, 장바구니 알림이었다면 세 번 다 엉뚱한 데를 고친 거예요. 이름으로 시킨 6번은 모두 그것만 바뀌었어요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>어떻게 시험했나</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>도구: claude.ai(Claude · Opus 5.5 · 중간), 2026-10-26.</li>
+      <li>데모 페이지: 화면 이름은 빼고 생김새로만 부탁해서 만든 HTML 한 장(2분 30초).</li>
+      <li>부탁마다 <b>시크릿 대화</b>를 새로 열고 같은 HTML 파일을 붙여 한 줄만 보냈어요. 3번씩, 모두 9번. 돌아온 코드가 어느 요소를 바꾸는지로 셌어요.</li>
+      <li>원하는 곳은 처음에 '쿠폰 창'으로 정하고 돌렸어요. 결과를 본 뒤 "장바구니 알림이었다면?"을 확인하려고 '장바구니 토스트' 부탁 3번을 더 돌렸어요.</li>
+    </ul>
+    <div class="warn" style="margin-top:10px"><ul>
+      <li><b>부탁마다 3번뿐</b>이고 모델도 하나예요. 다른 AI · 다른 페이지에서는 결과가 달라질 수 있어요.</li>
+      <li>'그 뜨는 창'이 늘 틀린다는 뜻은 아니에요. 이번 페이지에서는 AI가 매번 쿠폰 창을 골랐고, 다른 걸 말한 사람은 한 번 더 말해야 했다는 뜻이에요.</li>
+      <li>시험한 페이지는 '허니 뷰티'라는 가상 브랜드 예시예요.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>2026-10-26 claude.ai(Claude)로 직접 시험한 결과예요.</li>
+      <li>영상 썸네일 캐릭터는 AI로 만든 가상 캐릭터예요(Anthropic 공식 캐릭터 아님).</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../18/"><small>← 이전 편</small>EP.18 카피 뽑는 마케터들, '전문가처럼'은 F예요</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic과는 관계가 없어요. 결과는 2026-10-26 시험 기준이라 도구가 바뀌면 달라질 수 있어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
