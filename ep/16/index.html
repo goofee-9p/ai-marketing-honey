@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EP.16 내가 만든 툴, 팀원이랑 같이 쓰려면 · 이거 모르는 마케터 없게 해주세요</title>
+<title>EP.16 내가 만든 툴도, 피그마처럼 같이 쓰기 · 이거 모르는 마케터 없게 해주세요</title>
 <meta name="description" content="팀원이 고친 문구가 내 화면엔 없다면, 툴이 고친 내용을 각자 브라우저에만 저장해서예요. 툴을 만든 AI한테 저장 위치를 Supabase로 바꿔 달라고 하는 요청문과 연결 단계, 무료 한도.">
-<meta property="og:title" content="EP.16 내가 만든 툴, 팀원이랑 같이 쓰려면">
+<meta property="og:title" content="EP.16 내가 만든 툴도, 피그마처럼 같이 쓰기">
 <meta property="og:description" content="저장 위치를 Supabase로 바꾸는 AI 요청문 + 연결 단계 + 무료 한도.">
 <meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -23,8 +23,8 @@
 
   <div class="hero">
     <span class="chip">EP.16 · 팀이 같이 쓰는 툴</span>
-    <h1>내가 만든 툴,<br><span class="hl">팀원이랑 같이 쓰려면</span></h1>
-    <p class="lead">팀원이 고친 문구가 내 화면엔 없어서 메신저로 다시 묻고 있다면, 이유는 저장 위치예요. 처음 만든 AI 툴은 보통 고친 내용을 <b>각자 브라우저에만</b> 저장해요. 툴을 만든 AI한테 저장 위치를 <b>Supabase(팀 공용 창고)</b>로 바꿔 달라고 하면, 누가 고쳐도 한곳에 저장되고 새로고침하면 모두 같은 문구가 떠요.</p>
+    <h1>내가 만든 툴도,<br><span class="hl">피그마처럼 같이 쓰기</span></h1>
+    <p class="lead">팀원이 고친 문구가 내 화면엔 없어서 메신저로 다시 묻고 있다면, 이유는 저장 위치예요. 처음 만든 AI 툴은 보통 고친 내용을 <b>각자 브라우저에만</b> 저장해요. 툴을 만든 AI한테 저장 위치를 <b>Supabase(팀 공용 창고)</b>로 바꿔 달라고 하면, 누가 고쳐도 한곳에 저장되고 모두의 화면에 같은 문구가 떠요.</p>
     <div class="meta"><span class="chip ghost">AI에 줄 요청문</span><span class="chip ghost">연결 단계</span><span class="chip ghost">더 하기</span></div>
   </div>
 
@@ -36,6 +36,7 @@
       <pre>이 툴은 지금 고친 내용이 내 브라우저에만 저장돼서 팀원 화면에는 안 보여.
 저장 위치를 Supabase로 바꿔 줘. 지금 화면에서 고치는 내용(예: 헤드라인, 버튼 문구, 사이즈)을 Supabase 표에 저장하고, 툴을 열면 그 표에서 불러오게 해 줘.
 내가 Supabase에서 직접 해야 하는 일(프로젝트 만들기, 키 복사 위치, 표 만드는 SQL)을 순서대로 알려 줘.
+다른 사람이 고치면 새로고침 없이 내 화면에도 바로 보이게, 실시간 반영(Realtime)도 켜 줘.
 코드는 몰라도 따라 할 수 있게 한 단계씩 설명해 줘.</pre>
       <p class="tip">💡 팀원이 링크로 열게 하려면 툴이 인터넷 주소로 올라가 있어야 해요(EP.15 참고). 이미 올렸다면 "바꾼 다음 다시 올려 줘"까지 같이 요청하세요.</p>
     </div>
@@ -47,15 +48,15 @@
       <li><a href="https://supabase.com">supabase.com</a>에 가입하고 <b>New project</b>를 만들어요(무료 플랜).</li>
       <li>AI가 준 <b>표 만드는 SQL</b>을 프로젝트의 <b>SQL Editor</b>에 붙여 넣고 실행해요.</li>
       <li>프로젝트 설정의 <b>API</b> 화면에서 <b>Project URL</b>과 <b>공개용 키(anon/publishable)</b>를 복사해 AI한테 줘요. <b>service_role 키는 주지 마세요.</b></li>
-      <li>AI가 고쳐 준 툴을 다시 올리고, 내가 고친 뒤 팀원 화면에서 <b>새로고침</b>해 같은 문구가 뜨는지 확인해요.</li>
+      <li>AI가 고쳐 준 툴을 다시 올리고, 내가 문구를 고친 뒤 팀원 화면에도 같은 문구가 뜨는지 확인해요.</li>
     </ol>
-    <img src="../../assets/img/ep16/sync.jpg" alt="노트북에서 고친 문구가 팀원 폰을 새로고침하자 같은 문구로 뜨는 장면" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
+    <img src="../../assets/img/ep16/sync.jpg" alt="노트북에서 고친 문구가 팀원 폰에도 같은 문구로 뜨는 장면" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-top:10px">
   </section>
 
   <section>
     <h2><span class="n">03</span>더 하기 (필요할 때만)</h2>
     <div class="card"><b>우리 팀만 들어오게 — 로그인 + 접근 규칙(RLS)</b><p class="muted" style="margin:4px 0 0">AI한테 "이메일로 로그인한 사람만 열 수 있게 하고, 접근 규칙(RLS)을 켜서 우리 팀만 읽고 쓰게 해 줘"라고 덧붙여요. RLS가 꺼져 있으면 주소와 키를 아는 사람이 표를 읽을 수 있어요.</p></div>
-    <div class="card" style="margin-top:10px"><b>새로고침 없이 바로 — 실시간 반영(Realtime)</b><p class="muted" style="margin:4px 0 0">"다른 사람이 고치면 새로고침 없이 내 화면에도 바로 보이게 Realtime도 켜 줘"라고 덧붙여요. 기본은 꺼져 있어서, 켜지 않으면 새로고침해야 보여요.</p></div>
+    <div class="card" style="margin-top:10px"><b>바로 안 바뀐다면 — 실시간 반영(Realtime) 확인</b><p class="muted" style="margin:4px 0 0">요청문 마지막 줄이 실시간 반영이에요. 기본은 꺼져 있어서, 빠지면 새로고침해야 보여요. 안 바뀌면 AI한테 "Realtime이 켜져 있는지 확인해 줘"라고 물어보세요.</p></div>
     <div class="warn" style="margin-top:12px">
       <ul>
         <li><b>무료(Free) 한도</b>: 프로젝트 2개 · 데이터베이스 500MB. <b>1주일 동안 안 쓰면 일시정지</b>돼요. 데이터는 남지만, 대시보드에서 다시 켜기 전까지 툴이 안 열려요.</li>
