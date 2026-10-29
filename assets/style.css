@@ -120,3 +120,5 @@ footer { margin-top: 48px; font-size: 12.5px; color: var(--sub); line-height: 1.
 @media (max-width: 420px) { .ep.wide { grid-template-columns: 1fr; } .ep.wide img { width: 100%; height: auto; aspect-ratio: 16 / 9; } }
 .cta a + a { margin-left: 8px; }
 .cta a.yt { background: transparent; border: 1.5px solid #5a6070; color: #fff; }
+.watch { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; background: var(--ink); color: #fff; font-weight: 800; font-size: 15px; padding: 10px 18px; border-radius: 999px; text-decoration: none; }
+.watch svg { display: block; color: var(--honey); }
