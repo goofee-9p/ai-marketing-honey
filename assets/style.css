@@ -22,6 +22,7 @@ a { color: inherit; }
 .top a { text-decoration: none; font-weight: 800; font-size: 15px; }
 .top .brand { display: inline-flex; align-items: center; gap: 8px; }
 .top .brand img { width: 26px; height: 26px; display: block; }
+.top .handle + .handle { margin-left: 0; }
 .top .handle { margin-left: auto; flex: none; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #fff; background: var(--honey); border-radius: 50%; text-decoration: none; }
 .top .handle svg { display: block; }
 .top .brand { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -106,3 +107,16 @@ p + p { margin-top: 10px; }
 .cta b { font-size: 18px; }
 .cta a { display: inline-block; margin-top: 12px; background: var(--honey); color: #fff; font-weight: 800; padding: 10px 18px; border-radius: 999px; text-decoration: none; }
 footer { margin-top: 48px; font-size: 12.5px; color: var(--sub); line-height: 1.6; }
+
+/* 릴스 · 유튜브 탭 (2026-10-29) */
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 24px; padding: 4px; background: #fff; border: 1.5px solid var(--line); border-radius: 999px; position: sticky; top: 8px; z-index: 5; }
+.tabs a { display: flex; align-items: center; justify-content: center; text-decoration: none; padding: 7px 8px; border-radius: 999px; color: var(--sub); }
+.tabs a svg { display: block; }
+.tabs a.on { background: var(--honey); color: #fff; }
+.tabs + .pane { margin-top: 22px; }
+.pane[hidden] { display: none; }
+.ep.wide { grid-template-columns: 160px 1fr; }
+.ep.wide img { width: 160px; height: 90px; }
+@media (max-width: 420px) { .ep.wide { grid-template-columns: 1fr; } .ep.wide img { width: 100%; height: auto; aspect-ratio: 16 / 9; } }
+.cta a + a { margin-left: 8px; }
+.cta a.yt { background: transparent; border: 1.5px solid #5a6070; color: #fff; }

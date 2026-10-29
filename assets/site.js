@@ -17,6 +17,19 @@
     box.appendChild(btn);
   });
 
+  // 목록 탭: #reels(기본) · #youtube — JS가 없으면 두 목록이 모두 보여요
+  var tabs = document.querySelectorAll(".tabs [data-tab]");
+  if (tabs.length) {
+    var show = function () {
+      var want = (location.hash || "#reels").slice(1);
+      if (!document.getElementById(want) || !document.getElementById(want).classList.contains("pane")) want = "reels";
+      document.querySelectorAll(".pane").forEach(function (p) { p.hidden = p.id !== want; });
+      tabs.forEach(function (a) { var on = a.dataset.tab === want; a.classList.toggle("on", on); a.setAttribute("aria-selected", on); });
+    };
+    tabs.forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); history.replaceState(null, "", "#" + a.dataset.tab); show(); }); });
+    window.addEventListener("hashchange", show); show();
+  }
+
   var id = window.SITE && window.SITE.GA_ID;
   if (!id) return;
   var s = document.createElement("script");
