@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.22 클로드 Opus5.5로 릴스 공장 가동 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="우리 채널 릴스가 만들어지는 공정표 그대로: AI가 대본 · 목소리 · 썸네일 그림 · 영상 편집, 사람은 고르기 4번. 처음엔 어디까지 AI에 맡기면 되는지 단계별로.">
+<meta property="og:title" content="EP.22 클로드 Opus5.5로 릴스 공장 가동">
+<meta property="og:description" content="공정표 + 처음엔 어디까지 맡길지 4단계 + 고르기 4번 체크리스트 + 실제로 고친 횟수.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.22 · 릴스 제작</span>
+    <h1>클로드 Opus5.5로<br><span class="hl">릴스 공장 가동</span></h1>
+    <p class="lead">이 채널 릴스는 편집 툴을 열지 않고 만들어요. 대본 · 목소리 · 썸네일 그림 · 영상 편집은 AI가 하고, 사람은 <b>주제 · 대본 · 썸네일 · 올릴지</b> 네 번 골라요. 대신 한 번에 끝나진 않아요. 조회 3,213회가 나온 EP.14도 <b>대본만 15번</b> 다시 썼어요. 고쳐 쓴 건 AI였고, 사람은 어디가 어색한지만 짚었어요.</p>
+    <div class="meta"><span class="chip ghost">공정표</span><span class="chip ghost">처음엔 여기까지</span><span class="chip ghost">고르기 4번 체크리스트</span><span class="chip ghost">실제로 고친 횟수</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>공정표</h2>
+    <p class="muted">이 편(EP.22)을 만든 순서 그대로예요. 순서는 꼭 <b>대본 → 썸네일 → 목소리 → 영상</b>으로 가요. 대본이 바뀌면 뒤가 전부 다시 만들어지니까, 앞 단계를 확정하기 전엔 영상을 뽑지 않아요.</p>
+    <div style="overflow-x:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6">
+      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>단계</th><th>AI가 하는 일</th><th>쓰는 도구</th><th>사람이 하는 일</th></tr></thead>
+      <tbody>
+        <tr><td><b>주제</b></td><td>후보 몇 개를 '막힘 한 문장' · 훅 · 썸네일 아이디어까지 붙여서 정리</td><td>Claude</td><td><b>① 하나 고르기</b></td></tr>
+        <tr><td><b>대본</b></td><td>문장마다 번호 붙인 대본, 첫 문장(훅)은 2안</td><td>Claude</td><td><b>② 훅 고르고 OK</b></td></tr>
+        <tr><td><b>썸네일</b></td><td>그림은 이미지 AI, 제목 · 태그 · 로고는 매번 같은 틀에 얹어 2~3안 보드로</td><td>GPT 이미지 + 정해 둔 틀</td><td><b>③ 하나 고르기</b></td></tr>
+        <tr><td><b>목소리</b></td><td>같은 목소리 · 같은 설정으로 생성 → 받아쓰기로 잘못 읽은 곳 확인 → 쉼 줄이고 1.1배</td><td>ElevenLabs</td><td>— (설정은 처음 한 번만 골라 고정)</td></tr>
+        <tr><td><b>영상</b></td><td>말하는 시간에 맞춰 자막 · 장면 배치 → 글자 간격 검사 통과하면 렌더</td><td>Claude(코드로 렌더)</td><td>— (완성본 보고 고칠 곳 짚기)</td></tr>
+        <tr><td><b>올리기</b></td><td>캡션 · 상세 노트 페이지 정리</td><td>Claude</td><td><b>④ 올릴지 정하고 직접 게시</b></td></tr>
+      </tbody></table></div>
+    <img src="../../assets/img/ep22/thumb_board.jpg" alt="EP.22 썸네일 6차 후보 3안 비교 보드" style="width:100%;border-radius:14px;margin-top:14px;border:1px solid var(--line)">
+    <p class="muted" style="margin-top:6px">③ 썸네일을 고를 때 실제로 본 보드(6차). 폰 화면 속은 실제로 올린 EP.14 · 15 · 21이에요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>처음엔 어디까지 맡길까 — 4단계</h2>
+    <p class="muted">바이브 코딩을 안 해 봤다면 1단계부터 하나씩 늘려요. 각 단계만 해도 손이 가는 시간이 줄어요.</p>
+    <div class="card"><b>1단계 · 대본만 맡기기</b> <span class="muted">(ChatGPT · Claude 채팅이면 돼요)</span>
+      <p class="muted" style="margin:4px 0 0">주제와 대상만 주고, 문장 번호 붙인 대본 + 훅 2안을 받아요. 사람은 훅을 고르고 어색한 문장만 짚어요.</p></div>
+    <div class="prompt" id="script-request" style="margin-top:10px"><div class="label">복사해서 채팅에 붙이기(괄호만 바꿔요)</div><pre>(대상)이 실무에서 막히는 (막힘 한 문장)을 푸는 인스타 릴스 대본을 써 줘.
+- 25~30초, 문장 6~8개, 문장마다 번호.
+- 1번 문장(훅)은 2안: 보는 사람의 손해를 먼저 말하는 안 / 결과물을 먼저 보여 주는 안.
+- 첫 3초에는 도구 이름을 꺼내지 마.
+- 숫자는 내가 준 것만 쓰고, 없으면 숫자 없이 써.
+- 마지막 문장은 "(이득 한 마디)하고 싶다면, 팔로우하고 프로필 상세 노트 확인하세요."</pre></div>
+    <div class="card" style="margin-top:12px"><b>2단계 · 목소리 맡기기</b> <span class="muted">(ElevenLabs 웹)</span>
+      <p class="muted" style="margin:4px 0 0">목소리 · 모델 · 안정성 · 유사성을 한 번 정해 두고 매번 같은 값으로 뽑아요. 우리는 Han - Conversational · Eleven v4 · 안정성 53% · 유사성 75% · 언어 한국어예요. 영어 · 숫자는 원고에서만 읽는 대로 적어요(AI → 에이아이, 3천 → 삼천). 자막엔 원래대로 써요.</p></div>
+    <div class="card" style="margin-top:12px"><b>3단계 · 썸네일 그림 맡기기</b> <span class="muted">(이미지 AI + 내 템플릿)</span>
+      <p class="muted" style="margin:4px 0 0">그림만 AI에 맡기고, 제목 · 태그 · 로고 자리는 템플릿으로 고정해요. 이미지 AI는 글자를 잘 깨뜨려서 제목은 그림에 넣지 않아요. 그림 안 폰 화면처럼 꼭 정확해야 하는 부분은 실제 캡처를 참고 이미지로 같이 넣어요.</p></div>
+    <div class="card" style="margin-top:12px"><b>4단계 · 영상 편집까지 맡기기</b> <span class="muted">(Claude Code 같은 코딩 에이전트)</span>
+      <p class="muted" style="margin:4px 0 0">자막 시간 맞추기 · 장면 배치 · 렌더까지 코드로 돌려요. 처음 세팅은 오래 걸려요. 대신 한 번 틀을 만들면 다음 편부터는 장면만 바꿔요. 렌더 전에 "글자끼리 몇 px 이상 떨어졌나"를 검사하게 해 두면 고칠 일이 줄어요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>고르기 4번 체크리스트</h2>
+    <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
+      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>고를 때</th><th>볼 것</th></tr></thead>
+      <tbody>
+        <tr><td><b>① 주제</b></td><td>이 편이 풀어 주는 막힘을 한 문장으로 적을 수 있나? 이 일을 해 본 사람이면 거의 다 겪나? 동료한테 보내 줄 만한가?</td></tr>
+        <tr><td><b>② 대본</b></td><td>첫 문장이 보는 사람의 손해나 결과로 시작하나? 첫 3초에 도구 이름이 없나? 숫자는 직접 확인한 값인가? 30초 안쪽인가?</td></tr>
+        <tr><td><b>③ 썸네일</b></td><td>글자를 안 읽어도 무슨 얘기인지 보이나? 프로필에서 옆 편들과 색이 겹치지 않나?</td></tr>
+        <tr><td><b>④ 올릴지</b></td><td>완성본을 한 번 끝까지 봤나? "프로필 상세 노트"라고 말했다면 그 페이지가 진짜 올라가 있나?</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>실제로 고친 횟수</h2>
+    <div class="stats"><div class="stat on"><b>15번</b><span>EP.14 대본(조회 3,213)</span></div><div class="stat"><b>13번</b><span>EP.15 대본</span></div></div>
+    <ul class="muted" style="padding-left:18px;line-height:1.8;margin-top:12px">
+      <li>EP.14는 대본 v15에서 확정했고, 올리기 전에 한 번 더 새로 만들었어요(v20). EP.15는 대본 v13에서 확정했어요.</li>
+      <li>이 편(EP.22) 썸네일은 6차에서 골랐어요. 책상 · 민트 컨베이어 → 로봇 공장 라인 → 위에서 본 컨베이어 → 바닥까지 공장으로 바뀌었어요.</li>
+      <li>고친 건 매번 AI예요. 사람이 한 말은 이 정도였어요. "너무 길게 보여주는 느낌, 빠르게 훅훅" · "너무 AI로 뽑은 느낌" · "충분히 쉽게 설명됐나?"</li>
+    </ul>
+    <div class="card" style="margin-top:12px"><b>짚을 때는 '어디가 · 왜'만</b><p class="muted" style="margin:4px 0 0">고칠 방법까지 정해 주지 않아도 돼요. "2번 문장이 길어서 숨이 차요", "썸네일 폰 화면이 틀어져 보여요"처럼 어디가 왜 어색한지만 말하면 AI가 고친 안을 다시 가져와요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>써 보기 전에 알아 둘 점</h2>
+    <div class="warn"><ul>
+      <li><b>한 번에 안 끝나요.</b> AI가 빨리 만들어도 고르고 짚는 횟수가 많아요. 처음 몇 편은 오히려 오래 걸릴 수 있어요.</li>
+      <li><b>숫자 · 주장은 직접 확인해요.</b> AI는 그럴듯한 숫자를 지어낼 수 있어요. 대본에 들어가는 숫자는 내가 확인한 값만 줘요.</li>
+      <li><b>ElevenLabs는 글자 수만큼 크레딧을 써요</b>(Eleven v4 · 1자 = 1크레딧, 2026-10-26 확인). 한 번 생성하면 세대 2개가 같이 나와요.</li>
+      <li><b>게시 · 결제 · 가입은 사람이 해요.</b> 이 채널도 인스타 게시는 직접 눌러요.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>이 채널 작업 기록(편마다 기획 문서의 대본 버전 · 피드백 기록)과 2026-10-31 EP.22 제작 과정이에요.</li>
+      <li>EP.14 조회수 3,213은 2026-10-29 인스타 인사이트 값이에요.</li>
+      <li>썸네일 그림은 AI로 만들었어요. 그림 속 폰 화면은 실제로 올린 릴스예요.</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../14/"><small>← 같이 보면 좋은 편</small>EP.14 배너 사이즈 바꿀 때, 긴 배너만 잘린다면</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic · OpenAI · ElevenLabs와는 관계가 없어요. 2026-10-31 기준이라 도구가 바뀌면 달라질 수 있어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
