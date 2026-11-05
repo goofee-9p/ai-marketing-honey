@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.26 스튜디오급 모델컷 프롬프트 5개 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="모델 사진과 제품 사진을 첨부하고 ChatGPT로 뽑은 모델컷 5개. 컷별 프롬프트 전문 + 고칠 때 쓰는 프롬프트.">
+<meta property="og:title" content="EP.26 스튜디오급 모델컷 프롬프트 5개">
+<meta property="og:description" content="컷별 프롬프트 전문 + 팁 + 고칠 때 쓰는 프롬프트.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.26 · AI 모델컷</span>
+    <h1>스튜디오급<br><span class="hl">모델컷 프롬프트 5개</span></h1>
+    <p class="lead">모델 사진 한 장과 제품 사진 한 장을 첨부하고, 컷마다 프롬프트만 바꿔 ChatGPT로 뽑아요. 컷이 바뀌어도 같은 사람, 같은 라벨로 나오게 하는 공통 문장과 컷별 프롬프트 전문이에요.</p>
+    <div class="meta"><span class="chip ghost">공통 문장</span><span class="chip ghost">컷별 프롬프트 5개</span><span class="chip ghost">고칠 때 쓰는 프롬프트</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>캐러셀 다시 보기</h2>
+    <div class="gallery">
+      <img src="../../assets/img/ep26/slide_01.jpg" alt="1장" loading="lazy">
+      <img src="../../assets/img/ep26/slide_02.jpg" alt="2장" loading="lazy">
+      <img src="../../assets/img/ep26/slide_03.jpg" alt="3장" loading="lazy">
+      <img src="../../assets/img/ep26/slide_04.jpg" alt="4장" loading="lazy">
+      <img src="../../assets/img/ep26/slide_05.jpg" alt="5장" loading="lazy">
+      <img src="../../assets/img/ep26/slide_06.jpg" alt="6장" loading="lazy">
+      <img src="../../assets/img/ep26/slide_07.jpg" alt="7장" loading="lazy">
+    </div>
+    <p class="muted" style="margin-top:8px">옆으로 넘겨 보세요 →</p>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>먼저 준비할 사진 2장</h2>
+    <ol class="steps">
+      <li><b>모델 사진</b>마음에 드는 모델컷 한 장이에요. 얼굴 기준이 돼요.</li>
+      <li><b>제품 사진</b>라벨 글자까지 확정한 제품 사진이에요. 이 예시는 가상 브랜드 '허니 뷰티' 앰플이에요.</li>
+      <li><b>요청</b>ChatGPT에 두 장을 첨부하고, 아래 공통 문장 뒤에 컷 프롬프트를 이어 붙여요.</li>
+    </ol>
+    <div class="gallery" style="margin-top:12px">
+      <img src="../../assets/img/ep26/model.jpg" alt="첨부 1: 모델 사진" loading="lazy">
+      <img src="../../assets/img/ep26/product.jpg" alt="첨부 2: 제품 사진" loading="lazy">
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>모든 컷 앞에 붙이는 공통 문장</h2>
+    <div class="prompt" id="common">
+      <div class="label">공통 문장</div>
+      <pre>The first attached photo is the model; the second is the product. Keep the woman from the first photo exactly — same face, eyes, see-through bangs and messy high bun — do not change or beautify her face. Use the product exactly as in the second photo (clear glass dropper bottle, mustard-yellow dropper cap, golden liquid, navy label "HONEY BEAUTY", "Honey Ampoule", "HYALURON BRIGHT", "30ml"), label readable. Same bright soft daylight and airy white mood as the first photo. Vertical 4:5, premium K-beauty campaign photo, real skin texture, not airbrushed.</pre>
+      <p class="tip">💡 제품 설명(병 색, 라벨 글자)은 우리 제품에 맞게 바꿔 쓰세요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>컷별 프롬프트 5개</h2>
+    <div class="prompt" id="cut-closeup">
+      <div class="label">1. 클로즈업 모델컷</div>
+      <pre>Tight close-up from her forehead to her chin, face filling the frame. She holds the bottle (cap on) right against her cheek, label facing the camera, and gives a soft eye-smile straight into the lens. Dewy glowing skin, fine pores visible.</pre>
+      <p class="tip">💡 모델 사진과 제품 사진을 같이 첨부하면 얼굴과 라벨이 그대로 나와요.</p>
+    </div>
+    <div class="prompt" id="cut-texture">
+      <div class="label">2. 앰플 질감컷</div>
+      <pre>Extreme close-up from her eye to her lips. A smooth, glossy golden ampoule swipe on her cheekbone, no bubbles. Open bottle in the corner, label readable. Soft side light, 100mm macro, real pores.</pre>
+      <p class="tip">💡 기포가 생기면 새로 만들지 말고 아래 "기포만 지우기"로 고쳐요.</p>
+    </div>
+    <div class="prompt" id="cut-dropper">
+      <div class="label">3. 스포이드 한 줄컷</div>
+      <pre>Close-up from her eye down to her lips: with the glass dropper she draws one clean diagonal stroke of golden ampoule from below her eye toward her ear, the tip still touching the end of the line. One smooth, glossy, perfectly clear line — no bubbles, no beads. The open bottle (no cap — the cap is the dropper) held near her jaw, label readable.</pre>
+      <p class="tip">💡 'no bubbles, no beads'처럼 빼고 싶은 걸 직접 적어요.</p>
+    </div>
+    <div class="prompt" id="cut-product">
+      <div class="label">4. 제품 강조컷</div>
+      <pre>Detail shot cropped from just below her eyes to her collarbone: her lower face with a soft smile and glossy lips is gently out of focus while both hands hold the bottle in sharp focus at chest height, label facing the camera. Floral camisole, soft natural nails, light catching the golden liquid.</pre>
+      <p class="tip">💡 'label facing the camera, readable'을 적으면 라벨이 또렷해요.</p>
+    </div>
+    <div class="prompt" id="cut-lifestyle">
+      <div class="label">5. 라이프스타일컷</div>
+      <pre>Wider shot from the waist up: she sits by a bright window on a white bed in the floral camisole, knees drawn up, laughing naturally with her eyes crinkled, holding the bottle loosely in one hand on her knee, label readable. Airy, candid lifestyle feel, lots of soft white light.</pre>
+      <p class="tip">💡 'laughing naturally, candid'를 넣으면 포즈를 잡은 티가 덜 나요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>고칠 때는 새로 뽑지 말고</h2>
+    <div class="prompt" id="fix-bubbles">
+      <div class="label">앰플의 기포만 지우기 (결과 사진 첨부)</div>
+      <pre>Edit the attached photo. Keep absolutely everything else identical — the model, her face, eye, lips, hair, hand and fingers, the bottle and every letter of its label, lighting, colors and framing. Only change the golden ampoule on her cheek: remove every bubble, bead, droplet and grainy speck so it becomes one smooth, even, glossy and perfectly clear liquid layer with clean edges and a soft mirror-like highlight, like a single smooth swipe of ampoule. Same shape and position on the cheek.</pre>
+      <p class="tip">💡 "다른 건 그대로"를 먼저 말하고, 바꿀 곳을 하나만 적어요. 새로 뽑으면 얼굴이나 라벨까지 달라질 수 있어요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>이 세 가지만 기억하세요</h2>
+    <div class="card"><b>'예쁘게·애교살' 같은 단어는 빼기</b><p class="muted" style="margin:4px 0 0">넣을수록 성형한 얼굴이 나와요.</p></div>
+    <div class="card"><b>모델컷 + 라벨 확정한 제품 사진 첨부</b><p class="muted" style="margin:4px 0 0">컷이 바뀌어도 같은 사람, 같은 라벨로 나와요.</p></div>
+    <div class="card"><b>고칠 땐 새로 말고 "이것만"</b><p class="muted" style="margin:4px 0 0">다른 건 그대로 두고 한 군데만 고쳐요.</p></div>
+  </section>
+
+  <section>
+    <h2><span class="n">07</span>쓰기 전에 꼭</h2>
+    <div class="warn">
+      <ul>
+        <li>실제 사람 사진을 기준으로 쓸 때는 <b>초상권 동의</b>를 먼저 확인하세요.</li>
+        <li>라벨 글자는 <b>원본 제품과 한 글자씩 대조</b>하고 쓰세요. 비슷해 보여도 바뀔 수 있어요.</li>
+        <li>광고에 AI 인물을 쓰면 매체 규정에 맞게 <b>AI 생성 표기</b>를 확인하세요. 효능을 말하는 문구는 광고 심의 기준으로 따로 검토하세요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="next">
+    <a href="../25/"><small>← 이전 편</small>EP.25 PPT 안 열고 만든 모션 발표 자료 10장</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. OpenAI와는 관계가 없어요. '허니 뷰티'는 예시용 가상 브랜드이고, 사진 속 인물과 제품은 모두 AI로 만든 이미지예요(ChatGPT).
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
