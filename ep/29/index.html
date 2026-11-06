@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.29 인스타 계정 통째로 AI한테 맡겼어요 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="대본부터 업로드까지 AI가 하고 사람은 주제를 고르는 계정 운영. 시작 요청문, 임시 채팅에서 돌린 결과, 계정 제한 위험.">
+<meta property="og:title" content="EP.29 인스타 계정 통째로 AI한테 맡겼어요">
+<meta property="og:description" content="AI가 일하고, 사람은 고르고 승인해요.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.29 · 계정 운영</span>
+    <h1>인스타 계정 통째로<br><span class="hl">AI한테 맡겼어요</span></h1>
+    <p class="lead">터진 릴스를 읽고, 왜 터졌는지 찾고, 대본 · 목소리 · 영상 · 업로드까지 AI가 해요. 사람은 <b>주제를 고르고 올리기 전에 승인</b>해요.</p>
+    <div class="meta"><span class="chip ghost">시작 요청문</span><span class="chip ghost">돌려 본 결과</span><span class="chip ghost">계정 제한 위험</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>먼저 알아 둘 것</h2>
+    <div class="warn"><ul>
+      <li><b>계정 제한 위험:</b> 인스타 이용 약관은 허가 없이 자동화된 방식으로 정보에 접근하거나 수집하는 걸 금지해요(로그인 상태여도 마찬가지예요). 자동화 도구로 릴스를 긁거나 올리면 계정이 제한될 수 있어요. 자동 게시의 공식 경로는 Instagram API(프로페셔널 계정 + 권한)예요.</li>
+      <li><b>사람이 승인해요.</b> 아래 사례(EP.25)도 계정 주인이 승인한 뒤에 올렸어요. 결제 · 계정 설정 · 댓글도 사람 몫으로 두세요.</li>
+      <li>인스타 아이디와 비밀번호를 외부 앱이나 AI에 넘기지 마세요.</li>
+      <li>'왜 터졌는지'는 AI의 추측이에요. 조회수는 내가 직접 본 값을 쓰는 게 정확해요.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>이 계정에서 실제로 한 범위</h2>
+    <div class="card"><ol class="muted" style="padding-left:20px;line-height:1.9;margin:0">
+      <li><b>읽기 · 왜 터졌나:</b> 비슷한 계정 릴스를 조회수 구간별로 나눠 분석했어요. 10월 118편, 11월 조사까지 합치면 수백 편이에요. 로그인된 브라우저에서 읽었어요.</li>
+      <li><b>대본:</b> Claude가 쓰고, 다른 Claude 세션과 ChatGPT가 검수했어요.</li>
+      <li><b>목소리:</b> ElevenLabs 웹에서 생성했어요.</li>
+      <li><b>영상:</b> 코드로 만든 렌더러가 화면을 그렸어요.</li>
+      <li><b>업로드:</b> EP.25는 계정 주인이 승인한 뒤, 브라우저 자동화로 올렸어요. 공식 API 경로가 아니라서 위 위험을 함께 봐야 해요.</li>
+      <li><b>사람:</b> 주제 후보를 읽어 보고 고르기 · 게시 승인.</li>
+    </ol></div>
+    <p class="muted" style="margin-top:10px">영상 첫 화면의 조회수 1.6만은 2026-11-06 릴스 탭에서 읽은 값이고, 이 계정 릴스 중 가장 높아요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>시작 요청문</h2>
+    <div class="prompt" id="req-line"><div class="label">영상의 한 줄</div><pre>내 분야 터진 릴스 스무 개, 왜 터졌는지 표로 정리해 줘.</pre><div class="tip">이것만 넣으면 AI가 분야를 묻거나 짐작해요. 아래처럼 분야를 적는 게 좋아요.</div></div>
+    <div class="prompt" id="req-a" style="margin-top:12px"><div class="label">분야를 적은 버전</div><pre>내 분야는 [분야 이름]이야. 터진 인스타 릴스 스무 개, 왜 터졌는지 표로 정리해 줘.
+칸은 계정 · 첫 문장 · 조회수 · 링크 · 왜 터졌나.
+조회수와 링크는 확인한 것만 적고, 못 찾은 칸은 &quot;확인 못 함&quot;이라고 적어 줘.
+왜 터졌나는 추측이라고 표시해 줘.</pre></div>
+    <div class="prompt" id="req-b" style="margin-top:12px"><div class="label">내가 본 값으로 주제 다섯 개 받기</div><pre>아래는 내가 릴스 탭에서 직접 본 표야.
+- 조회수 [숫자] / [릴스 제목 또는 첫 문장]
+- 조회수 [숫자] / [릴스 제목 또는 첫 문장]
+- 조회수 [숫자] / [릴스 제목 또는 첫 문장]
+이 표에 있는 값만 근거로, 왜 차이가 났을지 추측 3개를 적어 줘.
+그다음 이번 주 올릴 주제 다섯 개를 제목 한 줄씩 제안해 줘. 고르는 건 내가 할게.</pre><div class="tip">정확한 숫자가 필요하면 이 방법이에요. 릴스 탭에서 직접 보고 적은 값만 쓰니까요.</div></div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>브라우저 연결 없이 돌려 본 결과</h2>
+    <p class="muted">2026-11-06, ChatGPT 임시 채팅과 Claude 시크릿 채팅에서 돌렸어요. 브라우저나 외부 연결 도구는 쓰지 않았어요.</p>
+    <div class="card"><ul class="muted" style="padding-left:18px;line-height:1.9;margin:0">
+      <li><b>ChatGPT · 한 줄 그대로:</b> 분야를 묻지 않고 뷰티 분야로 짐작해서 표 20줄을 줬어요. 내 분야가 아닐 수 있어요.</li>
+      <li><b>ChatGPT · 분야를 적었을 때:</b> 표 20줄이 나왔어요. 조회수는 외부 사이트에 표시된 값이고, 개별 릴스 링크는 없고 목록 페이지 링크만 있었어요. '확인 못 함'이라고 적게 하면 링크 칸이 전부 '확인 못 함'으로 나왔어요.</li>
+      <li><b>Claude · 한 줄 그대로:</b> 분야부터 물었어요.</li>
+      <li><b>Claude · 분야를 적었을 때:</b> 웹 검색으로 20개 중 7개만 찾았고, 링크는 대부분 비었어요. 직접 고른 링크를 붙여 달라고 되물었어요.</li>
+      <li><b>내가 본 값을 넣었을 때(ChatGPT):</b> 넣은 값만 근거로 추측 3개와 주제 다섯 개가 나왔어요. 원인을 단정할 수 없다는 말도 같이 나왔어요.</li>
+    </ul></div>
+    <img src="../../assets/img/ep29/gpt_table.jpg" alt="ChatGPT 임시 채팅이 준 표 일부. 조회수, 목록 링크, 터진 이유 칸" style="width:100%;border-radius:14px;margin-top:12px">
+    <p class="muted" style="margin-top:8px">그래서 이 한 줄은 <b>방향을 잡는 첫 표</b>로 쓰세요. 숫자가 중요한 표는 03번 세 번째 요청문처럼 내가 본 값을 넣어요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>Instagram 이용 약관(help.instagram.com/581066165581870) — 자동화된 정보 접근 · 수집 금지. 2026-11-06 확인.</li>
+      <li>Instagram 도움말 "데이터 스크래핑으로 계정이 제한된 이유"(help.instagram.com/740480200552298) — 계정 제한. 2026-11-06 확인.</li>
+      <li>Meta 개발자 문서 "Automated Data Collection" · "Instagram Platform: Content Publishing"(developers.facebook.com) — 공식 API 경로 · 게시 조건. 2026-11-06 확인.</li>
+      <li>썸네일 그림은 AI로 만들었어요.</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../25/"><small>← 같이 보면 좋은 편</small>EP.25 PPT 안 열고 만든 모션 발표 자료 10장</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Meta · OpenAI · Anthropic과는 관계가 없어요. 약관과 답은 2026-11-06 기준이라 바뀔 수 있어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
