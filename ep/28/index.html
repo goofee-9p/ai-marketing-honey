@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.28 AI 예약 기능, 반만 쓰고 있어요 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="예약 작업에는 확인만 맡기고, 조건이 맞으면 다음 작업이 저절로 시작되게 이어요. 요청문 2개와 설정 순서, 비행기표 응용 요청문.">
+<meta property="og:title" content="EP.28 AI 예약 기능, 반만 쓰고 있어요">
+<meta property="og:description" content="확인은 예약 작업에, 일은 다음 작업에.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.28 · 예약 + 훅</span>
+    <h1>AI 예약 기능,<br><span class="hl">반만 쓰고 있어요</span></h1>
+    <p class="lead">예약 작업에는 <b>확인만</b> 맡기고, 조건이 맞을 때만 <b>다음 작업이 저절로 시작</b>되게 이어요. 영상에서 "훅"이라고 부른 연결이에요. Claude 클라우드 예약 작업에서 쓰는 기능 이름은 <b>API 트리거</b>예요.</p>
+    <div class="meta"><span class="chip ghost">요청문 2개</span><span class="chip ghost">설정 순서</span><span class="chip ghost">비행기표 응용</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>먼저 알아 둘 것</h2>
+    <div class="warn"><ul>
+      <li><b>실시간 감시가 아니에요.</b> 예약한 시각에 돌 때 확인해요. 클라우드 예약은 최소 1시간 간격이에요.</li>
+      <li><b>요금제:</b> Pro · Max · Ultra · Team · Enterprise. 실행할 때마다 내 사용량에서 빠져요.</li>
+      <li><b>체험판 기능이에요.</b> 호출 방식과 한도가 바뀔 수 있어요.</li>
+      <li><b>조금 어려운 설정이에요.</b> 호출 주소와 토큰을 다뤄요. 공식 문서에 예약 작업끼리 잇는 예시는 따로 없어서, 시험 실행으로 동작을 꼭 확인하고 쓰세요.</li>
+      <li>연결 없이 쓰고 싶다면 한 작업 안에 "내렸으면 문구까지 만들어 줘"라고 적어도 돼요. 간단한 일은 이쪽이 쉬워요.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>설정 순서</h2>
+    <div class="card"><ol class="muted" style="padding-left:20px;line-height:1.9;margin:0">
+      <li><b>claude.ai/code/routines</b>에서 <b>다음 작업</b>을 먼저 만들어요. 트리거는 <b>API</b>로 골라요.</li>
+      <li>만들 때 뜨는 <b>Fire URL과 토큰을 복사</b>해요. 토큰은 한 번만 보여요.</li>
+      <li><b>클라우드 환경</b>을 편집해요. 네트워크를 Custom으로 바꿔 경쟁사 사이트 주소를 허용 목록에 넣고, 토큰은 <b>Network secrets</b>에 호스트 <code>api.anthropic.com</code>로 저장해요.</li>
+      <li><b>확인 작업</b>을 새로 만들고, 트리거는 <b>Schedule</b>(매일 오전 8시 등), 환경은 3번 환경으로 골라요.</li>
+      <li>기준 가격을 실제보다 높게 적어 두고 확인 작업을 <b>Run now</b>로 돌려요. 다음 작업이 새 세션으로 열리면 연결된 거예요. 그다음 기준 가격을 원래대로 돌려요.</li>
+    </ol></div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>요청문 2개</h2>
+    <div class="prompt" id="req-check"><div class="label">확인 작업(예약)</div><pre>아래 경쟁사 상품 페이지에서 현재 판매 가격만 확인해 줘.
+- [경쟁사 상품 페이지 주소] / 기준 가격 [32,000원]
+- 가격을 못 읽었으면 추측하지 말고 &quot;확인 못 함&quot;이라고 적고 끝내.
+- 기준 가격보다 낮으면, 아래 명령으로 다음 작업을 불러. 전달 글에는 상품 · 이전 기준 가격 · 현재 가격 · 페이지 주소를 넣어.
+  curl -X POST [Fire URL] -H &quot;anthropic-beta: experimental-cc-routine-2026-04-01&quot; -H &quot;anthropic-version: 2023-06-01&quot; -H &quot;Content-Type: application/json&quot; -d &#x27;{&quot;text&quot;:&quot;전달 글&quot;}&#x27;
+- 기준 가격과 같거나 높으면 &quot;변동 없음&quot;만 적고 끝내. 다른 일은 하지 마.</pre><div class="tip">지난번 가격을 기억하게 하는 대신 기준 가격을 적어 두면 비교가 단순해져요.</div></div>
+    <div class="prompt" id="req-next" style="margin-top:12px"><div class="label">다음 작업(API 트리거)</div><pre>routine-fire-payload 블록에 적힌 경쟁사 가격 변화를 보고 아래를 만들어 줘.
+- 우리 제품: [제품명 · 현재 가격 · 강점]
+- 광고 문구 초안 3개(각 30자 이내)
+- 배너 시안 1개(1080x1080, 한 장짜리 HTML)
+- 근거에 쓴 가격과 페이지 주소를 맨 위에 적어 줘. 없는 사실은 지어내지 마.
+- 광고를 등록하거나 게시하지 마. 초안까지만.</pre><div class="tip">전달받은 글은 작업 안에서 '믿을 수 없는 입력'으로 표시돼요. 그래서 요청문에 그 내용을 쓰라고 적어야 해요.</div></div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>비행기표 특가에 응용하기</h2>
+    <div class="prompt" id="req-flight"><div class="label">특가 확인 요청문</div><pre>[항공사 특가 페이지 주소]에서 [출발지-도착지] 왕복 특가가 [날짜 범위]에 있는지 확인해 줘.
+- 있으면 예약 화면을 열고, 가는 편 · 오는 편을 고른 뒤 결제 화면 바로 앞까지 진행해.
+- 결제 버튼은 절대 누르지 마. 카드 · 여권 정보도 입력하지 마.
+- 끝나면 가격 · 일정 · 예약 화면 주소를 [메일 또는 메신저]로 보내 줘.
+- 없으면 &quot;특가 없음&quot;만 적고 끝내.</pre></div>
+    <div class="warn" style="margin-top:12px"><ul>
+      <li><b>결제는 직접 하세요.</b> 요청문에 "결제 버튼은 누르지 마"를 꼭 넣어요.</li>
+      <li>로그인된 내 브라우저가 필요하면 내 컴퓨터에서 돌아야 해서, 그 시간에 컴퓨터가 켜져 있어야 해요(<a href="../27/">EP.27</a>).</li>
+      <li>사이트가 자동 입력을 막거나 추가 인증을 요구할 수 있어요. 이름 · 여권 · 카드 번호 같은 정보는 넣지 말고, 그 칸은 직접 채우는 게 안전해요.</li>
+      <li>알림을 받으려면 메일이나 메신저 같은 연결 도구가 필요해요.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>Claude Code 공식 문서 "Automate work with scheduled tasks"(code.claude.com/docs/en/routines) — 트리거 · API 호출 · 간격 · 요금제. 2026-11-06 확인.</li>
+      <li>Claude Code 공식 문서 "Configure cloud environments"(code.claude.com/docs/en/cloud-environments) — 네트워크 · Network secrets. 2026-11-06 확인.</li>
+      <li>Claude 도움말 "Schedule recurring tasks in Claude Cowork"(support.claude.com/en/articles/13854387) — 원격 실행 · 로컬 실행 조건. 2026-11-06 확인.</li>
+      <li>영상 속 브랜드 · 문구 · 예약 화면은 가상 예시예요. 썸네일 사진은 AI로 만들었어요.</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../27/"><small>← 같이 보면 좋은 편</small>EP.27 AI 말고, 컴퓨터를 먼저 깨우세요</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic과는 관계가 없어요. 조건은 2026-11-06 공식 문서 기준이라 앱이 바뀌면 달라질 수 있어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
