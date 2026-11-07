@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>유튜브 03 릴스 공장 만드는 법 — 조회 9천 릴스 공정 그대로 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="조회 9,366이 나온 릴스 한 편의 공정표 · 규칙 파일 틀 · 단계별 요청문 · 사람이 고르는 네 자리 체크리스트.">
+<meta property="og:title" content="릴스 공장 만드는 법 — 조회 9천 릴스 공정 그대로">
+<meta property="og:description" content="공정표 · 규칙 파일 틀 · 단계별 요청문 · 사람이 고르는 네 자리 체크리스트">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../#youtube"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+    <a class="handle" href="https://www.youtube.com/@ai.marketinghoney" aria-label="유튜브 @ai.marketinghoney" title="@ai.marketinghoney"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">유튜브 03 · 릴스 공장</span>
+    <h1>릴스 공장 만드는 법,<br><span class="hl">조회 9,366 릴스 공정 그대로</span></h1>
+    <p class="lead">올리고 23시간에 조회 9,366이 나온 릴스(EP.25)의 작업 기록을 공정대로 정리했어요. 같은 공정으로 만든 조회 259 릴스도 있어요. 공장은 매일 올릴 수 있게 해 주지만, 터지게 해 주지는 않아요.</p>
+    <div class="meta"><span class="chip ghost">공정표</span><span class="chip ghost">규칙 파일 틀</span><span class="chip ghost">단계별 요청문</span><span class="chip ghost">고르는 자리 4곳</span></div>
+    <img src="../../assets/img/yt03/cover_169.jpg" alt="안전모 쓴 별 캐릭터와 미니 컨베이어 썸네일" loading="lazy" style="width:100%;border-radius:16px;border:1.5px solid var(--line);margin-top:14px">
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>공정표</h2>
+    <p class="muted">순서는 대본 → 썸네일 → 목소리 → 영상이에요. 앞 단계가 바뀌면 뒤가 전부 다시 만들어져서, 앞을 정하기 전엔 영상을 뽑지 않아요.</p>
+    <div style="overflow-x:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6">
+      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>단계</th><th>AI가 하는 일</th><th>쓰는 도구</th><th>사람이 하는 일</th></tr></thead>
+      <tbody>
+        <tr><td><b>규칙 파일</b></td><td>작업 시작할 때 먼저 읽기</td><td>Claude</td><td>거슬린 것을 한 줄씩 적기</td></tr>
+        <tr><td><b>주제</b></td><td>후보를 문제 한 문장으로 정리</td><td>Claude</td><td><b>① 하나 고르기</b></td></tr>
+        <tr><td><b>대본</b></td><td>문장 번호 붙인 대본 · 첫 문장 2안 · 고쳐 쓰기</td><td>Claude</td><td><b>② 어디로 갈지 정하기</b> · 숫자 확인</td></tr>
+        <tr><td><b>썸네일</b></td><td>그림 후보 · 정해 둔 틀에 제목 얹기</td><td>이미지 AI + 틀</td><td><b>③ 왜 별로인지 말하고 고르기</b></td></tr>
+        <tr><td><b>목소리</b></td><td>같은 설정으로 생성 · 받아쓰기 대조 · 쉼 줄이고 1.1배</td><td>ElevenLabs</td><td>처음에 설정 한 번</td></tr>
+        <tr><td><b>조립과 검사</b></td><td>말에 맞춰 자막 · 장면 배치 · 겹침 검사 뒤 렌더</td><td>Claude Code</td><td>지적은 한 번 → 규칙과 검사로</td></tr>
+        <tr><td><b>올리기</b></td><td>캡션 · 상세 노트 정리</td><td>Claude</td><td><b>④ 올릴지 정하기</b></td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>규칙 파일 틀</h2>
+    <p class="muted">처음부터 길게 쓰지 마세요. 한 편 만들고 거슬린 것만 적으면 돼요. 채팅 앱이면 대화 시작할 때 이 파일을 첨부하세요.</p>
+    <div class="prompt" id="rules"><div class="label">복사해서 파일로 저장(괄호만 바꿔요)</div><pre># (채널 이름) 제작 규칙
+
+## 대상
+- 누가 보는지: (직무 · 연차)
+- 그 사람이 겪는 문제 예시: (한 줄)
+
+## 대본
+- 길이: (30초 안쪽) · 문장마다 번호
+- 첫 문장 2안: 손해를 먼저 / 결과를 먼저
+- 첫 3초에 도구 이름 꺼내지 않기
+- 숫자는 내가 준 값만 쓰기. 없으면 숫자 없이 쓰기
+
+## 화면
+- 자막: (위치 · 글자 크기 · 한 줄 글자 수)
+- 그림이나 캡처 위에 글자 · 칩 얹지 않기
+- 썸네일: 글자 자리는 고정, 그림만 매번 새로
+
+## 목소리
+- 목소리 (이름) · 모델 (이름) · 안정성 (숫자) · 유사성 (숫자)
+- 영어 · 숫자는 원고에만 읽는 대로 적기
+
+## 지적 기록 (날짜 + 그때 한 말)
+- (날짜) "(거슬렸던 말)" → (앞으로 지킬 규칙)</pre></div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>단계별 요청문 — 처음엔 어디까지</h2>
+    <p class="muted">다 하실 필요 없어요. 편집은 맨 나중에 맡겨도 돼요.</p>
+    <div class="card"><b>1단계 · 대본만</b> <span class="muted">(채팅 앱이면 충분해요)</span></div>
+    <div class="prompt" id="script-request" style="margin-top:10px"><div class="label">복사해서 붙이기</div><pre>첨부한 규칙 파일을 먼저 읽어 줘.
+(대상)이 실무에서 겪는 문제 "(문제 한 문장)"을 푸는 릴스 대본을 써 줘.
+문장마다 번호를 붙이고, 1번 문장은 2안으로 줘(손해를 먼저 / 결과를 먼저).
+숫자는 내가 준 것만 써. 없으면 숫자 없이 써.</pre></div>
+    <div class="card" style="margin-top:12px"><b>2단계 · 목소리</b><p class="muted" style="margin:4px 0 0">설정 숫자를 고정하고 같은 값으로 뽑아요. 우리는 Han - Conversational · Eleven v4 · 안정성 53 · 유사성 75 · 한국어예요. 글자 수만큼 크레딧이 빠져요.</p></div>
+    <div class="card" style="margin-top:12px"><b>3단계 · 썸네일 그림</b><p class="muted" style="margin:4px 0 0">글자 자리는 내 템플릿에 두고 그림만 맡겨요. 이미지 AI는 한글을 잘 깨뜨려요.</p></div>
+    <div class="prompt" id="thumb-request" style="margin-top:10px"><div class="label">그림 요청문 틀</div><pre>(문제가 보이는 장면)을 사진처럼 그려 줘. 세로 3:4.
+글자 · 로고는 넣지 마. 아래쪽 1/3은 제목이 들어가게 비워 줘.
+후보 2장을 서로 다른 장면으로 줘.</pre></div>
+    <div class="card" style="margin-top:12px"><b>4단계 · 영상 편집</b> <span class="muted">(Claude Code 같은 코딩 에이전트)</span><p class="muted" style="margin:4px 0 0">처음 세팅은 오래 걸려요. 대신 틀을 만들면 다음 편부터 장면만 바꿔요.</p></div>
+    <div class="prompt" id="check-request" style="margin-top:10px"><div class="label">검사 넣는 요청문</div><pre>렌더 전에 화면 요소 위치를 기록해서, 칩이나 글자가 그림 · 캡처 위에 얹히면 실패로 멈추는 검사를 넣어 줘.
+실패하면 어느 장면 몇 초인지 출력하고 영상을 만들지 마.
+일부러 칩을 얹어서 검사가 실제로 잡는지도 확인해 줘.</pre></div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>사람이 고르는 자리 4곳</h2>
+    <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
+      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>자리</th><th>볼 것</th></tr></thead>
+      <tbody>
+        <tr><td><b>① 주제</b></td><td>이 일 해 본 사람이 거의 다 겪는 문제인가? 동료한테 보내 줄 만한가?</td></tr>
+        <tr><td><b>② 대본</b></td><td>이야기가 맞는 쪽으로 가나? 첫 문장이 손해나 결과로 시작하나? 숫자는 확인했나?</td></tr>
+        <tr><td><b>③ 썸네일</b></td><td>글자 없이도 무슨 얘기인지 보이나? 옆 편과 색이 겹치지 않나?</td></tr>
+        <tr><td><b>④ 올릴지</b></td><td>완성본을 끝까지 봤나? 말한 상세 노트가 진짜 올라가 있나?</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>주제로 나눠 본 숫자 (2026-11-05 오전)</h2>
+    <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
+      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>묶음</th><th>편 · 조회</th></tr></thead>
+      <tbody>
+        <tr><td><b>AI한테 말 잘 시키는 요령</b></td><td>EP18 246 · EP19 237 · EP20 312 · EP21 259</td></tr>
+        <tr><td><b>일의 큰 덩어리를 새로</b></td><td>EP14 3,257 · EP15 5,382 · EP16 326 · EP17 250 · EP22 1,441 · EP23 300 · EP24 5,580 · EP25 9,366</td></tr>
+      </tbody></table></div>
+    <div class="warn" style="margin-top:12px"><ul>
+      <li>편수가 적고, 묶음은 결과를 본 뒤에 나눴어요. 법칙이 아니라 우리 채널에서 이렇게 갈렸다는 정도예요.</li>
+      <li>편마다 게시 뒤 기간이 달라요(EP25 23시간 · EP21 4일). 3초 유지율은 아직 못 쟀어요.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>출처 · 화면 안내</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>숫자는 2026-11-05 오전 인스타 인사이트 값이에요.</li>
+      <li>영상 속 파일 창과 터미널은 실제 파일 문장 · 실제 출력을 영상용으로 다시 그린 거예요. 검사 실패 화면은 칩을 일부러 얹어 다시 돌린 재현이에요.</li>
+      <li>나레이션은 AI 목소리(ElevenLabs)예요. 썸네일과 표지 그림은 AI로 만든 이미지예요.</li>
+    </ul>
+  </section>
+
+    <nav class="next">
+    <a href="../02/"><small>유튜브 02</small>AI로 만든 툴, 팀 전체가 쓰게 되기까지 5단계</a>
+    <a href="../../ep/25/" style="text-align:right"><small>릴스 편</small>EP.25 PPT 안 열고 만든 모션 발표 자료 10장</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 직접 써 보고 정리해요.</p>
+    <a href="https://www.youtube.com/@ai.marketinghoney">유튜브 구독</a>
+    <a href="https://www.instagram.com/ai.marketing.honey/" class="yt">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic · ElevenLabs · OpenAI와는 관계가 없어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
