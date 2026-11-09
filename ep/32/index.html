@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP.32 AI 뉴스 다 보지 말고, 개발자들이 쓰는 법을 보세요 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="마케터가 요즘 얘기하는 AI 활용법은 개발자들이 먼저 쓰던 것이에요. 해외 개발자 커뮤니티 · 유튜브 채널 · 뉴스레터와, 마케팅에 옮기는 요청문을 정리했어요.">
+<meta property="og:title" content="EP.32 AI 뉴스 다 보지 말고, 개발자들이 쓰는 법을 보세요">
+<meta property="og:description" content="개발자 소식 보는 곳 10곳과 마케팅에 옮기는 요청문.">
+<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+.tl { display: grid; gap: 10px; }
+.tl .row { background: #fff; border: 1.5px solid var(--line); border-radius: 16px; padding: 14px; }
+.tl .k { font-size: 13px; font-weight: 800; color: var(--honey-d); margin-bottom: 8px; }
+.tl .pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; }
+.tl .a, .tl .b { border-radius: 12px; padding: 10px 12px; font-size: 14.5px; line-height: 1.45; }
+.tl .a { background: #23283a; color: #e8eaf0; }
+.tl .b { background: var(--honey-l); color: #4a3200; font-weight: 700; }
+.tl small { display: block; font-size: 11.5px; font-weight: 800; opacity: .7; margin-bottom: 2px; }
+.tl .gap { font-size: 12.5px; font-weight: 900; color: #b32a33; text-align: center; white-space: nowrap; }
+.src { display: grid; gap: 10px; }
+.src a.item { display: block; text-decoration: none; color: inherit; background: #fff; border: 1.5px solid var(--line); border-radius: 16px; padding: 14px 16px; }
+.src a.item:hover { border-color: var(--honey); }
+.src .nm { font-size: 17px; font-weight: 900; }
+.src .tag { display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: #eef0f4; color: #4a5060; vertical-align: 2px; }
+.src .tag.ko { background: #e2f4ea; color: #16774a; }
+.src p { margin: 6px 0 0; font-size: 14.5px; line-height: 1.55; color: #3a4252; }
+.src .how { margin-top: 6px; font-size: 13.5px; color: var(--honey-d); font-weight: 700; }
+.pick { display: grid; gap: 8px; padding: 0; }
+.pick li { list-style: none; background: #fff; border: 1.5px solid var(--line); border-radius: 14px; padding: 12px 14px; font-size: 15px; line-height: 1.5; }
+.pick b { color: var(--honey-d); }
+</style>
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.32 · AI 흐름</span>
+    <h1>AI 뉴스 다 보지 말고<br><span class="hl">여기만 보세요</span></h1>
+    <p class="lead">마케터가 요즘 얘기하는 AI 활용법은 대부분 개발자들이 먼저 쓰던 거예요. 그래서 AI 뉴스를 다 따라가기보다, <b>개발자들이 AI를 어떻게 쓰는지</b>를 보면 다음 유행이 먼저 보여요. 그 소식을 보는 곳 10곳과, 마케팅에 옮기는 요청문을 정리했어요.</p>
+    <div class="meta"><span class="chip ghost">개발자 → 마케터 시간표</span><span class="chip ghost">커뮤니티 3</span><span class="chip ghost">유튜브 4</span><span class="chip ghost">뉴스레터 3</span><span class="chip ghost">요청문 2개</span></div>
+  </div>
+
+  <section>
+    <h2><span class="n">01</span>개발자가 먼저, 마케터는 나중에</h2>
+    <p class="muted" style="margin-bottom:12px">개발자용으로 먼저 나오고, 한참 뒤에 누구나 쓰는 모양으로 바뀐 예예요.</p>
+    <div class="tl">
+      <div class="row"><div class="k">바이브 코딩(말로 시키면 AI가 코드를 짜 주는 방식)</div><div class="pair"><div class="a"><small>개발자</small>2025년 2월 2일 · 안드레 카파시가 처음 쓴 말</div><div class="gap">→</div><div class="b"><small>마케터 · 비개발자</small>국내 교육과정 · '바이브 마케팅' 글이 나오기 시작</div></div></div>
+      <div class="row"><div class="k">AI한테 컴퓨터 일 맡기기</div><div class="pair"><div class="a"><small>개발자</small>클로드 코드(2025년 2월)</div><div class="gap">약 11개월</div><div class="b"><small>누구나</small>클로드 코워크(2026년 1월 12일)</div></div></div>
+      <div class="row"><div class="k">노트북을 덮어도 혼자 일하는 AI</div><div class="pair"><div class="a"><small>개발자</small>OpenAI 코덱스 · 클라우드에서 혼자 코딩(2025년 5월 16일)</div><div class="gap">약 1년 4개월</div><div class="b"><small>누구나</small>ChatGPT 닷츠(2026년 9월 29일) · 클로드 듀엣(10월)</div></div></div>
+    </div>
+    <p class="muted" style="margin-top:10px">앤트로픽은 코워크를 소개하면서, 클로드 코드 사용자들이 코딩이 아닌 일까지 맡기는 걸 보고 만들었다고 밝혔어요. 마케터들이 바이브 코딩을 언제부터 썼는지는 하나로 정할 근거가 없어서 날짜를 적지 않았어요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>해외 개발자 커뮤니티</h2>
+    <div class="src">
+      <a class="item" href="https://news.ycombinator.com/" target="_blank" rel="noopener"><div class="nm">Hacker News<span class="tag">영어</span></div><p>개발자들이 링크를 올리고 투표하는 게시판이에요. AI 도구가 나오면 개발자들의 첫 반응이 가장 먼저 모여요.</p><div class="how">이렇게 보세요 · 첫 화면 30개 제목만 훑고, 댓글이 많은 AI 글 하나만 열어 봐요.</div></a>
+      <a class="item" href="https://news.hada.io/" target="_blank" rel="noopener"><div class="nm">GeekNews<span class="tag ko">한국어</span></div><p>해외 개발 · AI 소식을 한국어로 요약해 올리는 곳이에요. 영어가 부담되면 여기부터 보세요.</p><div class="how">이렇게 보세요 · 하루 한 번, 'AI'가 들어간 글의 요약만 읽어요.</div></a>
+      <a class="item" href="https://www.reddit.com/r/ClaudeAI/" target="_blank" rel="noopener"><div class="nm">r/ClaudeAI (레딧)<span class="tag">영어</span></div><p>클로드를 쓰는 사람들이 쓰는 법 · 막힌 점 · 새 기능 후기를 올려요. 개발자가 많지만 코딩 말고 다른 일에 쓰는 글도 자주 올라와요.</p><div class="how">이렇게 보세요 · Top › This Week로 바꿔서 이번 주 인기 글 5개만 봐요.</div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>개발자 유튜브 채널</h2>
+    <div class="src">
+      <a class="item" href="https://www.youtube.com/@Fireship" target="_blank" rel="noopener"><div class="nm">Fireship<span class="tag">영어 · 433만</span></div><p>개발 소식을 몇 분짜리 영상으로 빠르고 재밌게 정리해요. 새 AI 도구가 개발자 사이에서 왜 화제인지 감 잡기 좋아요.</p></a>
+      <a class="item" href="https://www.youtube.com/@t3dotgg" target="_blank" rel="noopener"><div class="nm">Theo - t3.gg<span class="tag">영어 · 57.7만</span></div><p>AI 코딩 도구가 나오면 바로 써 보고 솔직하게 반응해요. 개발자들이 무엇에 열광하고 무엇에 실망하는지 보여요.</p></a>
+      <a class="item" href="https://www.youtube.com/@aiexplained-official" target="_blank" rel="noopener"><div class="nm">AI Explained<span class="tag">영어 · 45.8만</span></div><p>새 AI 모델과 논문이 무엇을 바꾸는지 차분하게 풀어 줘요. 코딩을 몰라도 따라갈 수 있어요.</p></a>
+      <a class="item" href="https://www.youtube.com/@ColeMedin" target="_blank" rel="noopener"><div class="nm">Cole Medin<span class="tag">영어 · 23.1만</span></div><p>AI 에이전트를 직접 만들어 보는 실습 영상이 많아요. 개발자들이 요즘 AI에게 어떤 일을 맡기는지 그대로 보여요.</p></a>
+    </div>
+    <p class="muted" style="margin-top:10px">구독자 수와 활동은 2026-11-08에 각 채널 페이지에서 확인했어요. 네 곳 모두 최근 일주일 안에 새 영상이 올라왔어요. 영어 영상은 유튜브 자막 › 자동 번역 › 한국어로 볼 수 있어요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>개발자 뉴스레터</h2>
+    <div class="src">
+      <a class="item" href="https://simonwillison.net/" target="_blank" rel="noopener"><div class="nm">Simon Willison's Weblog<span class="tag">영어 · 블로그 + 메일</span></div><p>개발자가 AI 도구를 직접 써 보고 거의 매일 기록해요. '개발자들이 AI를 어떻게 쓰는지'를 가장 가까이서 볼 수 있는 곳이에요.</p></a>
+      <a class="item" href="https://tldr.tech/ai" target="_blank" rel="noopener"><div class="nm">TLDR AI<span class="tag">영어 · 평일 메일</span></div><p>AI 소식을 몇 줄씩 요약해 평일마다 보내 줘요. 출근길 5분이면 다 읽어요.</p></a>
+      <a class="item" href="https://www.latent.space/" target="_blank" rel="noopener"><div class="nm">Latent Space<span class="tag">영어 · 뉴스레터 + 팟캐스트</span></div><p>AI로 제품을 만드는 개발자들의 대화와 분석이에요. 조금 깊지만, 다음에 뭐가 올지 미리 읽기 좋아요.</p></a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>이런 말이 보이면 신호예요</h2>
+    <ul class="pick">
+      <li><b>"이거 없인 일 못 해"</b> · 개발자들이 어떤 도구를 이렇게 말하면, 몇 달 뒤 비개발자용이 나올 가능성이 커요.</li>
+      <li><b>"코딩 말고 이런 데도 써"</b> · 개발자들이 그 AI를 코딩 아닌 일에 쓰기 시작했다는 뜻이에요. 코워크가 이렇게 나왔어요.</li>
+      <li><b>같은 이름이 여러 곳에서</b> · 커뮤니티 · 유튜브 · 뉴스레터에 같은 도구가 1~2주 계속 나오면, 지나가는 소식이 아니에요.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>마케팅에 옮기는 요청문</h2>
+    <p class="muted" style="margin-bottom:12px">웹 검색이 되는 ChatGPT · Claude에 붙여 넣으세요. [ ] 칸만 바꾸면 돼요.</p>
+    <div class="prompt" id="weekly"><div class="label">매주 개발자 소식 → 마케터 업무로</div><pre>이번 주 Hacker News와 GeekNews에서 AI 관련 인기 글을 찾아 줘.
+그중 개발자들이 AI를 새로운 방식으로 쓰고 있는 글 5개만 골라 줘.
+
+글마다 아래 3줄로 정리해 줘.
+1. 개발자들이 AI로 뭘 하고 있는지(쉬운 말로)
+2. 이걸 [내 업무: 예) 광고 소재 만들기 · 월간 보고서 · 인스타 운영]에 옮기면 어떻게 쓸 수 있는지
+3. 개발 지식 없이 지금 바로 해 볼 수 있는지(가능 · 조금 어려움 · 아직 개발자용)
+
+링크를 꼭 붙이고, 확실하지 않은 건 추측이라고 표시해 줘.</pre><div class="tip">'아직 개발자용'으로 나온 건 메모만 해 두고, 몇 달 뒤 다시 확인해 보세요.</div></div>
+    <div class="prompt" id="translate"><div class="label">개발자 글 하나를 내 일로 번역하기</div><pre>아래 글은 개발자가 AI를 쓰는 방법에 대한 글이야.
+[글 링크 또는 본문 붙여 넣기]
+
+나는 [직무: 예) 퍼포먼스 마케터]이고 코딩은 몰라.
+1. 이 글의 핵심을 비개발자도 알 수 있게 3줄로 설명해 줘.
+2. 같은 방법을 내 업무에 쓰는 예시 2개를 만들어 줘.
+3. 그중 하나를 내가 바로 따라 할 수 있는 단계로 적어 줘.</pre><div class="tip">영상에서 말한 "개발자들한테 뜨는 걸 마케팅에 어떻게 쓸지"를 이 요청문으로 해요.</div></div>
+  </section>
+
+  <section>
+    <h2><span class="n">07</span>이렇게 옮겨 온 편들</h2>
+    <p class="muted" style="margin-bottom:12px">개발자 도구를 마케터 일로 옮긴 지난 편이에요. 영상에 나온 세 편이에요.</p>
+    <ul class="pick">
+      <li><a href="../15/"><b>EP.15</b> AI로 만든 웹사이트, 남들은 못 열어요</a> · Vercel(배포) → 웹사이트 링크로 공유</li>
+      <li><a href="../24/"><b>EP.24</b> 노트북 덮으면, AI도 멈춰요</a> · GitHub → 노트북을 덮어도 AI가 계속 일하게</li>
+      <li><a href="../16/"><b>EP.16</b> 내가 만든 툴도, 피그마처럼 같이 쓰기</a> · Supabase(데이터베이스) → 팀이 같이 쓰는 창고</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">08</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>바이브 코딩 — 안드레 카파시 X 글(2025-02-02). 날짜는 여러 2차 출처가 같은 날로 적고 있어요. 국내 교육과정 기사: 한국경제 2025-04-06.</li>
+      <li>클로드 코워크 — SiliconANGLE(2026-01-12) · The Decoder: 클로드 코드를 바탕으로 비개발자용으로 만들었고, 코드 사용자들이 코딩 외 일을 맡기는 걸 보고 만들었다는 앤트로픽 설명.</li>
+      <li>OpenAI 코덱스 — openai.com/index/introducing-codex(2025-05-16): 클라우드 샌드박스에서 혼자 일하는 코딩 에이전트.</li>
+      <li>ChatGPT 닷츠(2026-09-29) · 클로드 듀엣(2026-10-21) — EP.30 상세 노트의 공식 안내 확인 결과.</li>
+      <li>커뮤니티 · 채널 · 뉴스레터 — 2026-11-08 각 사이트에서 열리는지와 최근 글 · 영상 날짜를 확인했어요. r/ClaudeAI 회원 수는 공식 숫자가 아니라 따로 적지 않았어요.</li>
+      <li>영상 속 시간표 · 뉴스 카드 · 말풍선은 이해를 돕기 위한 그림이에요. 썸네일 사진은 AI로 만든 이미지예요.</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../30/"><small>← 같이 보면 좋은 편</small>EP.30 자기 컴퓨터 들고 출근하는 AI, 닷츠</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. 소개한 커뮤니티 · 채널 · 뉴스레터와는 관계가 없고 광고도 아니에요. 2026-11-08 기준이라 바뀔 수 있어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
