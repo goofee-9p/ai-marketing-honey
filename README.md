@@ -4,7 +4,7 @@
 목록(`index.html`)은 **인스타 릴스 · 유튜브 탭**으로 나뉘고(`#reels` 기본 · `#youtube`), 주소도 릴스는 `ep/NN/`, 유튜브는 `yt/NN/`으로 따로예요.
 릴스에서 다 못 한 설명, 바로 복사해 쓰는 프롬프트, 써 보기 전에 알아 둘 점을 정리해요.
 
-- 사이트: https://goofee-9p.github.io/ai-marketing-honey/
+- 사이트: https://ai-marketing-honey.vercel.app/
 - EP.01 ego lite가 뭐예요? → `ep/01/`
 - EP.02 ego lite 쓰는 법 → `ep/02/`
 - EP.03 매일 아침 소재 교체 에이전트 · 브랜드 가이드 양식 → `ep/03/`
@@ -34,7 +34,7 @@ assets/img/ytNN/      유튜브 장면 · 16:9 썸네일(cover_169.jpg)
 
 ## 회차 추가
 
-1. `ep/NN/index.html`을 직전 회차에서 복사해 내용만 바꿔요(프롬프트는 `<div class="prompt" id="...">` 안의 `<pre>`).
+1. `ep/_template/index.html`(부품 v2 견본, 2026-11-09~)을 `ep/NN/index.html`로 복사해 내용만 바꿔요(경로는 그대로 맞아요). 부품: 목차 `nav.toc[data-auto]` · 도구 카드 `.tool` · 한 줄 명령 `.cmd` · 요청문 `.prompt.dark` · 막혔을 때 `.faq`. 규칙은 작업 레포 DESIGN-GUIDE 16번.
 2. `assets/img/epNN/`에 장면 캡처와 3:4 커버(`cover_34.jpg`)를 넣어요.
 3. `index.html` 회차 목록 맨 위에 카드를 하나 추가해요.
 
@@ -46,7 +46,7 @@ assets/img/ytNN/      유튜브 장면 · 16:9 썸네일(cover_169.jpg)
 인스타에서 거는 링크에는 회차별 UTM을 붙여요.
 
 ```
-https://goofee-9p.github.io/ai-marketing-honey/ep/02/?utm_source=instagram&utm_medium=social&utm_campaign=ep02
+https://ai-marketing-honey.vercel.app/ep/02/?utm_source=instagram&utm_medium=social&utm_campaign=ep02
 ```
 
 영상 속 광고 관리 화면은 이해를 돕기 위한 예시 화면이에요. ego lite는 citrolabs가 만든 브라우저로, 이 노트와는 관계가 없어요.
