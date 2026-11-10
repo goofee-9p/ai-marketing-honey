@@ -1,13 +1,17 @@
 // 복사 버튼(요청문 .prompt · 한 줄 명령 .cmd) + 자동 목차 + (측정 ID가 있을 때만) GA4
 (function () {
+  // 복사 버튼은 글자 대신 그림(겹친 네모 → 누르면 체크)
+  var ICON_COPY = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></svg>';
+  var ICON_DONE = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>';
   function addCopy(box, src, id) {
     var btn = document.createElement("button");
-    btn.className = "copy"; btn.type = "button"; btn.textContent = "복사";
+    btn.className = "copy"; btn.type = "button"; btn.innerHTML = ICON_COPY;
+    btn.setAttribute("aria-label", "복사"); btn.title = "복사";
     btn.addEventListener("click", function () {
       var text = src.innerText.replace(/\n+$/, "");
       var done = function () {
-        btn.textContent = "복사됨 ✓"; btn.classList.add("done");
-        setTimeout(function () { btn.textContent = "복사"; btn.classList.remove("done"); }, 1600);
+        btn.innerHTML = ICON_DONE; btn.classList.add("done"); btn.setAttribute("aria-label", "복사됨");
+        setTimeout(function () { btn.innerHTML = ICON_COPY; btn.classList.remove("done"); btn.setAttribute("aria-label", "복사"); }, 1600);
         if (window.gtag) gtag("event", "copy_prompt", { prompt_id: id });
       };
       var fallback = function () { var t = document.createElement("textarea"); t.value = text; t.setAttribute("readonly", ""); t.style.position = "absolute"; t.style.left = "-9999px"; document.body.appendChild(t); t.select(); try { document.execCommand("copy"); } catch (e) {} t.remove(); done(); };
@@ -49,6 +53,11 @@
     });
     toc.setAttribute("aria-label", "목차");
   }
+
+  // 곧 공개(.ep.soon) 카드는 눌러도 안 열려요 — href를 떼고 키보드로도 안 잡히게
+  document.querySelectorAll(".ep.soon").forEach(function (a) {
+    a.removeAttribute("href"); a.setAttribute("aria-disabled", "true"); a.setAttribute("tabindex", "-1");
+  });
 
   // 목록 탭: #reels(기본) · #youtube — JS가 없으면 두 목록이 모두 보여요
   var tabs = document.querySelectorAll(".tabs [data-tab]");

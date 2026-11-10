@@ -62,6 +62,10 @@ p + p { margin-top: 10px; }
 .prompt .tip { margin-top: 10px; font-size: 13.5px; color: var(--honey-d); }
 .copy { position: absolute; top: 12px; right: 12px; border: 0; background: var(--ink); color: #fff; font: inherit; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; cursor: pointer; }
 .copy.done { background: var(--green); }
+.copy { display: inline-grid; place-items: center; line-height: 0; padding: 7px 11px; }
+.copy svg { display: block; }
+/* 곧 공개 카드: 클릭 안 됨(site.js가 href도 떼요) */
+.ep.soon { pointer-events: none; }
 
 /* API 패널(영상 속 그 패널) */
 .api { background: var(--panel); color: #e8eaf0; border-radius: 18px; padding: 16px; font-size: 14px; overflow-x: auto; }
@@ -154,13 +158,14 @@ section[id], .tool[id] { scroll-margin-top: 16px; }
 /* 5. 검정 복사 칸 — 한 줄 명령 <div class="cmd"><code>…</code></div> · 긴 요청문 <div class="prompt dark"> */
 .cmd { display: flex; align-items: stretch; background: var(--panel); border-radius: 12px; overflow: hidden; margin-top: 10px; }
 .cmd code { flex: 1; min-width: 0; color: #e8eaf0; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13.5px; line-height: 1.6; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
-.cmd .copy { position: static; flex: none; border-radius: 0; background: #2c3242; color: #d6d9e2; padding: 0 14px; }
+.cmd .copy { position: static; flex: none; border-radius: 0; background: var(--honey); color: var(--ink); padding: 0 14px; }
 .prompt.dark { background: var(--panel); border: 0; padding: 50px 16px 16px; color: #eceef4; }
 .prompt.dark .label { position: absolute; top: 15px; left: 16px; right: 92px; margin: 0; color: #a9afbd; }
 .prompt.dark pre { font-size: 15px; font-weight: 600; line-height: 1.7; }
 .prompt.dark .tip { color: var(--honey); }
-.prompt.dark .copy { top: 10px; right: 10px; border-radius: 8px; background: #2c3242; color: #d6d9e2; }
-.cmd .copy.done, .prompt.dark .copy.done { background: var(--honey); color: var(--ink); }
+.prompt.dark .copy { top: 10px; right: 10px; border-radius: 8px; background: var(--honey); color: var(--ink); padding: 7px 10px; }
+.cmd .copy:hover, .prompt.dark .copy:hover { background: #ffb938; }
+.cmd .copy.done, .prompt.dark .copy.done { background: var(--green); color: #fff; }
 .cmd + .cmd, .cmd + .prompt.dark, .prompt.dark + .cmd { margin-top: 8px; }
 .tool .prompt.dark, .lab + .prompt.dark { margin-top: 10px; }
 
