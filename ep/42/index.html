@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>경쟁사가 가격 내린 아침, 대응 전략이 쫙 · 이거 모르는 마케터 없게 해주세요</title>
+<title>EP.33 경쟁사가 가격 내린 아침, 대응 전략이 쫙 · 이거 모르는 마케터 없게 해주세요</title>
 <meta name="description" content="AI 예약에 확인만 시키지 말고 그다음 일까지. 경쟁사 가격이 내린 날만 비교표와 대응 문구 3개가 나오게 거는 요청문, 거는 순서, 공고 · 재입고 응용.">
-<meta property="og:title" content="경쟁사가 가격 내린 아침, 대응 전략이 쫙">
+<meta property="og:title" content="EP.33 경쟁사가 가격 내린 아침, 대응 전략이 쫙">
 <meta property="og:description" content="AI 예약에 조건 한 줄 — 바뀐 날만 대응 전략까지.">
-<meta property="og:image" content="https://goofee-9p.github.io/ai-marketing-honey/assets/img/og.jpg">
+<meta property="og:image" content="https://ai-marketing-honey.vercel.app/assets/img/og.jpg">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
 <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
@@ -22,59 +22,68 @@
   </header>
 
   <div class="hero">
-    <span class="chip">AI 예약</span>
+    <span class="chip">EP.33 · AI 예약</span>
     <h1>경쟁사가 가격 내린 아침,<br><span class="hl">대응 전략이 쫙</span></h1>
     <p class="lead">AI 예약에 <b>확인만</b> 시키면 반만 쓰는 거예요. <b>"내렸으면 그다음 일까지"</b> 한 줄을 붙이면, 조용한 날은 "변동 없음" 한 줄, 가격이 바뀐 날엔 비교표와 대응 문구 3개가 먼저 와 있어요.</p>
     <div class="meta"><span class="chip ghost">요청문 복사</span><span class="chip ghost">거는 순서</span><span class="chip ghost">공고 · 재입고 응용</span></div>
   </div>
 
+  <nav class="toc" data-auto></nav>
+
   <section>
-    <h2><span class="n">01</span>요청문</h2>
-    <div class="prompt" id="req"><div class="label">경쟁사 가격 · 대괄호만 바꿔서 그대로 쓰기</div><pre>매일 아침, 아래 경쟁사 상품 페이지에서 현재 판매 가격을 확인해 줘.
+    <h2><span class="n">01</span>요청문과 거는 순서</h2>
+    <div class="tool" id="t1">
+      <span class="num">1</span>
+      <h3>Claude 예약 작업</h3>
+      <p class="lead">정한 시각마다 요청문을 알아서 다시 돌려 주는 기능이에요.</p>
+      <div class="links"><a href="https://support.claude.com/en/articles/13854387" target="_blank" rel="noopener">공식 도움말</a><a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a></div>
+      <p><b>준비물</b>: Claude 유료 요금제(Pro · Max · Ultra · Team · Enterprise), 경쟁사 상품 페이지 주소</p>
+      <ol class="muted" style="padding-left:20px;line-height:1.9;margin:6px 0 12px">
+        <li>Claude 앱 왼쪽의 <b>Scheduled</b>(예약)를 열고 <b>New task</b>를 눌러요.</li>
+        <li><b>Set up manually</b>를 골라 이름(예: 경쟁사 가격 아침 확인)을 적고, 아래 요청문을 붙여 넣어요.</li>
+        <li>주기는 <b>Daily</b>(매일)로, 시간은 출근 전으로 골라 저장해요.</li>
+        <li>바로 한 번 돌려 봐요(<b>Run now</b>). 가격을 잘 읽는지, 못 읽으면 "확인 못 함"이라고 적는지 봐요.</li>
+      </ol>
+      <p class="lab">복붙용 👇</p>
+      <div class="prompt dark" id="req"><div class="label">경쟁사 가격 · 대괄호만 바꾸기</div><pre>매일 아침, 아래 경쟁사 상품 페이지에서 현재 판매 가격을 확인해 줘.
 - [경쟁사 상품 페이지 주소] / 기준 가격 [32,000원]
 - 가격을 못 읽었으면 추측하지 말고 &quot;확인 못 함&quot;이라고만 적어.
 - 기준 가격보다 내렸으면 아래 두 가지를 만들어 줘.
   1) 비교표: 경쟁사 · 기준 가격 · 오늘 가격 · 차이 · 우리 가격
   2) 대응 문구 3개(각 30자 이내). 우리 제품: [제품명 · 가격 · 강점]
 - 그대로면 &quot;변동 없음&quot; 한 줄만 적고 끝내.
-- 광고를 등록하거나 가격을 바꾸지 마. 초안까지만 만들어.</pre><div class="tip">'지난번 가격'을 기억하게 하는 대신 <b>기준 가격</b>을 적어 두면 비교가 단순해져요. 가격을 바꾸면 기준 가격도 고쳐 주세요.</div></div>
+- 광고를 등록하거나 가격을 바꾸지 마. 초안까지만 만들어.</pre><div class="tip">'지난번 가격'을 기억하게 하는 대신 기준 가격을 적어 두면 비교가 단순해져요. 가격을 바꾸면 기준 가격도 고쳐 주세요.</div></div>
+      <p class="result">✅ 받는 결과: 매일 아침 실행이 하나씩 쌓여요. 조용한 날은 "변동 없음" 한 줄, 가격이 내린 날엔 비교표 + 대응 문구 3개.</p>
+      <p>💡 대화창에 "매일 아침 8시에 이거 해 줘"라고 말해도 Claude가 이름 · 주기 · 지시를 정리해 예약을 제안해요. 확인하고 <b>Schedule</b>을 누르면 돼요.</p>
+      <p class="caution">⚠️ 실시간 감시가 아니라 예약한 시각에 확인해요. 대응 문구와 비교표는 초안이니 올리기 전에 숫자와 표현을 직접 확인하세요.</p>
+    </div>
   </section>
 
   <section>
-    <h2><span class="n">02</span>거는 순서 (Claude 예약 작업)</h2>
-    <div class="card"><ol class="muted" style="padding-left:20px;line-height:1.9;margin:0">
-      <li>Claude 앱 왼쪽의 <b>Scheduled</b>(예약)를 열고 <b>New task</b>를 눌러요.</li>
-      <li><b>Set up manually</b>를 골라 이름(예: 경쟁사 가격 아침 확인)을 적고, 위 요청문을 붙여 넣어요.</li>
-      <li>주기는 <b>Daily</b>(매일)로, 시간은 출근 전으로 골라요. 저장해요.</li>
-      <li>바로 한 번 돌려 봐요(<b>Run now</b>). 가격을 잘 읽는지, 못 읽으면 "확인 못 함"이라고 적는지 봐요.</li>
-    </ol></div>
-    <p class="muted" style="margin-top:12px">대화창에 "매일 아침 8시에 이거 해 줘"라고 말해도 Claude가 이름 · 주기 · 지시를 정리해 예약을 제안해요. 확인하고 <b>Schedule</b>을 누르면 돼요. 결과는 실행마다 따로 쌓이고, 왼쪽 <b>Scheduled</b>에서 지난 실행을 열어 봐요.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">03</span>공고 · 재입고에도 같은 방식</h2>
-    <p class="muted">"확인 → 바뀌었으면 그다음 일 → 아니면 변동 없음 한 줄" 틀은 그대로 두고, 확인할 곳과 만들 것만 바꿔요.</p>
-    <div class="prompt"><div class="label">공고 확인</div><pre>매일 아침, [공고 게시판 주소]에서 오늘 올라온 글 중 제목에 [키워드]가 들어간 공고를 찾아 줘.
+    <h2><span class="n">02</span>공고 · 재입고에도 같은 방식</h2>
+    <p class="muted" style="margin-bottom:12px">"확인 → 바뀌었으면 그다음 일 → 아니면 변동 없음 한 줄" 틀은 그대로 두고, 확인할 곳과 만들 것만 바꿔요.</p>
+    <p class="lab">복붙용 👇</p>
+    <div class="prompt dark" id="notice"><div class="label">공고 확인</div><pre>매일 아침, [공고 게시판 주소]에서 오늘 올라온 글 중 제목에 [키워드]가 들어간 공고를 찾아 줘.
 - 있으면 제목 · 마감일 · 지원 조건 한 줄 · 주소를 표로 정리해 줘.
 - 없으면 &quot;변동 없음&quot; 한 줄만 적고 끝내.</pre></div>
-    <div class="prompt"><div class="label">재입고 확인</div><pre>매일 아침, [상품 페이지 주소]에서 [옵션 · 색상 · 사이즈]가 지금 구매할 수 있는 상태인지 확인해 줘.
+    <p class="lab">복붙용 👇</p>
+    <div class="prompt dark" id="restock"><div class="label">재입고 확인</div><pre>매일 아침, [상품 페이지 주소]에서 [옵션 · 색상 · 사이즈]가 지금 구매할 수 있는 상태인지 확인해 줘.
 - 구매할 수 있으면 &quot;재입고&quot; · 가격 · 주소를 적어 줘.
 - 아직 품절이거나 확인이 안 되면 &quot;변동 없음&quot; 한 줄만 적고 끝내.</pre></div>
   </section>
 
   <section>
-    <h2><span class="n">04</span>미리 알아 둘 것</h2>
-    <div class="warn"><ul>
-      <li>실시간 감시가 아니에요. 예약한 시각에 돌 때 확인해요.</li>
-      <li>Claude 유료 요금제(Pro · Max · Ultra · Team · Enterprise)에서 돼요.</li>
-      <li>예약 작업은 원격으로 돌아서 컴퓨터가 잠들어 있어도 실행돼요. 단, 내 컴퓨터의 파일이나 앱이 필요한 작업은 내 컴퓨터에서만 돌아서 그 시간에 컴퓨터가 깨어 있어야 해요(<a href="../27/">EP.27</a>).</li>
-      <li>로그인이 필요하거나 자동 접속을 막는 사이트는 가격을 못 읽을 수 있어요. 그래서 요청문에 "추측하지 말고 확인 못 함"을 넣었어요.</li>
-      <li>대응 문구와 비교표는 초안이에요. 올리기 전에 숫자와 표현을 직접 확인하세요.</li>
-    </ul></div>
+    <h2><span class="n">03</span>막혔을 때</h2>
+    <div class="faq">
+      <details><summary>왼쪽에 Scheduled 메뉴가 안 보여요.</summary><div class="a">예약 작업은 유료 요금제에서 돼요. Team · Enterprise는 관리자가 Cowork를 켜 둬야 보여요. 대화창에 "매일 아침 8시에 이거 해 줘"라고 말하는 방법도 있어요.</div></details>
+      <details><summary>계속 "확인 못 함"만 나와요.</summary><div class="a">로그인이 필요하거나 자동 접속을 막는 사이트일 수 있어요. 로그인 없이 열리는 상품 페이지 주소인지 확인하고, 그래도 안 되면 그 사이트는 이 방법으로 확인이 어려워요.</div></details>
+      <details><summary>컴퓨터를 꺼 두면 안 도나요?</summary><div class="a">예약 작업은 원격으로 돌아서 컴퓨터가 잠들어 있어도 실행돼요. 단, 내 컴퓨터의 파일이나 앱이 필요한 작업은 내 컴퓨터에서만 돌아서 그 시간에 깨어 있어야 해요(<a href="../27/">EP.27</a>).</div></details>
+      <details><summary>결과는 어디서 봐요?</summary><div class="a">실행마다 따로 쌓여요. 왼쪽 <b>Scheduled</b>에서 지난 실행을 열어 봐요. 공식 도움말에는 알림 설명이 따로 없어요.</div></details>
+    </div>
   </section>
 
-  <section>
-    <h2><span class="n">05</span>출처</h2>
+  <section data-toc="skip">
+    <h2><span class="n">04</span>출처</h2>
     <ul class="muted" style="padding-left:18px;line-height:1.8">
       <li>Claude 도움말 "Schedule recurring tasks in Claude Cowork"(support.claude.com/en/articles/13854387) — 만드는 법 · 주기 · 요금제 · 원격 / 로컬 실행. 2026-11-09 확인.</li>
       <li>영상 속 브랜드 · 문구 · 화면은 가상 예시예요. 썸네일 그림은 AI로 만들었어요.</li>
