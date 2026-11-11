@@ -210,3 +210,46 @@ section[id], .tool[id] { scroll-margin-top: 16px; }
   .wrap table.stack.log td:not(:first-child):not(:last-child) { display: inline-block; width: auto; padding-right: 22px; }
   .wrap table.stack.log td:first-child { font-size: 14.5px; padding: 8px 16px; }
 }
+
+/* 둘 비교 카드(.vs) — 표 대신 쪽마다 카드 한 장, 폰은 위아래 · PC는 나란히 */
+.vs { display: grid; gap: 10px; }
+@media (min-width: 600px) { .vs { grid-template-columns: 1fr 1fr; } }
+.vs-card { background: #fff; border: 1.5px solid var(--line); border-radius: 18px; padding: 16px 18px; }
+.vs-card.on { background: #fffaf0; border-color: var(--honey); }
+.vs-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-bottom: 10px; margin-bottom: 4px; border-bottom: 1.5px solid #ecece6; }
+.vs-card.on .vs-head { border-color: #f3dca0; }
+.vs-head span { font-size: 14px; font-weight: 800; color: var(--sub); }
+.vs-card.on .vs-head span { color: var(--honey-d); }
+.vs-head b { font-size: 24px; font-weight: 900; letter-spacing: -0.5px; white-space: nowrap; }
+.vs-card.on .vs-head b { color: var(--honey-d); }
+/* 이름 – 내용 줄(.kv): 작은 꿀색 이름 위, 내용 아래 */
+.kv dt { font-size: 12.5px; font-weight: 800; color: var(--sub); margin-top: 10px; }
+.kv dd { font-size: 15px; line-height: 1.6; }
+/* 기록 막대(.runs) */
+.runs { list-style: none; background: #fff; border: 1.5px solid var(--line); border-radius: 18px; padding: 4px 16px; margin-top: 10px; }
+.run { display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; column-gap: 8px; padding: 12px 0; }
+.run + .run { border-top: 1px solid #ecece6; }
+.r-n { font-size: 13px; color: var(--sub); }
+.r-w { font-size: 13px; font-weight: 800; padding: 1px 8px; border-radius: 999px; background: #eef0f3; color: #4a5160; }
+.run.on .r-w { background: var(--honey-l); color: var(--honey-d); }
+.r-t { grid-column: 4; font-size: 16px; font-weight: 900; white-space: nowrap; }
+.run.on .r-t { color: var(--honey-d); }
+.bar { grid-column: 1 / -1; height: 8px; border-radius: 99px; background: #f1f1ec; margin-top: 8px; overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: 99px; background: #b9bdc6; }
+.run.on .bar i { background: var(--honey); }
+.r-memo { grid-column: 1 / -1; font-size: 13px; color: var(--sub); margin-top: 6px; line-height: 1.5; }
+/* 브랜드 묶음(.brands) */
+.brands { margin-top: 6px; }
+.brand { padding: 12px 0; }
+.brand + .brand { border-top: 1px solid #ecece6; }
+.brand h4 { font-size: 16px; font-weight: 900; }
+.brand h4 small { font-size: 13px; font-weight: 600; color: var(--sub); margin-left: 4px; }
+.brand .kv { display: grid; grid-template-columns: 84px 1fr; column-gap: 10px; }
+.brand .kv dt, .brand .kv dd { margin-top: 6px; font-size: 14.5px; }
+.brand .kv dt { font-size: 13px; padding-top: 1px; }
+/* 번호 목록(.jobs) */
+.jobs { list-style: none; counter-reset: j; background: #fff; border: 1.5px solid var(--line); border-radius: 18px; padding: 4px 18px; margin-top: 10px; }
+.jobs li { counter-increment: j; position: relative; padding: 14px 0 14px 36px; font-size: 15.5px; line-height: 1.55; }
+.jobs li + li { border-top: 1px solid #ecece6; }
+.jobs li::before { content: counter(j); position: absolute; left: 0; top: 14px; width: 24px; height: 24px; border-radius: 50%; background: var(--honey); color: #fff; font-size: 13px; font-weight: 900; display: grid; place-items: center; }
+.jobs .say { display: block; margin-top: 4px; font-size: 14px; color: var(--sub); }

@@ -32,14 +32,25 @@
 
   <section>
     <h2><span class="n">01</span>왜 차이가 날까: 심부름 방식</h2>
-    <div class="stats"><div class="stat"><b>21분 57초</b><span>크롬(Claude in Chrome 확장) · 3번의 가운데 값</span></div><div class="stat on"><b>5분 15초</b><span>ego lite · 3번의 가운데 값</span></div></div>
-    <div style="overflow-x:auto;margin-top:12px"><table class="stack" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
-      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th></th><th>느린 쪽(크롬 확장)</th><th>빠른 쪽(ego lite)</th></tr></thead>
-      <tbody>
-        <tr><td><b>심부름으로 치면</b></td><td>우유 사 오고 집에 왔다가, 계란 사러 또 나가요</td><td>장보기 목록 들고 한 번에 다녀와요</td></tr>
-        <tr><td><b>실제로는</b></td><td>"이거 눌러" → 결과 → "다음 이거 읽어" → 결과… 한 번에 한 동작씩 주고받아요</td><td>"열고 · 펼치고 · 50개 읽어" 여러 동작을 묶어서 한 번에 보내요</td></tr>
-        <tr><td><b>이번에 주고받은 횟수</b></td><td>가운데 128번</td><td>가운데 35번</td></tr>
-      </tbody></table></div>
+    <div class="vs">
+      <div class="vs-card">
+        <div class="vs-head"><span>크롬 확장</span><b>21분 57초</b></div>
+        <dl class="kv">
+          <dt>심부름으로 치면</dt><dd>우유 사 오고 집에 왔다가, 계란 사러 또 나가요</dd>
+          <dt>실제로는</dt><dd>"이거 눌러" → 결과 → "다음 이거 읽어" → 결과… 한 번에 한 동작씩 주고받아요</dd>
+          <dt>주고받은 횟수</dt><dd><b>128번</b></dd>
+        </dl>
+      </div>
+      <div class="vs-card on">
+        <div class="vs-head"><span>ego lite</span><b>5분 15초</b></div>
+        <dl class="kv">
+          <dt>심부름으로 치면</dt><dd>장보기 목록 들고 한 번에 다녀와요</dd>
+          <dt>실제로는</dt><dd>"열고 · 펼치고 · 50개 읽어" 여러 동작을 묶어서 한 번에 보내요</dd>
+          <dt>주고받은 횟수</dt><dd><b>35번</b></dd>
+        </dl>
+      </div>
+    </div>
+    <p class="muted" style="font-size:13px;margin-top:6px">시간 · 횟수는 3번씩 잰 것의 가운데 값이에요.</p>
     <p class="caution">⚠️ 주고받은 횟수에는 크롬 확장 쪽 연결 오류로 거절돼 다시 보낸 호출도 섞여 있어요. 차이가 전부 '묶어서 보내기' 때문이라고는 말할 수 없어요.</p>
     <img src="../../assets/img/ep23/compare.jpg" alt="같은 일 걸린 시간 비교: 크롬 확장 21분 57초, ego lite 5분 15초" style="width:100%;border-radius:14px;margin-top:12px;border:1px solid var(--line)">
   </section>
@@ -47,16 +58,15 @@
   <section>
     <h2><span class="n">02</span>6번 잰 기록</h2>
     <p class="muted">회차마다 <b>새 대화</b>(같은 Claude 모델)에 아래 03의 요청문을 그대로 줬어요. 다른 건 "어느 브라우저로" 한 줄뿐이에요. 시간은 AI가 브라우저를 처음 쓰기 직전부터 표를 저장할 때까지예요(요청 쓰는 시간 제외).</p>
-    <div style="overflow-x:auto;margin-top:8px"><table class="tight stack log" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6">
-      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>회차 · 창</th><th>걸린 시간</th><th>모은 리뷰</th><th>메모</th></tr></thead>
-      <tbody>
-        <tr><td>1회차 · 크롬</td><td><b>21분 57초</b></td><td>150</td><td>호출 절반쯤이 연결 오류로 거절돼 다시 보냄</td></tr>
-        <tr><td>2회차 · ego lite</td><td><b>5분 15초</b></td><td>150</td><td>막힌 곳 없음</td></tr>
-        <tr><td>3회차 · 크롬</td><td><b>19분 25초</b></td><td>150</td><td>연결 오류 재전송 · 탭이 뒤에 있어 목록이 안 그려짐</td></tr>
-        <tr><td>4회차 · ego lite</td><td><b>4분 46초</b></td><td>150</td><td>막힌 곳 없음</td></tr>
-        <tr><td>5회차 · 크롬</td><td><b>26분 50초</b></td><td>150</td><td>크롬을 다시 켠 뒤에도 연결 오류 재전송(첫 시도는 0개로 멈춰서 다시 돌림)</td></tr>
-        <tr><td>6회차 · ego lite</td><td><b>10분 5초</b></td><td>150</td><td>막힌 곳 없음(첫 시도는 사용량 한도로 멈춰서 다시 돌림)</td></tr>
-      </tbody></table></div>
+    <ul class="runs">
+      <li class="run"><span class="r-n">1회차</span><span class="r-w">크롬</span><b class="r-t">21분 57초</b><span class="bar"><i style="width:82%"></i></span><span class="r-memo">호출 절반쯤이 연결 오류로 거절돼 다시 보냄</span></li>
+      <li class="run on"><span class="r-n">2회차</span><span class="r-w">ego lite</span><b class="r-t">5분 15초</b><span class="bar"><i style="width:20%"></i></span><span class="r-memo">막힌 곳 없음</span></li>
+      <li class="run"><span class="r-n">3회차</span><span class="r-w">크롬</span><b class="r-t">19분 25초</b><span class="bar"><i style="width:72%"></i></span><span class="r-memo">연결 오류 재전송 · 탭이 뒤에 있어 목록이 안 그려짐</span></li>
+      <li class="run on"><span class="r-n">4회차</span><span class="r-w">ego lite</span><b class="r-t">4분 46초</b><span class="bar"><i style="width:18%"></i></span><span class="r-memo">막힌 곳 없음</span></li>
+      <li class="run"><span class="r-n">5회차</span><span class="r-w">크롬</span><b class="r-t">26분 50초</b><span class="bar"><i style="width:100%"></i></span><span class="r-memo">크롬을 다시 켠 뒤에도 연결 오류 재전송(첫 시도는 0개로 멈춰서 다시 돌림)</span></li>
+      <li class="run on"><span class="r-n">6회차</span><span class="r-w">ego lite</span><b class="r-t">10분 5초</b><span class="bar"><i style="width:38%"></i></span><span class="r-memo">막힌 곳 없음(첫 시도는 사용량 한도로 멈춰서 다시 돌림)</span></li>
+    </ul>
+    <p class="muted" style="font-size:13px;margin-top:6px">여섯 번 모두 리뷰 150개를 다 모았어요.</p>
     <ul class="muted" style="padding-left:18px;line-height:1.8;margin-top:10px">
       <li>결과가 덜 나온 쪽이 빨랐던 게 아니에요. 회차끼리 모은 리뷰 원문을 맞춰 봤더니 같은 페이지 · 같은 정렬의 리뷰였어요.</li>
       <li>짝끼리 보면 차이는 4.2배 · 4.1배 · 2.7배로 회차마다 달랐어요.</li>
@@ -96,26 +106,23 @@
       <p class="result">✅ 받는 결과: 상품별 장점 · 불만 · 자주 나온 말 표 한 장(숫자는 그 말을 한 리뷰 수).</p>
     </div>
     <div class="card" style="margin-top:12px"><b>실제로 나온 표(2회차 · ego lite · 가상 브랜드 허니 뷰티)</b>
-      <div style="overflow-x:auto;margin-top:8px"><table class="stack" style="width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6">
-        <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th></th><th>토리든(올리브영)</th><th>웰라쥬(무신사)</th><th>토니모리(컬리)</th></tr></thead>
-        <tbody>
-          <tr><td><b>장점</b></td><td>촉촉·수분 29 · 가볍고 산뜻 17</td><td>촉촉·보습 26 · 흡수 빠름 20</td><td>촉촉함 24 · 가성비 19</td></tr>
-          <tr><td><b>불만</b></td><td>건성·겨울엔 보습 부족, 크림 필수 7</td><td>혼자 쓰면 부족 → 크림 필요 5</td><td>건조할 땐 크림 덧발라야 2</td></tr>
-          <tr><td><b>자주 나온 말</b></td><td>수분 26 · 촉촉 14 · 흡수 12</td><td>제형 22 · 촉촉 21 · 흡수 20</td><td>촉촉 20 · 수분 9 · 가성비 8</td></tr>
-        </tbody></table></div></div>
+      <div class="brands">
+        <div class="brand"><h4>토리든 <small>올리브영</small></h4><dl class="kv"><dt>장점</dt><dd>촉촉·수분 29 · 가볍고 산뜻 17</dd><dt>불만</dt><dd>건성·겨울엔 보습 부족, 크림 필수 7</dd><dt>자주 나온 말</dt><dd>수분 26 · 촉촉 14 · 흡수 12</dd></dl></div>
+        <div class="brand"><h4>웰라쥬 <small>무신사</small></h4><dl class="kv"><dt>장점</dt><dd>촉촉·보습 26 · 흡수 빠름 20</dd><dt>불만</dt><dd>혼자 쓰면 부족 → 크림 필요 5</dd><dt>자주 나온 말</dt><dd>제형 22 · 촉촉 21 · 흡수 20</dd></dl></div>
+        <div class="brand"><h4>토니모리 <small>컬리</small></h4><dl class="kv"><dt>장점</dt><dd>촉촉함 24 · 가성비 19</dd><dt>불만</dt><dd>건조할 땐 크림 덧발라야 2</dd><dt>자주 나온 말</dt><dd>촉촉 20 · 수분 9 · 가성비 8</dd></dl></div>
+      </div>
+      <p class="muted" style="font-size:13px;margin-top:8px">숫자는 그 말을 한 리뷰 수예요.</p></div>
   </section>
 
   <section>
     <h2><span class="n">04</span>맡기기 좋은 일</h2>
     <p class="muted">이번에 잰 건 1번 하나예요. 나머지는 같은 방식으로 맡길 수 있는 일이에요.</p>
-    <div style="overflow-x:auto"><table class="stack" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
-      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>일</th><th>요청할 때 한 줄 더</th></tr></thead>
-      <tbody>
-        <tr><td><b>1. 경쟁사 리뷰 모아 표로</b> (이번 실험)</td><td>"순서는 페이지 기본 정렬 그대로, 몇 개 모았는지 상품별로 알려 줘."</td></tr>
-        <tr><td><b>2. 경쟁사 상세페이지 · 가격 · 프로모션 비교</b></td><td>"가격은 정가 · 할인가 · 쿠폰 따로 적고, 확인한 시각도 같이."</td></tr>
-        <tr><td><b>3. 광고 관리 화면 돌며 어제 성과 숫자 모으기</b></td><td>"읽기만 하고 아무것도 바꾸지 마."</td></tr>
-        <tr><td><b>4. 검색광고 키워드 등록 초안</b></td><td>"저장 · 게시 버튼은 누르지 말고, 누르기 직전 화면에서 멈춰."</td></tr>
-      </tbody></table></div>
+    <ol class="jobs">
+      <li><b>경쟁사 리뷰 모아 표로</b> (이번 실험)<span class="say">"순서는 페이지 기본 정렬 그대로, 몇 개 모았는지 상품별로 알려 줘."</span></li>
+      <li><b>경쟁사 상세페이지 · 가격 · 프로모션 비교</b><span class="say">"가격은 정가 · 할인가 · 쿠폰 따로 적고, 확인한 시각도 같이."</span></li>
+      <li><b>광고 관리 화면 돌며 어제 성과 숫자 모으기</b><span class="say">"읽기만 하고 아무것도 바꾸지 마."</span></li>
+      <li><b>검색광고 키워드 등록 초안</b><span class="say">"저장 · 게시 버튼은 누르지 말고, 누르기 직전 화면에서 멈춰."</span></li>
+    </ol>
   </section>
 
   <section>
