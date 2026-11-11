@@ -33,7 +33,7 @@
   <section>
     <h2><span class="n">01</span>왜 차이가 날까: 심부름 방식</h2>
     <div class="stats"><div class="stat"><b>21분 57초</b><span>크롬(Claude in Chrome 확장) · 3번의 가운데 값</span></div><div class="stat on"><b>5분 15초</b><span>ego lite · 3번의 가운데 값</span></div></div>
-    <div style="overflow-x:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
+    <div style="overflow-x:auto;margin-top:12px"><table class="stack" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
       <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th></th><th>느린 쪽(크롬 확장)</th><th>빠른 쪽(ego lite)</th></tr></thead>
       <tbody>
         <tr><td><b>심부름으로 치면</b></td><td>우유 사 오고 집에 왔다가, 계란 사러 또 나가요</td><td>장보기 목록 들고 한 번에 다녀와요</td></tr>
@@ -47,15 +47,15 @@
   <section>
     <h2><span class="n">02</span>6번 잰 기록</h2>
     <p class="muted">회차마다 <b>새 대화</b>(같은 Claude 모델)에 아래 03의 요청문을 그대로 줬어요. 다른 건 "어느 브라우저로" 한 줄뿐이에요. 시간은 AI가 브라우저를 처음 쓰기 직전부터 표를 저장할 때까지예요(요청 쓰는 시간 제외).</p>
-    <div style="overflow-x:auto;margin-top:8px"><table class="tight" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6">
-      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>회차</th><th>창</th><th>걸린 시간</th><th>모은 리뷰</th><th>메모</th></tr></thead>
+    <div style="overflow-x:auto;margin-top:8px"><table class="tight stack log" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6">
+      <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>회차 · 창</th><th>걸린 시간</th><th>모은 리뷰</th><th>메모</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>크롬</td><td><b>21분 57초</b></td><td>150</td><td>호출 절반쯤이 연결 오류로 거절돼 다시 보냄</td></tr>
-        <tr><td>2</td><td>ego lite</td><td><b>5분 15초</b></td><td>150</td><td>막힌 곳 없음</td></tr>
-        <tr><td>3</td><td>크롬</td><td><b>19분 25초</b></td><td>150</td><td>연결 오류 재전송 · 탭이 뒤에 있어 목록이 안 그려짐</td></tr>
-        <tr><td>4</td><td>ego lite</td><td><b>4분 46초</b></td><td>150</td><td>막힌 곳 없음</td></tr>
-        <tr><td>5</td><td>크롬</td><td><b>26분 50초</b></td><td>150</td><td>크롬을 다시 켠 뒤에도 연결 오류 재전송(첫 시도는 0개로 멈춰서 다시 돌림)</td></tr>
-        <tr><td>6</td><td>ego lite</td><td><b>10분 5초</b></td><td>150</td><td>막힌 곳 없음(첫 시도는 사용량 한도로 멈춰서 다시 돌림)</td></tr>
+        <tr><td>1회차 · 크롬</td><td><b>21분 57초</b></td><td>150</td><td>호출 절반쯤이 연결 오류로 거절돼 다시 보냄</td></tr>
+        <tr><td>2회차 · ego lite</td><td><b>5분 15초</b></td><td>150</td><td>막힌 곳 없음</td></tr>
+        <tr><td>3회차 · 크롬</td><td><b>19분 25초</b></td><td>150</td><td>연결 오류 재전송 · 탭이 뒤에 있어 목록이 안 그려짐</td></tr>
+        <tr><td>4회차 · ego lite</td><td><b>4분 46초</b></td><td>150</td><td>막힌 곳 없음</td></tr>
+        <tr><td>5회차 · 크롬</td><td><b>26분 50초</b></td><td>150</td><td>크롬을 다시 켠 뒤에도 연결 오류 재전송(첫 시도는 0개로 멈춰서 다시 돌림)</td></tr>
+        <tr><td>6회차 · ego lite</td><td><b>10분 5초</b></td><td>150</td><td>막힌 곳 없음(첫 시도는 사용량 한도로 멈춰서 다시 돌림)</td></tr>
       </tbody></table></div>
     <ul class="muted" style="padding-left:18px;line-height:1.8;margin-top:10px">
       <li>결과가 덜 나온 쪽이 빨랐던 게 아니에요. 회차끼리 모은 리뷰 원문을 맞춰 봤더니 같은 페이지 · 같은 정렬의 리뷰였어요.</li>
@@ -96,7 +96,7 @@
       <p class="result">✅ 받는 결과: 상품별 장점 · 불만 · 자주 나온 말 표 한 장(숫자는 그 말을 한 리뷰 수).</p>
     </div>
     <div class="card" style="margin-top:12px"><b>실제로 나온 표(2회차 · ego lite · 가상 브랜드 허니 뷰티)</b>
-      <div style="overflow-x:auto;margin-top:8px"><table style="width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6">
+      <div style="overflow-x:auto;margin-top:8px"><table class="stack" style="width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6">
         <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th></th><th>토리든(올리브영)</th><th>웰라쥬(무신사)</th><th>토니모리(컬리)</th></tr></thead>
         <tbody>
           <tr><td><b>장점</b></td><td>촉촉·수분 29 · 가볍고 산뜻 17</td><td>촉촉·보습 26 · 흡수 빠름 20</td><td>촉촉함 24 · 가성비 19</td></tr>
@@ -108,7 +108,7 @@
   <section>
     <h2><span class="n">04</span>맡기기 좋은 일</h2>
     <p class="muted">이번에 잰 건 1번 하나예요. 나머지는 같은 방식으로 맡길 수 있는 일이에요.</p>
-    <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
+    <div style="overflow-x:auto"><table class="stack" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7">
       <thead><tr style="text-align:left;border-bottom:2px solid var(--line)"><th>일</th><th>요청할 때 한 줄 더</th></tr></thead>
       <tbody>
         <tr><td><b>1. 경쟁사 리뷰 모아 표로</b> (이번 실험)</td><td>"순서는 페이지 기본 정렬 그대로, 몇 개 모았는지 상품별로 알려 줘."</td></tr>

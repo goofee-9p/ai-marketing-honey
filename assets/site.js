@@ -72,6 +72,14 @@
     window.addEventListener("hashchange", show); show();
   }
 
+  // 표: 칸마다 머리줄 이름을 data-label로 달아 둬요(폰에서 table.stack이 카드로 쌓일 때 씀)
+  document.querySelectorAll("table").forEach(function (t) {
+    var heads = Array.prototype.map.call(t.querySelectorAll("thead th"), function (h) { return h.textContent.trim(); });
+    t.querySelectorAll("tbody tr").forEach(function (tr) {
+      Array.prototype.forEach.call(tr.children, function (td, i) { if (heads[i] && !td.hasAttribute("data-label")) td.setAttribute("data-label", heads[i]); });
+    });
+  });
+
   var id = window.SITE && window.SITE.GA_ID;
   if (!id) return;
   var s = document.createElement("script");

@@ -181,11 +181,32 @@ section[id], .tool[id] { scroll-margin-top: 16px; }
 .faq .a { padding: 0 0 16px; font-size: 15px; color: #3a4252; }
 .faq .a .cmd { font-size: 14px; }
 
-/* 표 — 칸 사이 여백 · 줄 구분선 · 위 정렬 (예전 회차 표도 같이 적용) */
-.wrap table th, .wrap table td { padding: 10px 14px 10px 0; vertical-align: top; text-align: left; }
-.wrap table th:last-child, .wrap table td:last-child { padding-right: 0; }
-.wrap table th { font-weight: 800; vertical-align: bottom; }
-.wrap table th, .wrap table td { word-break: keep-all; overflow-wrap: break-word; }
-.wrap table tbody tr + tr { border-top: 1px solid var(--line); }
+/* 표 — 흰 카드 · 꿀색 머리줄 · 칸 안쪽 여백 · 행 사이 얇은 선 (예전 회차 표도 같이 적용) */
+.wrap table { border-collapse: separate !important; border-spacing: 0; background: #fff; border: 1.5px solid var(--line); border-radius: 16px; overflow: hidden; }
+.wrap table th, .wrap table td { padding: 11px 14px; vertical-align: top; text-align: left; word-break: keep-all; overflow-wrap: break-word; }
+.wrap table thead th { background: #fff4d6; color: var(--honey-d); font-size: 13px; font-weight: 800; vertical-align: bottom; border-bottom: 1.5px solid #f3dca0; }
+.wrap table tbody tr + tr td { border-top: 1px solid #ecece6; }
+.wrap table tbody td:first-child { font-weight: 700; }
+.card table { margin-top: 2px; }
 /* 짧은 칸은 안 꺾이게: <table class="tight">면 마지막 칸만 줄바꿈 */
 .wrap table.tight td:not(:last-child), .wrap table.tight th:not(:last-child) { white-space: nowrap; }
+.wrap table.tight td:not(:last-child) { font-weight: 400; }
+.wrap table.tight td:first-child { color: var(--sub); }
+/* 폰에서 <table class="stack">은 행마다 카드로 쌓여요(첫 칸 = 카드 제목, 나머지 = 머리줄 이름 + 내용) */
+@media (max-width: 560px) {
+  .wrap table th, .wrap table td { padding: 10px 8px; }
+  .wrap table.stack, .wrap table.stack tbody, .wrap table.stack tr, .wrap table.stack td { display: block; width: 100%; }
+  .wrap table.stack { background: none; border: 0; border-radius: 0; overflow: visible; }
+  .wrap table.stack thead { display: none; }
+  .wrap table.stack tbody tr { background: #fff; border: 1.5px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .wrap table.stack tbody tr + tr { margin-top: 10px; }
+  .wrap table.stack tbody tr + tr td { border-top: 0; }
+  .wrap table.stack td { padding: 4px 16px 10px; }
+  .wrap table.stack td:first-child { background: #fff4d6; color: var(--ink); font-size: 15px; font-weight: 800; padding: 10px 16px; margin-bottom: 8px; border-bottom: 1.5px solid #f3dca0; }
+  .wrap table.stack td:not(:first-child)[data-label]::before { content: attr(data-label); display: block; font-size: 12.5px; font-weight: 800; color: var(--honey-d); margin-bottom: 1px; }
+  .wrap table.stack td:last-child { padding-bottom: 14px; }
+  /* 기록표(.log): 숫자 칸은 한 줄에 나란히 */
+  .wrap table.stack.log td { white-space: normal; }
+  .wrap table.stack.log td:not(:first-child):not(:last-child) { display: inline-block; width: auto; padding-right: 22px; }
+  .wrap table.stack.log td:first-child { font-size: 14.5px; padding: 8px 16px; }
+}
