@@ -159,8 +159,10 @@ section[id], .tool[id] { scroll-margin-top: 16px; }
 .cmd { display: flex; align-items: stretch; background: var(--panel); border-radius: 12px; overflow: hidden; margin-top: 10px; }
 .cmd code { flex: 1; min-width: 0; color: #e8eaf0; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13.5px; line-height: 1.6; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
 .cmd .copy { position: static; flex: none; border-radius: 0; background: var(--honey); color: var(--ink); padding: 0 14px; }
-.prompt.dark { background: var(--panel); border: 0; padding: 50px 16px 16px; color: #eceef4; }
-.prompt.dark .label { position: absolute; top: 15px; left: 16px; right: 92px; margin: 0; color: #a9afbd; }
+.prompt.dark { background: var(--panel); border: 0; padding: 16px 16px 16px; color: #eceef4; }
+/* 제목은 흐름 안에 둬서 두 줄이 돼도 본문과 안 겹쳐요(오른쪽은 복사 버튼 자리) */
+.prompt.dark .label { min-height: 26px; margin: 0 56px 12px 0; color: #a9afbd; line-height: 1.45; }
+.prompt.dark .label::before { flex: none; }
 .prompt.dark pre { font-size: 15px; font-weight: 600; line-height: 1.7; }
 .prompt.dark .tip { color: var(--honey); }
 .prompt.dark .copy { top: 10px; right: 10px; border-radius: 8px; background: var(--honey); color: var(--ink); padding: 7px 10px; }
