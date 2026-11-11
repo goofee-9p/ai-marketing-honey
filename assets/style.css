@@ -180,3 +180,12 @@ section[id], .tool[id] { scroll-margin-top: 16px; }
 .faq details[open] summary::after { content: "–"; }
 .faq .a { padding: 0 0 16px; font-size: 15px; color: #3a4252; }
 .faq .a .cmd { font-size: 14px; }
+
+/* 표 — 칸 사이 여백 · 줄 구분선 · 위 정렬 (예전 회차 표도 같이 적용) */
+.wrap table th, .wrap table td { padding: 10px 14px 10px 0; vertical-align: top; text-align: left; }
+.wrap table th:last-child, .wrap table td:last-child { padding-right: 0; }
+.wrap table th { font-weight: 800; vertical-align: bottom; }
+.wrap table th, .wrap table td { word-break: keep-all; overflow-wrap: break-word; }
+.wrap table tbody tr + tr { border-top: 1px solid var(--line); }
+/* 짧은 칸은 안 꺾이게: <table class="tight">면 마지막 칸만 줄바꿈 */
+.wrap table.tight td:not(:last-child), .wrap table.tight th:not(:last-child) { white-space: nowrap; }
