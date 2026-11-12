@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EP.37 PPT 무드 설명, 이제 명령어 하나 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="그동안 만든 내 PPT로 Claude 스킬을 만들어 두면, 슬래시 + 스킬 이름 + 요청 한 줄로 늘 같은 무드의 PPT가 나와요. 요청문 · 저장하는 법 · 막혔을 때.">
+<meta property="og:title" content="EP.37 PPT 무드 설명, 이제 명령어 하나">
+<meta property="og:description" content="매번 붙이던 긴 무드 설명을 Claude 스킬로 저장하고 슬래시로 꺼내 쓰는 법.">
+<meta property="og:image" content="https://ai-marketing-honey.vercel.app/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.37 · Claude 스킬</span>
+    <h1>PPT 무드 설명,<br><span class="hl">이제 명령어 하나</span></h1>
+    <p class="lead">"남색 바탕으로, 여백 넉넉하게, 제목은 굵게…" AI한테 PPT를 시킬 때마다 붙이던 긴 설명을 <b>Claude 스킬</b>로 한 번 저장해 두면, 다음부턴 <b>/ + 스킬 이름 + 요청</b> 한 줄이면 돼요. 그동안 만든 내 PPT에서 색 · 글꼴 · 여백 규칙을 뽑아 담는 방법이에요.</p>
+    <div class="meta"><span class="chip ghost">준비</span><span class="chip ghost">만드는 법 3단계</span><span class="chip ghost">슬래시로 꺼내 쓰기</span><span class="chip ghost">막혔을 때</span></div>
+  </div>
+
+  <nav class="toc" data-auto></nav>
+
+  <section>
+    <h2><span class="n">01</span>준비</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li><b>Claude 계정</b>(브라우저 claude.ai 기준). 스킬은 무료 · Pro · Max · Team 요금제에서 쓸 수 있어요.</li>
+      <li>설정 → 기능(Capabilities)에서 <b>'파일 만들기 · 편집'</b>(예전 이름: 코드 실행 및 파일 생성)을 켜 두세요. 꺼져 있으면 스킬이 안 돌아요.</li>
+      <li>그동안 만든 <b>내 PPT 3~10개</b>를 폴더 하나에 모아 두세요. 회사 기밀이 담긴 자료는 빼고, 디자인이 잘 드러나는 것으로 골라요.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>만드는 법 3단계</h2>
+
+    <div class="tool" id="t1">
+      <span class="num">1</span>
+      <h3>내 PPT를 프로젝트에 올리기</h3>
+      <p class="lead">claude.ai 왼쪽 메뉴 → 프로젝트 → 새 프로젝트(예: 내 PPT 무드) → 파일 추가</p>
+      <div class="links"><a href="https://claude.ai/projects" target="_blank" rel="noopener">Claude 프로젝트</a></div>
+      <p class="result">✅ 받는 결과: 프로젝트 파일 목록에 내 PPT들이 보여요.</p>
+      <p class="caution">⚠️ 프로젝트에 올릴 수 있는 용량에는 한도가 있어요. 너무 크면 장수가 적은 PPT 위주로 골라요.</p>
+    </div>
+
+    <div class="tool" id="t2">
+      <span class="num">2</span>
+      <h3>요청문 한 줄로 스킬 만들기</h3>
+      <p class="lead">프로젝트 안에서 새 대화를 열고 아래 요청문을 그대로 붙여 넣어요. [ ] 칸만 바꿔요.</p>
+      <figure class="shot"><img src="../../assets/img/ep46/rules.jpg" alt="내 PPT 무드 스킬 규칙: 색, 글꼴, 여백, 도형" width="1080" height="880" loading="lazy"><figcaption>이해를 돕기 위한 예시 화면(가상 브랜드 허니 뷰티)</figcaption></figure>
+    </div>
+    <div class="prompt dark" id="make-skill"><div class="label">스킬 만드는 요청문</div><pre>이 프로젝트에 올린 PPT들을 모두 열어 보고,
+공통으로 쓰인 디자인 규칙을 정리해서 '[내무드]'라는 Claude 스킬로 만들어 줘.
+
+정리할 것
+- 색: 배경 · 제목 · 강조색 HEX 코드
+- 글꼴: 제목 · 본문 글꼴과 크기
+- 여백 · 배치: 바깥 여백, 한 장에 넣는 요소 수
+- 도형 · 아이콘: 모서리, 선 굵기, 그림자 여부
+- 차트 · 표 스타일
+
+스킬 설명 첫 줄에는 "PPT를 만들 때 이 무드로 만든다"라고 적어 줘.
+결과는 바로 저장할 수 있는 스킬 파일로 줘.</pre><div class="tip">설명 첫 줄이 중요해요. Claude는 스킬 이름 · 설명을 보고 언제 꺼낼지 정해요. claude.ai는 설명이 200자까지라 짧게 써요.</div></div>
+
+    <div class="tool" id="t3">
+      <span class="num">3</span>
+      <h3>스킬로 저장하기</h3>
+      <p class="lead">답변에 스킬 파일이 나오면 저장해요.</p>
+      <ul class="muted" style="padding-left:18px;line-height:1.8">
+        <li>파일 옆에 저장(스킬에 추가) 버튼이 보이면 눌러요.</li>
+        <li>버튼이 없으면 파일(ZIP)을 내려받아 <b>사용자 지정(Customize) → 스킬 → + → 스킬 만들기 → 스킬 올리기</b>로 올려요.</li>
+      </ul>
+      <div class="links"><a href="https://claude.ai/customize/skills" target="_blank" rel="noopener">Claude 스킬 설정</a></div>
+      <p class="result">✅ 받는 결과: 스킬 목록에 [내무드]가 생기고 켜져 있어요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>슬래시로 꺼내 쓰기</h2>
+    <figure class="shot"><img src="../../assets/img/ep46/slash.jpg" alt="입력창에 /내무드 를 입력하자 스킬 메뉴가 뜬 예시" width="1080" height="880" loading="lazy"><figcaption>이해를 돕기 위한 예시 화면(가상 브랜드 허니 뷰티)</figcaption></figure>
+    <p class="muted" style="margin-bottom:12px">새 대화 입력창에 <b>/</b>를 치면 내 스킬 목록이 떠요. 이름을 고르고 요청만 이어서 써요.</p>
+    <div class="prompt dark" id="use-skill"><div class="label">이렇게 쓰면 끝</div><pre>/내무드 신제품 소개 PPT 5장. 내용은 아래 글로.
+[여기에 기획안이나 메모 붙여 넣기]</pre></div>
+    <ul class="muted" style="padding-left:18px;line-height:1.8;margin-top:12px">
+      <li>같은 방법으로 <b>보고서 말투</b>, <b>회의록 양식</b>, <b>상세페이지 문구 규칙</b>도 스킬로 만들어 두면 /이름 하나로 꺼내 써요.</li>
+      <li>팀 · 엔터프라이즈 요금제면 스킬을 열고 '공유'로 동료에게 보낼 수 있어요(관리자가 공유를 켜 둬야 해요).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>막혔을 때</h2>
+    <div class="faq">
+      <details><summary>/를 쳐도 내 스킬이 메뉴에 안 떠요.</summary><div class="a">새 대화의 첫 메시지에서는 메뉴가 안 뜨는 경우가 있다는 제보가 있어요. 이름을 끝까지 직접 쓰거나(예: /내무드), "내무드 스킬로 만들어 줘"처럼 말로 불러도 돼요. 스킬 설정에서 스킬이 켜져 있는지도 확인하세요.</div></details>
+      <details><summary>스킬 파일 대신 설명 글만 나와요.</summary><div class="a">설정 → 기능에서 '파일 만들기 · 편집'이 켜져 있는지 확인하고, "SKILL.md가 들어 있는 스킬 폴더를 ZIP 파일로 만들어 줘"라고 한 번 더 요청하세요.</div></details>
+      <details><summary>스킬을 올리는데 오류가 나요.</summary><div class="a">ZIP 안 폴더 이름과 스킬 이름이 같아야 하고, 설명이 200자를 넘으면 안 돼요. Claude에게 "claude.ai에 올릴 수 있게 이름 · 설명 길이를 맞춰서 다시 만들어 줘"라고 하세요.</div></details>
+      <details><summary>무드가 조금씩 달라져요.</summary><div class="a">결과가 마음에 안 드는 부분을 말해 주고 "이 내용을 [내무드] 스킬 규칙에 추가해 줘"라고 하면 스킬이 점점 정확해져요. 규칙에 HEX 코드처럼 숫자로 적힌 게 많을수록 흔들림이 줄어요.</div></details>
+    </div>
+  </section>
+
+  <section data-toc="skip">
+    <h2><span class="n">05</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li><a href="https://support.claude.com/en/articles/12512180" target="_blank" rel="noopener">Claude 도움말: 스킬 사용 · 만들기 · 공유</a></li>
+      <li><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">Agent Skills 문서</a> · <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">Anthropic 공식 스킬 모음(pptx · skill-creator)</a></li>
+      <li>2026-11-13 확인</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../45/"><small>← 지난 편</small>EP.36 AI 영상 모델 전부, 3일 동안 공짜</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic과는 관계가 없고 협찬받지 않았어요. 영상 · 노트의 Claude 화면은 이해를 돕기 위해 그린 예시예요. 2026-11-13 기준이라 메뉴 이름이 바뀌면 달라질 수 있어요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
