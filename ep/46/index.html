@@ -57,8 +57,7 @@
       <h3>요청문 한 줄로 스킬 만들기</h3>
       <p class="lead">프로젝트 안에서 새 대화를 열고 아래 요청문을 그대로 붙여 넣어요. [ ] 칸만 바꿔요.</p>
       <figure class="shot"><img src="../../assets/img/ep46/rules.jpg" alt="내 PPT 무드 스킬 규칙: 색, 글꼴, 여백, 도형" width="960" height="630" loading="lazy"><figcaption>이해를 돕기 위한 예시 화면(가상 브랜드 허니 뷰티)</figcaption></figure>
-    </div>
-    <div class="prompt dark" id="make-skill"><div class="label">스킬 만드는 요청문</div><pre>이 프로젝트에 올린 PPT들을 모두 열어 보고,
+      <div class="prompt dark" id="make-skill"><div class="label">스킬 만드는 요청문</div><pre>이 프로젝트에 올린 PPT들을 모두 열어 보고,
 공통으로 쓰인 디자인 규칙을 정리해서 '[내무드]'라는 Claude 스킬로 만들어 줘.
 
 정리할 것
@@ -70,6 +69,7 @@
 
 스킬 설명 첫 줄에는 "PPT를 만들 때 이 무드로 만든다"라고 적어 줘.
 결과는 바로 저장할 수 있는 스킬 파일로 줘.</pre><div class="tip">설명 첫 줄이 중요해요. Claude는 스킬 이름 · 설명을 보고 언제 꺼낼지 정해요. claude.ai는 설명이 200자까지라 짧게 써요.</div></div>
+    </div>
 
     <div class="tool" id="t3">
       <span class="num">3</span>
@@ -90,11 +90,11 @@
       <h3>/ + 스킬 이름 + 요청</h3>
       <p class="lead">새 대화 입력창에 <b>/</b>를 치면 내 스킬 목록이 떠요. 이름을 고르고 요청만 이어서 써요.</p>
       <figure class="shot"><img src="../../assets/img/ep46/slash.jpg" alt="입력창에 /내무드 신제품 소개 다섯 장 을 입력하자 같은 무드의 장표가 나온 예시" width="960" height="640" loading="lazy"><figcaption>이해를 돕기 위한 예시 화면(가상 브랜드 허니 뷰티)</figcaption></figure>
+      <div class="prompt dark" id="use-skill"><div class="label">이렇게 쓰면 끝</div><pre>/내무드 신제품 소개 PPT 5장. 내용은 아래 글로.
+[여기에 기획안이나 메모 붙여 넣기]</pre></div>
       <p class="result">✅ 받는 결과: 주제가 달라도 같은 색 · 글꼴 · 여백의 장표.</p>
     </div>
-    <div class="prompt dark" id="use-skill"><div class="label">이렇게 쓰면 끝</div><pre>/내무드 신제품 소개 PPT 5장. 내용은 아래 글로.
-[여기에 기획안이나 메모 붙여 넣기]</pre></div>
-    <ul class="muted" style="padding-left:18px;line-height:1.8;margin-top:12px">
+    <ul class="muted" style="padding-left:18px;line-height:1.8;margin-top:16px">
       <li>같은 방법으로 <b>보고서 말투</b>, <b>회의록 양식</b>, <b>상세페이지 문구 규칙</b>도 스킬로 만들어 두면 /이름 하나로 꺼내 써요.</li>
       <li>팀 · 엔터프라이즈 요금제면 스킬을 열고 '공유'로 동료에게 보낼 수 있어요(관리자가 공유를 켜 둬야 해요).</li>
     </ul>
