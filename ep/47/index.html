@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EP.38 딸깍 한 번에, 마케터 포폴 완성 · 이거 모르는 마케터 없게 해주세요</title>
+<meta name="description" content="작업물 폴더 하나 + 레퍼런스 사이트 링크 하나로 Claude Code가 웹 포트폴리오를 만들어 줘요. 레퍼런스 사이트 모음 · 복사용 요청문 · 막혔을 때.">
+<meta property="og:title" content="EP.38 딸깍 한 번에, 마케터 포폴 완성">
+<meta property="og:description" content="작업물 폴더 + 레퍼런스 링크로 웹 포트폴리오 만드는 법.">
+<meta property="og:image" content="https://ai-marketing-honey.vercel.app/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="" width="26" height="26">이거 모르는 마케터 없게 해주세요</a>
+    <a class="handle" href="https://www.instagram.com/ai.marketing.honey/" aria-label="인스타그램 @ai.marketing.honey" title="@ai.marketing.honey"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+  </header>
+
+  <div class="hero">
+    <span class="chip">EP.38 · Claude Code</span>
+    <h1>딸깍 한 번에,<br><span class="hl">마케터 포폴 완성</span></h1>
+    <p class="lead">포폴은 디자인부터 고민하면 첫 장도 못 만들어요. <b>작업물 폴더 하나</b>와 <b>마음에 드는 웹사이트 링크 하나</b>만 준비하면, Claude Code가 그 무드로 내 웹 포트폴리오를 만들어 줘요.</p>
+    <figure class="shot"><img src="../../assets/img/ep47/portfolio_hero.jpg" alt="완성된 웹 포트폴리오 첫 화면: One marketer for your ad creatives" width="1200" height="750" loading="lazy"><figcaption>영상 속 결과 예시(가상 브랜드 허니 뷰티)</figcaption></figure>
+    <div class="meta"><span class="chip ghost">준비</span><span class="chip ghost">레퍼런스 사이트 모음</span><span class="chip ghost">만드는 법 3단계</span><span class="chip ghost">막혔을 때</span></div>
+  </div>
+
+  <nav class="toc" data-auto></nav>
+
+  <section>
+    <h2><span class="n">01</span>준비</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li><b>Claude Code</b>: Claude 유료 요금제(Pro 이상)에서 써요. Claude 데스크톱 앱의 Code 탭이나 터미널에서 열 수 있어요.</li>
+      <li><b>작업물 폴더 하나</b>: 기획한 광고 소재, 월간 보고서, 기획안(PPT · 엑셀 · PDF), 자동화 화면 캡처 등. 폴더 이름은 아무거나 괜찮아요.</li>
+      <li><b>나에 대한 메모 한 장</b>(txt): 직무 · 연차 · 맡았던 일 3줄. 이름 · 연락처를 넣으면 그대로 들어가요.</li>
+      <li>회사 기밀 · 광고주 실제 수치는 빼거나 공개해도 되는 범위만 넣어요.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>레퍼런스 사이트 모음</h2>
+    <p class="muted">"이렇게 만들어 줘"라고 말로 설명하는 대신, 마음에 드는 사이트를 하나 골라 링크를 줘요.</p>
+    <figure class="shot"><img src="../../assets/img/ep47/awwwards.jpg" alt="Awwwards 첫 화면" width="1200" height="750" loading="lazy"><figcaption>awwwards.com 첫 화면(2026-11-14)</figcaption></figure>
+    <div class="tool" id="r1">
+      <span class="num">1</span>
+      <h3>Awwwards</h3>
+      <p class="lead">매일 뽑히는 화려하고 움직임 많은 웹사이트 모음. 'Portfolio', 'Beauty' 카테고리부터 보세요.</p>
+      <div class="links"><a href="https://www.awwwards.com/websites/portfolio/" target="_blank" rel="noopener">포트폴리오</a><a href="https://www.awwwards.com/websites/beauty/" target="_blank" rel="noopener">뷰티</a></div>
+    </div>
+    <div class="tool" id="r2">
+      <span class="num">2</span>
+      <h3>Recent (recent.design)</h3>
+      <p class="lead">옛 Godly. 사이트마다 Style · Color 무드 단어가 붙어 있어서, 무드를 말로 정리할 때 좋아요.</p>
+      <div class="links"><a href="https://recent.design/websites?category=portfolio" target="_blank" rel="noopener">포트폴리오</a></div>
+    </div>
+    <div class="tool" id="r3">
+      <span class="num">3</span>
+      <h3>Lapa Ninja · Framer 템플릿</h3>
+      <p class="lead">한 페이지짜리 랜딩 · 포트폴리오가 많아요. Framer 마켓은 '뷰티' 카테고리가 따로 있어요.</p>
+      <div class="links"><a href="https://www.lapa.ninja/category/portfolio/" target="_blank" rel="noopener">Lapa Ninja</a><a href="https://www.framer.com/marketplace/templates/categories/beauty/" target="_blank" rel="noopener">Framer 뷰티</a></div>
+    </div>
+    <p class="caution">⚠️ 레퍼런스는 무드와 움직임만 빌려요. 그 사이트의 로고 · 글 · 사진을 그대로 가져오면 안 돼요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>만드는 법 3단계</h2>
+
+    <div class="tool" id="t1">
+      <span class="num">1</span>
+      <h3>폴더 열기</h3>
+      <p class="lead">Claude Code에서 작업물 폴더를 열어요(데스크톱 앱: 새 세션 → 폴더 선택 · 터미널: 폴더에서 <code>claude</code>).</p>
+      <p class="result">✅ 받는 결과: Claude Code가 그 폴더 안 파일을 읽을 수 있어요.</p>
+    </div>
+
+    <div class="tool" id="t2">
+      <span class="num">2</span>
+      <h3>링크 + 요청 한 줄</h3>
+      <p class="lead">고른 사이트 링크를 첫 줄에 붙이고 아래 요청문을 그대로 보내요.</p>
+      <div class="prompt dark" id="make-portfolio"><div class="label">포트폴리오 만드는 요청문</div><pre>[레퍼런스 사이트 링크]
+이 사이트 무드랑 인터랙션(스크롤 효과, 호버, 화면 전환)을 살려서,
+이 폴더 작업물로 내 웹 포트폴리오를 만들어 줘.
+
+- 숫자는 폴더 파일에 있는 것만 써 줘.
+- 폴더 밖 이미지는 쓰지 말아 줘.
+- 포폴 안 글은 영어로. 데스크톱 화면에서 멋있게.
+- 그 사이트의 로고 · 글 · 사진은 가져오지 말고 무드만.</pre><div class="tip">한국어 포폴이 필요하면 "포폴 안 글은 한국어로"로 바꾸세요.</div></div>
+    </div>
+
+    <div class="tool" id="t3">
+      <span class="num">3</span>
+      <h3>열어 보고 고치기</h3>
+      <p class="lead">만들어진 <code>index.html</code>을 더블클릭해 브라우저로 열어요. 마음에 안 드는 곳은 말로 고쳐요.</p>
+      <figure class="shot"><img src="../../assets/img/ep47/portfolio_cards.jpg" alt="스크롤하면 작업 카드가 쌓이는 화면" width="1200" height="750" loading="lazy"><figcaption>스크롤하면 작업 카드가 쌓여요(예시)</figcaption></figure>
+      <figure class="shot"><img src="../../assets/img/ep47/portfolio_numbers.jpg" alt="보고서 숫자를 색 타일로 정리한 화면" width="1200" height="750" loading="lazy"><figcaption>보고서 숫자는 타일로(예시 · 가상 데이터)</figcaption></figure>
+      <p class="result">✅ 받는 결과: 내 작업물 · 성과 숫자가 정리된 한 페이지 웹 포트폴리오(폴더 안 <code>index.html</code>).</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>막혔을 때</h2>
+    <div class="faq">
+      <details><summary>레퍼런스 무드가 약하게 나와요.</summary><div class="a">링크만으로는 Claude Code가 화면을 못 보고 글만 읽는 경우가 있어요. 레퍼런스 사이트를 3~5장 캡처해서 폴더에 같이 넣고 "캡처 화면처럼 만들어 줘"라고 하면 훨씬 가까워져요.</div></details>
+      <details><summary>폴더에 없는 이미지가 들어갔어요.</summary><div class="a">"폴더 밖 이미지는 다 빼고 폴더 안 소재로 바꿔 줘"라고 하세요. 요청문에 처음부터 넣어 두는 게 가장 좋아요.</div></details>
+      <details><summary>숫자가 내 자료와 달라요.</summary><div class="a">"쓴 숫자를 전부 표로 보여 주고, 어느 파일에서 가져왔는지 적어 줘"라고 확인하세요. 파일에 없는 숫자는 지워 달라고 하면 돼요.</div></details>
+      <details><summary>스크롤했는데 사진이 안 보여요.</summary><div class="a">스크롤 효과 때문에 가려진 채 멈춘 경우가 있어요. "스크롤 효과가 안 돌아도 내용이 보이게 고쳐 줘"라고 하세요.</div></details>
+      <details><summary>링크로 보내고 싶어요.</summary><div class="a">만든 폴더를 Vercel 같은 무료 호스팅에 올리면 링크가 생겨요. 자세한 방법은 <a href="../15/">EP.15 노트</a>를 보세요.</div></details>
+    </div>
+  </section>
+
+  <section data-toc="skip">
+    <h2><span class="n">05</span>출처</h2>
+    <ul class="muted" style="padding-left:18px;line-height:1.8">
+      <li>영상 속 포트폴리오 디자인 참고: <a href="https://loopsii.com/" target="_blank" rel="noopener">loopsii.com</a></li>
+      <li>레퍼런스 화면: <a href="https://www.awwwards.com/" target="_blank" rel="noopener">awwwards.com</a> · <a href="https://recent.design/" target="_blank" rel="noopener">recent.design</a></li>
+      <li>2026-11-14 확인</li>
+    </ul>
+  </section>
+
+  <nav class="next">
+    <a href="../46/"><small>← 지난 편</small>EP.37 PPT 무드 설명, 이제 명령어 하나</a>
+    <a href="../../" style="text-align:right"><small>목록</small>전체 회차 보기</a>
+  </nav>
+
+  <div class="cta">
+    <b>실무에서 바로 쓰는 AI 활용법, 하나씩 올려요.</b>
+    <p style="color:#c8ccd6;margin-top:6px;font-size:14px">대행사에서 AI 교육하는 현직 마케터가 정리해요.</p>
+    <a href="https://www.instagram.com/ai.marketing.honey/">인스타에서 팔로우</a>
+  </div>
+
+  <footer>
+    개인 정리 노트예요. Anthropic · 소개한 사이트들과는 관계가 없고 협찬받지 않았어요. 영상 · 노트의 포트폴리오는 가상 브랜드 '허니 뷰티' 예시로, Claude Code로 만들고 일부 이미지를 손봤어요. 2026-11-14 기준이에요. 방문 통계를 위해 Google 애널리틱스를 쓸 수 있어요.
+  </footer>
+</div>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
