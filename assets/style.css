@@ -144,9 +144,9 @@ section[id], .tool[id] { scroll-margin-top: 16px; }
 .tool .num { display: inline-grid; place-items: center; min-width: 28px; height: 28px; padding: 0 9px; border-radius: 999px; background: var(--honey); color: #fff; font-size: 13px; font-weight: 900; }
 .tool h3 { font-size: 20px; font-weight: 900; letter-spacing: -0.4px; margin: 10px 0 2px; }
 .tool .lead { font-size: 15px; color: #3a4252; }
-.tool .shot { margin-top: 14px; }
-.tool .shot img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
-.tool .shot figcaption { font-size: 13px; color: var(--sub); margin-top: 6px; line-height: 1.5; }
+.shot { margin: 14px 0 0; }
+.shot img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+.shot figcaption { font-size: 13px; color: var(--sub); margin-top: 6px; line-height: 1.5; }
 .tool > p { font-size: 15px; margin-top: 12px; }
 .lab { font-size: 14px; font-weight: 800; margin-top: 18px; }
 .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
